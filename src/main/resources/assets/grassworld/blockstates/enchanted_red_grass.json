@@ -1,6 +1,11 @@
 {
     "variants": {
-        "": { "model": "grassworld:enchanted_red_grass" }
+        "": [
+            { "model": "grassworld:block/enchanted_red_grass" },
+            { "model": "grassworld:block/enchanted_red_grass", "y": 90 },
+            { "model": "grassworld:block/enchanted_red_grass", "y": 180 },
+            { "model": "grassworld:block/enchanted_red_grass", "y": 270 }
+        ]
     }
 }
 
