@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraft:block/dirt",
+    "top": "grassworld:blocks/enchanted_cyan_grass2",
+    "side": "grassworld:blocks/enchanted_cyan_grass1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "minecraft:block/dirt",
+    "top": "grassworld:blocks/enchanted_yellow_grass2",
+    "front": "grassworld:blocks/enchanted_yellow_grass1",
+    "side": "grassworld:blocks/enchanted_yellow_grass1"
+  }
+}

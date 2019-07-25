@@ -1,0 +1,43 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"SDP"
+	],
+	
+	"key":
+	{
+		"S":
+		{
+		
+			"item": "minecraft:wheat_seeds"
+		
+		},
+		
+		"D":
+		{
+		
+			      "item": "minecraft:dye",
+      "data": 4
+		
+		},
+		
+		"P":
+		{
+		
+			"item": "minecraft:grass"
+		
+		}
+		
+	},
+	
+	"result":
+	{
+		"item": "grassworld:fancy_blueseed"
+	}	
+	
+	
+		
+
+}

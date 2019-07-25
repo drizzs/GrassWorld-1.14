@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "grassworld:block/actualgrass_blue" },
+            { "model": "grassworld:block/actualgrass_blue", "y": 90 },
+            { "model": "grassworld:block/actualgrass_blue", "y": 180 },
+            { "model": "grassworld:block/actualgrass_blue", "y": 270 }
+        ]
+    }
+}
