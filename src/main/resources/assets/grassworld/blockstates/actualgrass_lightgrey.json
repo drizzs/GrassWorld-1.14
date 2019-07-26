@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "grassworld:actualgrass_lightgrey" }
+        "": { "model": "grassworld:block/actualgrass_lightgrey" }
     }
 }
