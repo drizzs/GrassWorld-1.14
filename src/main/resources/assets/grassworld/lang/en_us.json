@@ -120,6 +120,24 @@
 "block.grassworld.actualgrass_brown":"Brown Grass",
 "block.grassworld.actualgrass_limegreen":"Lime Green Grass",
 
-"itemGroup.grassworld":"Grass World"
+"itemGroup.grassworld":"Grass World",
+
+
+  "block.grassworld.plankred": "Red Planks",
+  "block.grassworld.plankblue": "Blue Planks",
+  "block.grassworld.plankyellow": "Yellow Planks",
+  "block.grassworld.plankorange": "Orange Planks",
+  "block.grassworld.planklimegreen": "Lime Green Planks",
+  "block.grassworld.plankcyan": "Cyan Planks",
+  "block.grassworld.planklightblue": "Light Blue Planks",
+  "block.grassworld.plankmagenta": "Magenta Planks",
+  "block.grassworld.plankgreen": "Green Planks",
+  "block.grassworld.plankpurple": "Purple Planks",
+  "block.grassworld.plankgrey": "Grey Planks",
+  "block.grassworld.planklightgrey": "Light Grey Planks",
+  "block.grassworld.plankpink": "Pink Planks",
+  "block.grassworld.plankwhite": "White Planks",
+  "block.grassworld.plankblack": "Black Planks",
+  "block.grassworld.plankbrown": "Brown Planks",
 }
 

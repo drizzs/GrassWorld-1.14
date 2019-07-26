@@ -75,6 +75,23 @@ public class GrassWorldBlocks {
     public static Block actualgrass_black;
     public static Block actualgrass_blue;
 
+    public static Block plankred;
+    public static Block plankblue;
+    public static Block plankgreen;
+    public static Block planklimegreen;
+    public static Block plankorange;
+    public static Block planklightblue;
+    public static Block plankgrey;
+    public static Block planklightgrey;
+    public static Block plankmagenta;
+    public static Block plankbrown;
+    public static Block plankwhite;
+    public static Block plankblack;
+    public static Block plankpurple;
+    public static Block plankpink;
+    public static Block plankcyan;
+    public static Block plankyellow;
+
 
 
 
