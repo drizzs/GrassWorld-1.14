@@ -3,15 +3,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:wheat_seeds"
+      "item": "minecraft:black_dye"
     },
     {
-      "item": "minecraft:dye",
-      "data": 0
+      "item": "minecraft:wheat_seeds"
     }
   ],
-  "result": 
-  {
+  "result": {
     "item": "grassworld:blackseed"
   }
 }
