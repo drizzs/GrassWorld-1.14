@@ -58,6 +58,23 @@ public class GrassWorldBlocks {
     public static Block enchanted_brown_grass;
     public static Block enchanted_green_grass;
 
+    public static Block actualgrass_orange;
+    public static Block actualgrass_cyan;
+    public static Block actualgrass_red;
+    public static Block actualgrass_brown;
+    public static Block actualgrass_pink;
+    public static Block actualgrass_purple;
+    public static Block actualgrass_green;
+    public static Block actualgrass_limegreen;
+    public static Block actualgrass_lightgrey;
+    public static Block actualgrass_grey;
+    public static Block actualgrass_lightblue;
+    public static Block actualgrass_yellow;
+    public static Block actualgrass_white;
+    public static Block actualgrass_magenta;
+    public static Block actualgrass_black;
+    public static Block actualgrass_blue;
+
 
 
 
