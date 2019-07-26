@@ -1,21 +1,17 @@
 package com.drizzs.grassworld.blocks.ActualGrass;
 
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.TallGrassBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.DecoratedFeatureConfig;
-import net.minecraft.world.gen.feature.FlowersFeature;
 
-import java.util.List;
-import java.util.Random;
-
-public class ActualGrassOrange extends TallGrassBlock {
+public class ActualGrassPink extends TallGrassBlock {
 
 
-    public ActualGrassOrange(Block.Properties properties) {
+    public ActualGrassPink(Properties properties) {
         super(properties);
     }
 
