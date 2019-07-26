@@ -1,10 +1,10 @@
 {
     "variants": {
         "": [
-            { "model": "grassworld:block/enchanted_limegrass_grass" },
-            { "model": "grassworld:block/enchanted_limegrass_grass", "y": 90 },
-            { "model": "grassworld:block/enchanted_limegrass_grass", "y": 180 },
-            { "model": "grassworld:block/enchanted_limegrass_grass", "y": 270 }
+            { "model": "grassworld:block/enchanted_limegreengrass_grass" },
+            { "model": "grassworld:block/enchanted_limegreengrass_grass", "y": 90 },
+            { "model": "grassworld:block/enchanted_limegreengrass_grass", "y": 180 },
+            { "model": "grassworld:block/enchanted_limegreengrass_grass", "y": 270 }
         ]
     }
 }
