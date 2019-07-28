@@ -1,24 +1,51 @@
 package com.drizzs.grassworld.blocks.enchantedgrass;
 
+import com.drizzs.grassworld.api.particle.GWParticleTypes;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.GrassBlock;
 import net.minecraft.block.IGrowable;
+import net.minecraft.client.particle.Particle;
+import net.minecraft.fluid.IFluidState;
+import net.minecraft.particles.BasicParticleType;
+import net.minecraft.particles.ParticleType;
+import net.minecraft.particles.ParticleTypes;
+import net.minecraft.util.Direction;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.DecoratedFeatureConfig;
 import net.minecraft.world.gen.feature.FlowersFeature;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.List;
 import java.util.Random;
 
+import static net.minecraft.state.properties.BlockStateProperties.FACING;
+import static net.minecraft.state.properties.BlockStateProperties.UP;
+@OnlyIn(Dist.CLIENT)
 public class EnchantedBlackGrass extends GrassBlock
 {
 
     public EnchantedBlackGrass(Properties p_i48388_1_) {
         super(p_i48388_1_);
     }
+
+    @OnlyIn(Dist.CLIENT)
+    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+
+            if (rand.nextInt(5) == 0) {
+                for(int i = 0; i < rand.nextInt(1) + 1; ++i) {
+                    worldIn.addParticle(GWParticleTypes.ENCHANTEDBLACK, (double)((float)pos.getX() + 0F), (double)((float)pos.getY() + 0.5F), (double)((float)pos.getZ() + 0F), (double)(rand.nextFloat() / 0F), 5.0F, (double)(rand.nextFloat() / 0F));
+                }
+            }
+
+
+    }
+
 
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {
         BlockPos blockpos = pos.up();
