@@ -1,4 +1,4 @@
-package com.drizzs.grassworld.items.normalseed;
+package com.drizzs.grassworld.items.netherseed.normal;
 
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import com.drizzs.grassworld.items.GrassWorldItems;
@@ -14,9 +14,9 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
-public class WhiteSeed extends Item {
+public class WhiteNetherSeed extends Item {
 
-    public WhiteSeed(Properties group)
+    public WhiteNetherSeed(Properties group)
     {
         super(new Properties().group(ItemGroupGW.instance).maxStackSize(16));
 
@@ -29,15 +29,15 @@ public class WhiteSeed extends Item {
         ItemStack item = context.getItem();
         Hand hand = context.getHand();
 
-        if (!(item.getItem() == GrassWorldItems.whiteseed)){
+        if (!(item.getItem() == GrassWorldItems.whitenetherseed)){
 
             return ActionResultType.PASS;
         }
 
-        if (world.getBlockState(blockpos).getBlock() == Blocks.GRASS_BLOCK || world.getBlockState(blockpos).getBlock() == Blocks.DIRT)
+        if (world.getBlockState(blockpos).getBlock() == Blocks.NETHERRACK)
         {
 
-            world.setBlockState(blockpos, GrassWorldBlocks.white_grass.getDefaultState());
+            world.setBlockState(blockpos, GrassWorldBlocks.whitenethergrass.getDefaultState());
 
         }
         return ActionResultType.SUCCESS;

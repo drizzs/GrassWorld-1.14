@@ -58,7 +58,73 @@ public class GrassWorldItems
     public static Item enchanted_greenseed;
     public static Item enchanted_limegreenseed;
 
+    public static Item orangeendseed;
+    public static Item blueendseed;
+    public static Item redendseed;
+    public static Item lightblueendseed;
+    public static Item greyendseed;
+    public static Item lightgreyendseed;
+    public static Item pinkendseed;
+    public static Item purpleendseed;
+    public static Item magentaendseed;
+    public static Item cyanendseed;
+    public static Item blackendseed;
+    public static Item brownendseed;
+    public static Item whiteendseed;
+    public static Item yellowendseed;
+    public static Item greenendseed;
+    public static Item limegreenendseed;
 
+    public static Item orangenetherseed;
+    public static Item bluenetherseed;
+    public static Item rednetherseed;
+    public static Item lightbluenetherseed;
+    public static Item greynetherseed;
+    public static Item lightgreynetherseed;
+    public static Item pinknetherseed;
+    public static Item purplenetherseed;
+    public static Item magentanetherseed;
+    public static Item cyannetherseed;
+    public static Item blacknetherseed;
+    public static Item brownnetherseed;
+    public static Item whitenetherseed;
+    public static Item yellownetherseed;
+    public static Item greennetherseed;
+    public static Item limegreennetherseed;
+
+    public static Item fancyorangeendseed;
+    public static Item fancyblueendseed;
+    public static Item fancyredendseed;
+    public static Item fancylightblueendseed;
+    public static Item fancygreyendseed;
+    public static Item fancylightgreyendseed;
+    public static Item fancypinkendseed;
+    public static Item fancypurpleendseed;
+    public static Item fancymagentaendseed;
+    public static Item fancycyanendseed;
+    public static Item fancyblackendseed;
+    public static Item fancybrownendseed;
+    public static Item fancywhiteendseed;
+    public static Item fancyyellowendseed;
+    public static Item fancygreenendseed;
+    public static Item fancylimegreenendseed;
+
+    public static Item fancyorangenetherseed;
+    public static Item fancybluenetherseed;
+    public static Item fancyrednetherseed;
+    public static Item fancylightbluenetherseed;
+    public static Item fancygreynetherseed;
+    public static Item fancylightgreynetherseed;
+    public static Item fancypinknetherseed;
+    public static Item fancypurplenetherseed;
+    public static Item fancymagentanetherseed;
+    public static Item fancycyannetherseed;
+    public static Item fancyblacknetherseed;
+    public static Item fancybrownnetherseed;
+    public static Item fancywhitenetherseed;
+    public static Item fancyyellownetherseed;
+    public static Item fancygreennetherseed;
+    public static Item fancylimegreennetherseed;
 
 
 

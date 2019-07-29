@@ -1,9 +1,7 @@
-package com.drizzs.grassworld.items.normalseed;
+package com.drizzs.grassworld.items.endseed.normal;
 
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
-import com.drizzs.grassworld.blocks.ModBlocks;
 import com.drizzs.grassworld.items.GrassWorldItems;
-import com.drizzs.grassworld.items.ModItems;
 import com.drizzs.grassworld.util.ItemGroupGW;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
@@ -16,11 +14,11 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
-public class OrangeSeed extends Item {
+public class OrangeEndSeed extends Item {
 
-    public OrangeSeed(Item.Properties group)
+    public OrangeEndSeed(Properties group)
     {
-        super(new Item.Properties().group(ItemGroupGW.instance).maxStackSize(16));
+        super(new Properties().group(ItemGroupGW.instance).maxStackSize(16));
 
     }
 
@@ -31,15 +29,15 @@ public class OrangeSeed extends Item {
         ItemStack item = context.getItem();
         Hand hand = context.getHand();
 
-        if (!(item.getItem() == GrassWorldItems.orangeseed)){
+        if (!(item.getItem() == GrassWorldItems.orangeendseed)){
 
             return ActionResultType.PASS;
         }
 
-        if (world.getBlockState(blockpos).getBlock() == Blocks.GRASS_BLOCK || world.getBlockState(blockpos).getBlock() == Blocks.DIRT)
+        if (world.getBlockState(blockpos).getBlock() == Blocks.END_STONE)
         {
 
-            world.setBlockState(blockpos, GrassWorldBlocks.orange_grass.getDefaultState());
+            world.setBlockState(blockpos, GrassWorldBlocks.orangeendgrass.getDefaultState());
 
         }
         return ActionResultType.SUCCESS;

@@ -1,4 +1,4 @@
-package com.drizzs.grassworld.items.endseed.normal;
+package com.drizzs.grassworld.items.endseed.fancy;
 
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import com.drizzs.grassworld.items.GrassWorldItems;
@@ -14,9 +14,9 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
-public class LightGreyEndSeed extends Item {
+public class FancyLightGreyEndSeed extends Item {
 
-    public LightGreyEndSeed(Properties group)
+    public FancyLightGreyEndSeed(Properties group)
     {
         super(new Properties().group(ItemGroupGW.instance).maxStackSize(16));
 
@@ -29,7 +29,7 @@ public class LightGreyEndSeed extends Item {
         ItemStack item = context.getItem();
         Hand hand = context.getHand();
 
-        if (!(item.getItem() == GrassWorldItems.lightgreyendseed)){
+        if (!(item.getItem() == GrassWorldItems.fancylightgreyendseed)){
 
             return ActionResultType.PASS;
         }
@@ -37,7 +37,7 @@ public class LightGreyEndSeed extends Item {
         if (world.getBlockState(blockpos).getBlock() == Blocks.END_STONE)
         {
 
-            world.setBlockState(blockpos, GrassWorldBlocks.lightgreyendgrass.getDefaultState());
+            world.setBlockState(blockpos, GrassWorldBlocks.fancylightgreyendgrass.getDefaultState());
 
         }
         return ActionResultType.SUCCESS;

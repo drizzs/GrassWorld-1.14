@@ -1,4 +1,4 @@
-package com.drizzs.grassworld.items.normalseed;
+package com.drizzs.grassworld.items.endseed.normal;
 
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import com.drizzs.grassworld.items.GrassWorldItems;
@@ -14,9 +14,9 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
-public class GreenSeed extends Item {
+public class GreenEndSeed extends Item {
 
-    public GreenSeed(Properties group)
+    public GreenEndSeed(Properties group)
     {
         super(new Properties().group(ItemGroupGW.instance).maxStackSize(16));
 
@@ -29,15 +29,15 @@ public class GreenSeed extends Item {
         ItemStack item = context.getItem();
         Hand hand = context.getHand();
 
-        if (!(item.getItem() == GrassWorldItems.greenseed)){
+        if (!(item.getItem() == GrassWorldItems.greenendseed)){
 
             return ActionResultType.PASS;
         }
 
-        if (world.getBlockState(blockpos).getBlock() == Blocks.GRASS_BLOCK || world.getBlockState(blockpos).getBlock() == Blocks.DIRT)
+        if (world.getBlockState(blockpos).getBlock() == Blocks.END_STONE)
         {
 
-            world.setBlockState(blockpos, GrassWorldBlocks.green_grass.getDefaultState());
+            world.setBlockState(blockpos, GrassWorldBlocks.greenendgrass.getDefaultState());
 
         }
         return ActionResultType.SUCCESS;
