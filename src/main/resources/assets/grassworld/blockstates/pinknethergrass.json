@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "grassworld:block/pinknethergrass" },
+            { "model": "grassworld:block/pinknethergrass", "y": 90 },
+            { "model": "grassworld:block/pinknethergrass", "y": 180 },
+            { "model": "grassworld:block/pinknethergrass", "y": 270 }
+        ]
+    }
+}

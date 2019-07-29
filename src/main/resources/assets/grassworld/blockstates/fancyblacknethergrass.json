@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "grassworld:block/fancyblacknethergrass" },
+            { "model": "grassworld:block/fancyblacknethergrass", "y": 90 },
+            { "model": "grassworld:block/fancyblacknethergrass", "y": 180 },
+            { "model": "grassworld:block/fancyblacknethergrass", "y": 270 }
+        ]
+    }
+}
