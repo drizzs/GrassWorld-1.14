@@ -4,9 +4,7 @@ import net.minecraft.particles.BasicParticleType;
 import net.minecraft.particles.IParticleData;
 import net.minecraft.particles.ParticleType;
 import net.minecraft.util.registry.Registry;
-import net.minecraftforge.registries.ObjectHolder;
 
-@ObjectHolder("grassworld")
 public class GWParticleTypes
 {
     public static final BasicParticleType ENCHANTEDBLACK = register("enchantedblack", true);
@@ -30,7 +28,7 @@ public class GWParticleTypes
 
 
     private static BasicParticleType register(String key, boolean alwaysShow) {
-        return (BasicParticleType)Registry.<ParticleType<? extends IParticleData>>register(Registry.PARTICLE_TYPE, key, new BasicParticleType(alwaysShow));
+        return (BasicParticleType) Registry.<ParticleType<? extends IParticleData>>register(Registry.PARTICLE_TYPE, key, new BasicParticleType(alwaysShow));
     }
 
     private static <T extends IParticleData> ParticleType<T> register(String key, IParticleData.IDeserializer<T> deserializer) {

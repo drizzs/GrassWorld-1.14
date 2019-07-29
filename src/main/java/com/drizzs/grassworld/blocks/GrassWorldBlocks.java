@@ -92,7 +92,72 @@ public class GrassWorldBlocks {
     public static Block plankcyan;
     public static Block plankyellow;
 
+    public static Block orangeendgrass;
+    public static Block blueendgrass;
+    public static Block blackendgrass;
+    public static Block whiteendgrass;
+    public static Block yellowendgrass;
+    public static Block redendgrass;
+    public static Block greyendgrass;
+    public static Block lightgreyendgrass;
+    public static Block lightblueendgrass;
+    public static Block limegreenendgrass;
+    public static Block magentaendgrass;
+    public static Block cyanendgrass;
+    public static Block pinkendgrass;
+    public static Block purpleendgrass;
+    public static Block brownendgrass;
+    public static Block greenendgrass;
 
+    public static Block fancyorangeendgrass;
+    public static Block fancyblueendgrass;
+    public static Block fancyblackendgrass;
+    public static Block fancywhiteendgrass;
+    public static Block fancyyellowendgrass;
+    public static Block fancyredendgrass;
+    public static Block fancygreyendgrass;
+    public static Block fancylightgreyendgrass;
+    public static Block fancylightblueendgrass;
+    public static Block fancylimegreenendgrass;
+    public static Block fancymagentaendgrass;
+    public static Block fancycyanendgrass;
+    public static Block fancypinkendgrass;
+    public static Block fancypurpleendgrass;
+    public static Block fancybrownendgrass;
+    public static Block fancygreenendgrass;
 
+    public static Block orangenethergrass;
+    public static Block bluenethergrass;
+    public static Block blacknethergrass;
+    public static Block whitenethergrass;
+    public static Block yellownethergrass;
+    public static Block rednethergrass;
+    public static Block greynethergrass;
+    public static Block lightgreynethergrass;
+    public static Block lightbluenethergrass;
+    public static Block limegreennethergrass;
+    public static Block magentanethergrass;
+    public static Block cyannethergrass;
+    public static Block pinknethergrass;
+    public static Block purplenethergrass;
+    public static Block brownnethergrass;
+    public static Block greennethergrass;
+
+    public static Block fancyorangenethergrass;
+    public static Block fancybluenethergrass;
+    public static Block fancyblacknethergrass;
+    public static Block fancywhitenethergrass;
+    public static Block fancyyellownethergrass;
+    public static Block fancyrednethergrass;
+    public static Block fancygreynethergrass;
+    public static Block fancylightgreynethergrass;
+    public static Block fancylightbluenethergrass;
+    public static Block fancylimegreennethergrass;
+    public static Block fancymagentanethergrass;
+    public static Block fancycyannethergrass;
+    public static Block fancypinknethergrass;
+    public static Block fancypurplenethergrass;
+    public static Block fancybrownnethergrass;
+    public static Block fancygreennethergrass;
 
 }

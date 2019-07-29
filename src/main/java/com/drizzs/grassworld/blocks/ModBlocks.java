@@ -2,7 +2,10 @@ package com.drizzs.grassworld.blocks;
 
 import com.drizzs.grassworld.blocks.ActualGrass.ActualGrassOrange;
 import com.drizzs.grassworld.blocks.enchantedgrass.*;
+import com.drizzs.grassworld.blocks.endgrass.normal.*;
 import com.drizzs.grassworld.blocks.fancygrass.*;
+import com.drizzs.grassworld.blocks.nethergrass.fancy.*;
+import com.drizzs.grassworld.blocks.nethergrass.normal.*;
 import com.drizzs.grassworld.blocks.normalgrass.*;
 import com.drizzs.grassworld.util.ItemGroupGW;
 import net.minecraft.block.Block;
@@ -102,6 +105,76 @@ public class ModBlocks
         GrassWorldBlocks.plankpurple = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "plankpurple");
         GrassWorldBlocks.plankwhite = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "plankwhite");
         GrassWorldBlocks.plankbrown = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "plankbrown");
+
+        GrassWorldBlocks.orangeendgrass = registerBlock(new OrangeEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "orangeendgrass");
+        GrassWorldBlocks.blueendgrass = registerBlock(new BlueEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "blueendgrass");
+        GrassWorldBlocks.blackendgrass = registerBlock(new BlackEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "blackendgrass");
+        GrassWorldBlocks.whiteendgrass = registerBlock(new WhiteEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "whiteendgrass");
+        GrassWorldBlocks.redendgrass = registerBlock(new RedEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "redendgrass");
+        GrassWorldBlocks.yellowendgrass = registerBlock(new YellowEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "yellowendgrass");
+        GrassWorldBlocks.purpleendgrass = registerBlock(new PurpleEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "purpleendgrass");
+        GrassWorldBlocks.pinkendgrass = registerBlock(new PinkEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "pinkendgrass");
+        GrassWorldBlocks.brownendgrass = registerBlock(new BrownEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "brownendgrass");
+        GrassWorldBlocks.greyendgrass = registerBlock(new GreyEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "greyendgrass");
+        GrassWorldBlocks.lightgreyendgrass = registerBlock(new LightGreyEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "lightgreyendgrass");
+        GrassWorldBlocks.lightblueendgrass = registerBlock(new LightBlueEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "lightblueendgrass");
+        GrassWorldBlocks.limegreenendgrass = registerBlock(new LimeGreenEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "limegreenendgrass");
+        GrassWorldBlocks.greenendgrass = registerBlock(new GreenEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "greenendgrass");
+        GrassWorldBlocks.magentaendgrass = registerBlock(new MagentaEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "magentaendgrass");
+        GrassWorldBlocks.cyanendgrass = registerBlock(new CyanEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "cyanendgrass");
+
+        GrassWorldBlocks.fancyorangeendgrass = registerBlock(new OrangeEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancyorangeendgrass");
+        GrassWorldBlocks.fancyblueendgrass = registerBlock(new BlueEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancyblueendgrass");
+        GrassWorldBlocks.fancyblackendgrass = registerBlock(new BlackEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancyblackendgrass");
+        GrassWorldBlocks.fancywhiteendgrass = registerBlock(new WhiteEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancywhiteendgrass");
+        GrassWorldBlocks.fancyredendgrass = registerBlock(new RedEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancyredendgrass");
+        GrassWorldBlocks.fancyyellowendgrass = registerBlock(new YellowEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancyyellowendgrass");
+        GrassWorldBlocks.fancypurpleendgrass = registerBlock(new PurpleEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancypurpleendgrass");
+        GrassWorldBlocks.fancypinkendgrass = registerBlock(new PinkEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancypinkendgrass");
+        GrassWorldBlocks.fancybrownendgrass = registerBlock(new BrownEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancybrownendgrass");
+        GrassWorldBlocks.fancygreyendgrass = registerBlock(new GreyEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancygreyendgrass");
+        GrassWorldBlocks.fancylightgreyendgrass = registerBlock(new LightGreyEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancylightgreyendgrass");
+        GrassWorldBlocks.fancylightblueendgrass = registerBlock(new LightBlueEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancylightblueendgrass");
+        GrassWorldBlocks.fancylimegreenendgrass = registerBlock(new LimeGreenEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancylimegreenendgrass");
+        GrassWorldBlocks.fancygreenendgrass = registerBlock(new GreenEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancygreenendgrass");
+        GrassWorldBlocks.fancymagentaendgrass = registerBlock(new MagentaEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancymagentaendgrass");
+        GrassWorldBlocks.fancycyanendgrass = registerBlock(new CyanEndGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancycyanendgrass");
+
+        GrassWorldBlocks.orangenethergrass = registerBlock(new OrangeNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "orangenethergrass");
+        GrassWorldBlocks.bluenethergrass = registerBlock(new BlueNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "bluenethergrass");
+        GrassWorldBlocks.blacknethergrass = registerBlock(new BlackNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "blacknethergrass");
+        GrassWorldBlocks.whitenethergrass = registerBlock(new WhiteNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "whitenethergrass");
+        GrassWorldBlocks.rednethergrass = registerBlock(new RedNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "rednethergrass");
+        GrassWorldBlocks.yellownethergrass = registerBlock(new YellowNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "yellownethergrass");
+        GrassWorldBlocks.purplenethergrass = registerBlock(new PurpleNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "purplenethergrass");
+        GrassWorldBlocks.pinknethergrass = registerBlock(new PinkNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "pinknethergrass");
+        GrassWorldBlocks.brownnethergrass = registerBlock(new BrownNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "brownnethergrass");
+        GrassWorldBlocks.greynethergrass = registerBlock(new GreyNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "greynethergrass");
+        GrassWorldBlocks.lightgreynethergrass = registerBlock(new LightGreyNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "lightgreynethergrass");
+        GrassWorldBlocks.lightbluenethergrass = registerBlock(new LightBlueNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "lightbluenethergrass");
+        GrassWorldBlocks.limegreennethergrass = registerBlock(new LimeGreenNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "limegreennethergrass");
+        GrassWorldBlocks.greennethergrass = registerBlock(new GreenNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "greennethergrass");
+        GrassWorldBlocks.magentanethergrass = registerBlock(new MagentaNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "magentanethergrass");
+        GrassWorldBlocks.cyannethergrass = registerBlock(new CyanNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "cyannethergrass");
+
+        GrassWorldBlocks.fancyorangenethergrass = registerBlock(new FancyOrangeNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancyorangenethergrass");
+        GrassWorldBlocks.fancybluenethergrass = registerBlock(new FancyBlueNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancybluenethergrass");
+        GrassWorldBlocks.fancyblacknethergrass = registerBlock(new FancyBlackNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancyblacknethergrass");
+        GrassWorldBlocks.fancywhitenethergrass = registerBlock(new FancyWhiteNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancywhitenethergrass");
+        GrassWorldBlocks.fancyrednethergrass = registerBlock(new FancyRedNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancyrednethergrass");
+        GrassWorldBlocks.fancyyellownethergrass = registerBlock(new FancyYellowNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancyyellownethergrass");
+        GrassWorldBlocks.fancypurplenethergrass = registerBlock(new FancyPurpleNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancypurplenethergrass");
+        GrassWorldBlocks.fancypinknethergrass = registerBlock(new FancyPinkNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancypinknethergrass");
+        GrassWorldBlocks.fancybrownnethergrass = registerBlock(new FancyBrownNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancybrownnethergrass");
+        GrassWorldBlocks.fancygreynethergrass = registerBlock(new FancyGreyNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancygreynethergrass");
+        GrassWorldBlocks.fancylightgreynethergrass = registerBlock(new FancyLightGreyNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancylightgreynethergrass");
+        GrassWorldBlocks.fancylightbluenethergrass = registerBlock(new FancyLightBlueNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancylightbluenethergrass");
+        GrassWorldBlocks.fancylimegreennethergrass = registerBlock(new FancyLimeGreenNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancylimegreennethergrass");
+        GrassWorldBlocks.fancygreennethergrass = registerBlock(new FancyGreenNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancygreennethergrass");
+        GrassWorldBlocks.fancymagentanethergrass = registerBlock(new FancyMagentaNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancymagentanethergrass");
+        GrassWorldBlocks.fancycyannethergrass = registerBlock(new FancyCyanNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancycyannethergrass");
+
+
     }
 
     public static Block registerBlock(Block block, String name)
