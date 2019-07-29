@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraft:block/dirt",
+    "top": "grassworld:blocks/bluenethergrass2",
+    "side": "grassworld:blocks/bluenethergrass1"
+  }
+}
