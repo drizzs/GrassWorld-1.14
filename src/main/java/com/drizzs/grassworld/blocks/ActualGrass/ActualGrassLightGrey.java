@@ -33,7 +33,27 @@ public class ActualGrassLightGrey extends TallGrassBlock {
                 || block == GrassWorldBlocks.enchanted_red_grass || block == GrassWorldBlocks.enchanted_limegreen_grass || block == GrassWorldBlocks.enchanted_green_grass
                 || block == GrassWorldBlocks.enchanted_pink_grass || block == GrassWorldBlocks.enchanted_lightgrey_grass || block == GrassWorldBlocks.enchanted_grey_grass
                 || block == GrassWorldBlocks.enchanted_lightblue_grass || block == GrassWorldBlocks.enchanted_cyan_grass || block == GrassWorldBlocks.enchanted_magenta_grass
-                || block == GrassWorldBlocks.enchanted_purple_grass || block == GrassWorldBlocks.enchanted_white_grass || block == GrassWorldBlocks.enchanted_black_grass;
+                || block == GrassWorldBlocks.enchanted_purple_grass || block == GrassWorldBlocks.enchanted_white_grass || block == GrassWorldBlocks.enchanted_black_grass
+                || block == GrassWorldBlocks.orangenethergrass || block == GrassWorldBlocks.bluenethergrass || block == GrassWorldBlocks.yellownethergrass
+                || block == GrassWorldBlocks.rednethergrass || block == GrassWorldBlocks.limegreennethergrass || block == GrassWorldBlocks.greennethergrass
+                || block == GrassWorldBlocks.pinknethergrass || block == GrassWorldBlocks.lightgreynethergrass || block == GrassWorldBlocks.greynethergrass
+                || block == GrassWorldBlocks.lightbluenethergrass || block == GrassWorldBlocks.cyannethergrass || block == GrassWorldBlocks.magentanethergrass
+                || block == GrassWorldBlocks.purplenethergrass || block == GrassWorldBlocks.whitenethergrass || block == GrassWorldBlocks.blacknethergrass
+                || block == GrassWorldBlocks.fancyrednethergrass || block == GrassWorldBlocks.fancylimegreennethergrass || block == GrassWorldBlocks.fancygreennethergrass
+                || block == GrassWorldBlocks.fancypinknethergrass || block == GrassWorldBlocks.fancylightgreynethergrass || block == GrassWorldBlocks.fancygreynethergrass
+                || block == GrassWorldBlocks.fancylightbluenethergrass || block == GrassWorldBlocks.fancycyannethergrass || block == GrassWorldBlocks.fancymagentanethergrass
+                || block == GrassWorldBlocks.fancypurplenethergrass || block == GrassWorldBlocks.fancywhitenethergrass || block == GrassWorldBlocks.fancyblacknethergrass
+                || block == GrassWorldBlocks.fancyorangenethergrass || block == GrassWorldBlocks.fancybluenethergrass || block == GrassWorldBlocks.fancyyellownethergrass
+                || block == GrassWorldBlocks.orangeendgrass || block == GrassWorldBlocks.blueendgrass || block == GrassWorldBlocks.yellowendgrass
+                || block == GrassWorldBlocks.redendgrass || block == GrassWorldBlocks.limegreenendgrass || block == GrassWorldBlocks.greenendgrass
+                || block == GrassWorldBlocks.pinkendgrass || block == GrassWorldBlocks.lightgreyendgrass || block == GrassWorldBlocks.greyendgrass
+                || block == GrassWorldBlocks.lightblueendgrass || block == GrassWorldBlocks.cyanendgrass || block == GrassWorldBlocks.magentaendgrass
+                || block == GrassWorldBlocks.purpleendgrass || block == GrassWorldBlocks.whiteendgrass || block == GrassWorldBlocks.blackendgrass
+                || block == GrassWorldBlocks.fancyorangeendgrass || block == GrassWorldBlocks.fancyblueendgrass || block == GrassWorldBlocks.fancyyellowendgrass
+                || block == GrassWorldBlocks.fancyredendgrass || block == GrassWorldBlocks.fancylimegreenendgrass || block == GrassWorldBlocks.fancygreenendgrass
+                || block == GrassWorldBlocks.fancypinkendgrass || block == GrassWorldBlocks.fancylightgreyendgrass || block == GrassWorldBlocks.fancygreyendgrass
+                || block == GrassWorldBlocks.fancylightblueendgrass || block == GrassWorldBlocks.fancycyanendgrass || block == GrassWorldBlocks.fancymagentaendgrass
+                || block == GrassWorldBlocks.fancypurpleendgrass || block == GrassWorldBlocks.fancywhiteendgrass || block == GrassWorldBlocks.fancyblackendgrass;
     }
 
 

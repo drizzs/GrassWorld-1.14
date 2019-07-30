@@ -1,5 +1,6 @@
 package com.drizzs.grassworld.blocks.nethergrass.normal;
 
+import com.drizzs.grassworld.blocks.Base.NetherGrassBase;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.GrassBlock;
@@ -13,7 +14,7 @@ import net.minecraft.world.gen.feature.FlowersFeature;
 import java.util.List;
 import java.util.Random;
 
-public class LightBlueNetherGrass extends GrassBlock
+public class LightBlueNetherGrass extends NetherGrassBase
 {
 
     public LightBlueNetherGrass(Properties p_i48388_1_) {

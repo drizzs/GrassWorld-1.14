@@ -16,11 +16,11 @@ import net.minecraft.world.gen.feature.FlowersFeature;
 import java.util.List;
 import java.util.Random;
 
-public class GrassBase extends EndSpreadableBase implements IGrowable
+public class EndGrassBase extends EndSpreadableBase implements IGrowable
 
 {
 
-    public GrassBase(Block.Properties properties) {
+    public EndGrassBase(Block.Properties properties) {
         super(properties);
     }
 

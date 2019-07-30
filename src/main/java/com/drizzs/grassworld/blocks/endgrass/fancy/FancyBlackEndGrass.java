@@ -1,10 +1,8 @@
 package com.drizzs.grassworld.blocks.endgrass.fancy;
 
-import com.drizzs.grassworld.blocks.Base.GrassBase;
+import com.drizzs.grassworld.blocks.Base.EndGrassBase;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
-import com.drizzs.grassworld.blocks.ModBlocks;
 import net.minecraft.block.*;
-import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -14,7 +12,7 @@ import net.minecraft.world.gen.feature.FlowersFeature;
 import java.util.List;
 import java.util.Random;
 
-public class FancyBlackEndGrass extends GrassBase {
+public class FancyBlackEndGrass extends EndGrassBase {
 
     public FancyBlackEndGrass(Properties p_i48388_1_) {
         super(p_i48388_1_);

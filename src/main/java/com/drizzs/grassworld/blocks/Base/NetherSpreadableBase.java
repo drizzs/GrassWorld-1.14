@@ -1,6 +1,5 @@
 package com.drizzs.grassworld.blocks.Base;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SnowBlock;
@@ -13,9 +12,9 @@ import net.minecraft.world.lighting.LightEngine;
 
 import java.util.Random;
 
-public abstract class EndSpreadableBase extends DirtBase
+public abstract class NetherSpreadableBase extends DirtBase
 {
-    protected EndSpreadableBase(Block.Properties builder)
+    protected NetherSpreadableBase(Properties builder)
     {
         super(builder);
     }
@@ -44,7 +43,7 @@ public abstract class EndSpreadableBase extends DirtBase
             System.out.println("this works");
             if (!worldIn.isAreaLoaded(pos, 3)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light and spreading
             if (!getLightLevel(state, worldIn, pos)) {
-                worldIn.setBlockState(pos, Blocks.END_STONE.getDefaultState());
+                worldIn.setBlockState(pos, Blocks.NETHERRACK.getDefaultState());
                 System.out.println("this works");
 
             } else {
@@ -53,7 +52,7 @@ public abstract class EndSpreadableBase extends DirtBase
                     System.out.println("This also works");
                     for(int i = 0; i < 4; ++i) {
                         BlockPos blockpos = pos.add(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
-                        if (worldIn.getBlockState(blockpos).getBlock() == Blocks.END_STONE && getFluidState(blockstate, worldIn, blockpos)) {
+                        if (worldIn.getBlockState(blockpos).getBlock() == Blocks.NETHERRACK && getFluidState(blockstate, worldIn, blockpos)) {
                             worldIn.setBlockState(blockpos, blockstate.with(SNOWY, Boolean.valueOf(worldIn.getBlockState(blockpos.up()).getBlock() == Blocks.SNOW)));
                             System.out.println("It all works");
                         }

@@ -1,10 +1,11 @@
-package com.drizzs.grassworld.blocks.endgrass.normal;
+package com.drizzs.grassworld.blocks.Base;
 
-import com.drizzs.grassworld.blocks.Base.EndGrassBase;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.IGrowable;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.DecoratedFeatureConfig;
@@ -13,16 +14,25 @@ import net.minecraft.world.gen.feature.FlowersFeature;
 import java.util.List;
 import java.util.Random;
 
-public class WhiteEndGrass extends EndGrassBase
+public class NetherGrassBase extends NetherSpreadableBase implements IGrowable
+
 {
 
-    public WhiteEndGrass(Properties p_i48388_1_) {
-        super(p_i48388_1_);
+    public NetherGrassBase(Properties properties) {
+        super(properties);
+    }
+
+    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+        return worldIn.getBlockState(pos.up()).isAir();
+    }
+
+    public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
+        return true;
     }
 
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {
         BlockPos blockpos = pos.up();
-        BlockState blockstate = GrassWorldBlocks.actualgrass_white.getDefaultState();
+        BlockState blockstate = GrassWorldBlocks.actualgrass_black.getDefaultState();
 
         for(int i = 0; i < 128; ++i) {
             BlockPos blockpos1 = blockpos;
@@ -67,4 +77,14 @@ public class WhiteEndGrass extends EndGrassBase
         }
 
     }
+
+    public boolean isSolid(BlockState state) {
+        return true;
+    }
+
+    public BlockRenderLayer getRenderLayer() {
+        return BlockRenderLayer.CUTOUT_MIPPED;
+    }
+
+
 }

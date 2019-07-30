@@ -12,11 +12,11 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 
-public class EndBase extends Block{
+public class DirtBase extends Block{
 
     public static final BooleanProperty SNOWY;
 
-    protected EndBase(Block.Properties properties) {
+    protected DirtBase(Block.Properties properties) {
         super(properties);
         this.setDefaultState((BlockState)((BlockState)this.stateContainer.getBaseState()).with(SNOWY, false));
     }
