@@ -37,8 +37,8 @@ public abstract class EndSpreadableBase extends EndBase
         return getLightLevel(state, iworld, pos) && !iworld.getFluidState(blockpos).isTagged(FluidTags.WATER);
     }
 
-
-
+    @Deprecated
+    @Override
     public void tick(BlockState state, World worldIn, BlockPos pos, Random random) {
         if (!worldIn.isRemote) {
             System.out.println("this works");
@@ -48,7 +48,7 @@ public abstract class EndSpreadableBase extends EndBase
                 System.out.println("this works");
 
             } else {
-                if (worldIn.getLight(pos.up()) >= 9) {
+                if (worldIn.getLight(pos.up()) >= 0) {
                     BlockState blockstate = this.getDefaultState();
                     System.out.println("This also works");
                     for(int i = 0; i < 4; ++i) {

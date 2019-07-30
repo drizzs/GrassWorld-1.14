@@ -35,10 +35,6 @@ public class EnchantedBlackGrass extends GrassBlock
     }
 
 
-
-
-
-
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {
         BlockPos blockpos = pos.up();
         BlockState blockstate = GrassWorldBlocks.actualgrass_black.getDefaultState();

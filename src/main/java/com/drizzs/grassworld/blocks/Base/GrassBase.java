@@ -1,5 +1,6 @@
 package com.drizzs.grassworld.blocks.Base;
 
+import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -33,7 +34,7 @@ public class GrassBase extends EndSpreadableBase implements IGrowable
 
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {
         BlockPos blockpos = pos.up();
-        BlockState blockstate = Blocks.GRASS.getDefaultState();
+        BlockState blockstate = GrassWorldBlocks.actualgrass_black.getDefaultState();
 
         for(int i = 0; i < 128; ++i) {
             BlockPos blockpos1 = blockpos;

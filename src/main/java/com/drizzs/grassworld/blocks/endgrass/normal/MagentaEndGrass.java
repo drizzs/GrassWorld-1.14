@@ -1,5 +1,6 @@
 package com.drizzs.grassworld.blocks.endgrass.normal;
 
+import com.drizzs.grassworld.blocks.Base.GrassBase;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.GrassBlock;
@@ -13,7 +14,7 @@ import net.minecraft.world.gen.feature.FlowersFeature;
 import java.util.List;
 import java.util.Random;
 
-public class MagentaEndGrass extends GrassBlock
+public class MagentaEndGrass extends GrassBase
 {
 
     public MagentaEndGrass(Properties p_i48388_1_) {

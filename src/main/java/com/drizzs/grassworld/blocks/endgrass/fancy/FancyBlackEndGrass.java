@@ -21,8 +21,6 @@ public class FancyBlackEndGrass extends GrassBase {
     }
 
 
-
-    @Override
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {
         BlockPos blockpos = pos.up();
         BlockState blockstate = GrassWorldBlocks.actualgrass_black.getDefaultState();
