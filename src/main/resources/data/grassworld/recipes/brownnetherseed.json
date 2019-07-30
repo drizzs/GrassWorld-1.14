@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:netherrack"
+    },
+    {
+      "item": "grassworld:brownseed"
+    }
+  ],
+  "result": 
+  {
+    "item": "grassworld:brownnetherseed"
+  }
+}
