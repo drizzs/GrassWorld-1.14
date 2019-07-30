@@ -4,6 +4,7 @@ import com.drizzs.grassworld.blocks.Base.GrassBase;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import com.drizzs.grassworld.blocks.ModBlocks;
 import net.minecraft.block.*;
+import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -18,6 +19,8 @@ public class FancyBlackEndGrass extends GrassBase {
     public FancyBlackEndGrass(Properties p_i48388_1_) {
         super(p_i48388_1_);
     }
+
+
 
     @Override
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {
@@ -66,6 +69,7 @@ public class FancyBlackEndGrass extends GrassBase {
             }
         }
     }
+
 
 
 

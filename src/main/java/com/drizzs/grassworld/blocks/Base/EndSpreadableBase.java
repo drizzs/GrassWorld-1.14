@@ -13,7 +13,7 @@ import net.minecraft.world.lighting.LightEngine;
 
 import java.util.Random;
 
-public abstract class EndSpreadableBase extends Block
+public abstract class EndSpreadableBase extends EndBase
 {
     protected EndSpreadableBase(Block.Properties builder)
     {
@@ -31,7 +31,7 @@ public abstract class EndSpreadableBase extends Block
         }
     }
 
-    private static boolean getFluid(BlockState state, IWorldReader iworld, BlockPos pos)
+    private static boolean getFluidState(BlockState state, IWorldReader iworld, BlockPos pos)
     {
         BlockPos blockpos = pos.up();
         return getLightLevel(state, iworld, pos) && !iworld.getFluidState(blockpos).isTagged(FluidTags.WATER);
@@ -39,7 +39,7 @@ public abstract class EndSpreadableBase extends Block
 
 
 
-    public void animateTick(BlockState state, World worldIn, BlockPos pos, Random random) {
+    public void tick(BlockState state, World worldIn, BlockPos pos, Random random) {
         if (!worldIn.isRemote) {
             System.out.println("this works");
             if (!worldIn.isAreaLoaded(pos, 3)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light and spreading
@@ -53,8 +53,8 @@ public abstract class EndSpreadableBase extends Block
                     System.out.println("This also works");
                     for(int i = 0; i < 4; ++i) {
                         BlockPos blockpos = pos.add(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
-                        if (worldIn.getBlockState(blockpos).getBlock() == Blocks.END_STONE && getFluid(blockstate, worldIn, blockpos)) {
-                            worldIn.setBlockState(blockpos, blockstate);
+                        if (worldIn.getBlockState(blockpos).getBlock() == Blocks.END_STONE && getFluidState(blockstate, worldIn, blockpos)) {
+                            worldIn.setBlockState(blockpos, blockstate.with(SNOWY, Boolean.valueOf(worldIn.getBlockState(blockpos.up()).getBlock() == Blocks.SNOW)));
                             System.out.println("It all works");
                         }
                     }
