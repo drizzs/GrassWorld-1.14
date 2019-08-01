@@ -41,21 +41,20 @@ public abstract class EndSpreadableBase extends DirtBase
     @Override
     public void tick(BlockState state, World worldIn, BlockPos pos, Random random) {
         if (!worldIn.isRemote) {
-            System.out.println("this works");
+
             if (!worldIn.isAreaLoaded(pos, 3)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light and spreading
             if (!getLightLevel(state, worldIn, pos)) {
                 worldIn.setBlockState(pos, Blocks.END_STONE.getDefaultState());
-                System.out.println("this works");
+
 
             } else {
                 if (worldIn.getLight(pos.up()) >= 0) {
                     BlockState blockstate = this.getDefaultState();
-                    System.out.println("This also works");
                     for(int i = 0; i < 4; ++i) {
                         BlockPos blockpos = pos.add(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
                         if (worldIn.getBlockState(blockpos).getBlock() == Blocks.END_STONE && getFluidState(blockstate, worldIn, blockpos)) {
                             worldIn.setBlockState(blockpos, blockstate.with(SNOWY, Boolean.valueOf(worldIn.getBlockState(blockpos.up()).getBlock() == Blocks.SNOW)));
-                            System.out.println("It all works");
+
                         }
                     }
                 }

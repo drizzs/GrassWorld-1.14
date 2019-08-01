@@ -1,5 +1,6 @@
 package com.drizzs.grassworld.api.particle.types;
 
+import com.drizzs.grassworld.api.particle.GrassParticleSprite;
 import net.minecraft.client.particle.*;
 import net.minecraft.particles.BasicParticleType;
 import net.minecraft.particles.ParticleTypes;
@@ -9,21 +10,21 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.registries.ObjectHolder;
 
 
-public class EnchantedBlack extends SpriteTexturedParticle
+public class EnchantedBlack extends GrassParticleSprite
 {
 
-    private EnchantedBlack(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn) {
-        super(worldIn, xCoordIn, yCoordIn, zCoordIn, 0.0D, 0.0D, 0.0D);
-        this.motionX *= 0.800000011920929D;
+
+    protected EnchantedBlack(World world, double x, double y, double z) {
+        super(world, x, y, z, 0.0D, 0.0D, 0.0D);
+        this.motionX *= 0;
         this.motionY *= 0.800000011920929D;
-        this.motionZ *= 0.800000011920929D;
-        this.motionY = (double)(this.rand.nextFloat() * 0.4F + 0.05F);
+        this.motionZ *= 0;
+        this.motionY = (double) (this.rand.nextFloat() * 0.4F + 0.05F);
         this.particleScale *= this.rand.nextFloat() * 2.0F + 0.2F;
-        this.maxAge = (int)(16.0D / (Math.random() * 0.8D + 0.2D));
+        this.maxAge = (int) (16.0D / (Math.random() * 0.8D + 0.2D));
     }
 
-
-    public void tick() {
+        public void tick() {
         this.prevPosX = this.posX;
         this.prevPosY = this.posY;
         this.prevPosZ = this.posZ;
@@ -34,9 +35,9 @@ public class EnchantedBlack extends SpriteTexturedParticle
         } else {
             this.motionY -= 0.03D;
             this.move(this.motionX, this.motionY, this.motionZ);
-            this.motionX *= 0.9990000128746033D;
+            this.motionX *= 0.1D;
             this.motionY *= 0.9990000128746033D;
-            this.motionZ *= 0.9990000128746033D;
+            this.motionZ *= 0.1D;
             if (this.onGround) {
                 this.motionX *= 0.699999988079071D;
                 this.motionZ *= 0.699999988079071D;
@@ -48,8 +49,8 @@ public class EnchantedBlack extends SpriteTexturedParticle
         return IParticleRenderType.PARTICLE_SHEET_OPAQUE;
     }
 
-    public float getScale(float p_217561_1_) {
-        float f = ((float)this.age + p_217561_1_) / (float)this.maxAge;
+    public float getScale(float float1) {
+        float f = ((float)this.age + float1) / (float)this.maxAge;
         return this.particleScale * (1.0F - f * f);
     }
 
