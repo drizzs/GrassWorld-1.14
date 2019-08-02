@@ -1,8 +1,11 @@
 package com.drizzs.grassworld.api.particle;
 
+import net.minecraft.client.particle.ParticleManager;
+import net.minecraft.client.particle.SpellParticle;
 import net.minecraft.particles.BasicParticleType;
 import net.minecraft.particles.IParticleData;
 import net.minecraft.particles.ParticleType;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.registry.Registry;
 
 public class GWParticleTypes
@@ -24,7 +27,6 @@ public class GWParticleTypes
         public static final BasicParticleType ENCHANTEDCYAN = register("enchantedcyan", true);
         public static final BasicParticleType ENCHANTEDMAGENTA = register("enchantedmagenta", true);
         public static final BasicParticleType ENCHANTEDBROWN = register("enchantedbrown", true);
-
 
 
 

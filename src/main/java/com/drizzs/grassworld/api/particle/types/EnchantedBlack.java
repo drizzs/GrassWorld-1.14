@@ -21,7 +21,7 @@ public class EnchantedBlack extends GrassParticleSprite
         this.motionZ *= 0;
         this.motionY = (double) (this.rand.nextFloat() * 0.4F + 0.05F);
         this.particleScale *= this.rand.nextFloat() * 2.0F + 0.2F;
-        this.maxAge = (int) (16.0D / (Math.random() * 0.8D + 0.2D));
+        this.maxAge = (int) (20.0D / (Math.random() * 0.8D + 0.2D));
     }
 
         public void tick() {
@@ -35,9 +35,9 @@ public class EnchantedBlack extends GrassParticleSprite
         } else {
             this.motionY -= 0.03D;
             this.move(this.motionX, this.motionY, this.motionZ);
-            this.motionX *= 0.1D;
-            this.motionY *= 0.9990000128746033D;
-            this.motionZ *= 0.1D;
+            this.motionX *= 0.0D;
+            this.motionY *= 6.9990000128746033D;
+            this.motionZ *= 0.0D;
             if (this.onGround) {
                 this.motionX *= 0.699999988079071D;
                 this.motionZ *= 0.699999988079071D;

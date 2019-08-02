@@ -81,7 +81,7 @@ public class OrangeGrass extends GrassBlock
 
         if (rand.nextInt(5) == 0) {
             for(int i = 0; i < rand.nextInt(1) + 1; ++i) {
-                worldIn.addParticle(GWParticleTypes.ENCHANTEDBLACK, (double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 0.5F), (double)((float)pos.getZ() + 0.5F), (double)(rand.nextFloat() / 0F), 5.0F, (double)(rand.nextFloat() / 0F));
+                worldIn.addParticle(ParticleTypes.LAVA, (double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 10.5F), (double)((float)pos.getZ() + 0.5F), 0F, 20F, 0F);
             }
         }
 
