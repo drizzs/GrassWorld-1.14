@@ -10,6 +10,6 @@ public class CommonProxy {
     }
     public void init() {}
 
-    public void spawnParticle(GWParticleTypes type, World parWorld, double x, double y, double z, Object... info) {}
+
 
 }

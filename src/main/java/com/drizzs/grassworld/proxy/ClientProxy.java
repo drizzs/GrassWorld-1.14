@@ -10,10 +10,5 @@ public class ClientProxy extends CommonProxy
 
     }
 
-    @Override
-    public void spawnParticle(GWParticleTypes type, World parWorld, double x, double y, double z, Object... info)
-    {
-
-    }
 
 }

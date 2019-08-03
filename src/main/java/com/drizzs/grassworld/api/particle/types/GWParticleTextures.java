@@ -9,6 +9,11 @@ import net.minecraftforge.fml.common.Mod;
 public class GWParticleTextures {
 
     public static ResourceLocation[] ENCHANTEDBLACK = new ResourceLocation[] {
-            new ResourceLocation("grassworld:textures/particles/enchantedblack.png")
+            new ResourceLocation("grassworld:textures/particles/enchantedblack.png"),
+            new ResourceLocation("grassworld:textures/particles/enchantedblack1.png"),
+            new ResourceLocation("grassworld:textures/particles/enchantedblack2.png"),
+            new ResourceLocation("grassworld:textures/particles/enchantedblack3.png"),
+            new ResourceLocation("grassworld:textures/particles/enchantedblack4.png"),
+            new ResourceLocation("grassworld:textures/particles/enchantedblack4.png")
     };
     }

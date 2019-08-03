@@ -16,8 +16,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.List;
 import java.util.Random;
 
-public class OrangeGrass extends GrassBlock
-{
+public class OrangeGrass extends GrassBlock {
 
     public OrangeGrass(Properties p_i48388_1_) {
         super(p_i48388_1_);
@@ -28,15 +27,15 @@ public class OrangeGrass extends GrassBlock
         BlockPos blockpos = pos.up();
         BlockState blockstate = GrassWorldBlocks.actualgrass_orange.getDefaultState();
 
-        for(int i = 0; i < 128; ++i) {
+        for (int i = 0; i < 128; ++i) {
             BlockPos blockpos1 = blockpos;
             int j = 0;
 
-            while(true) {
+            while (true) {
                 if (j >= i / 16) {
                     BlockState blockstate2 = worldIn.getBlockState(blockpos1);
                     if (blockstate2.getBlock() == blockstate.getBlock() && rand.nextInt(10) == 0) {
-                        ((IGrowable)blockstate.getBlock()).grow(worldIn, rand, blockpos1, blockstate2);
+                        ((IGrowable) blockstate.getBlock()).grow(worldIn, rand, blockpos1, blockstate2);
                     }
 
                     if (!blockstate2.isAir()) {
@@ -50,7 +49,7 @@ public class OrangeGrass extends GrassBlock
                             break;
                         }
 
-                        blockstate1 = ((FlowersFeature)((DecoratedFeatureConfig)(list.get(0)).config).feature.feature).getRandomFlower(rand, blockpos1);
+                        blockstate1 = ((FlowersFeature) ((DecoratedFeatureConfig) (list.get(0)).config).feature.feature).getRandomFlower(rand, blockpos1);
                     } else {
                         blockstate1 = blockstate;
                     }
@@ -76,12 +75,10 @@ public class OrangeGrass extends GrassBlock
     public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
 
         if (rand.nextInt(5) == 0) {
-            for(int i = 0; i < rand.nextInt(1) + 1; ++i) {
-                int v1 = 0.(rand.nextInt(9));
-                int v2 = rand.nextInt(9);
-                int v3 = rand.nextInt(9);
+            for (int i = 0; i < rand.nextInt(1) + 1; ++i) {
 
-                GWParticleSpawn.ENCHANTEDBLACK.spawn(worldIn, 0, 0, 0, v1, v2, v3);
+                System.out.print("Tick Works");
+                GWParticleSpawn.ENCHANTEDBLACK.spawn(worldIn, 0, 0, 0, 0d, 0.004d, 0d);
             }
         }
 
