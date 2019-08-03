@@ -1,6 +1,5 @@
 package com.drizzs.grassworld.proxy;
 
-import com.drizzs.grassworld.api.particle.GWParticleTypes;
 import net.minecraft.world.World;
 
 public class CommonProxy {

@@ -2,7 +2,7 @@
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
     "bottom": "minecraft:block/dirt",
-    "top": "grassworld:blocks/brownendgrass2",
-    "side": "grassworld:blocks/brownendgrass1"
+    "top": "grassworld:blocks/brown_grass2",
+    "side": "grassworld:blocks/brownendgrass"
   }
 }

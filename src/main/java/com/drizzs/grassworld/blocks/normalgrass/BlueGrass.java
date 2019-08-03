@@ -1,18 +1,14 @@
 package com.drizzs.grassworld.blocks.normalgrass;
 
-import com.drizzs.grassworld.api.particle.GWParticleTypes;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.GrassBlock;
 import net.minecraft.block.IGrowable;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.DecoratedFeatureConfig;
 import net.minecraft.world.gen.feature.FlowersFeature;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.List;
 import java.util.Random;
@@ -70,21 +66,5 @@ public class BlueGrass extends GrassBlock
         }
 
     }
-    @OnlyIn(Dist.CLIENT)
-    public void animateTick(World world, BlockPos pos, IFluidState p_204522_3_, Random random) {
-        BlockPos blockpos = pos.up();
-        if (world.getBlockState(blockpos).isAir() && !world.getBlockState(blockpos).isOpaqueCube(world, blockpos)) {
-            System.out.println("this works");
-            if (random.nextInt(100) == 0) {
-                System.out.println("this works");
-                double x = (double) ((float) pos.getX() + random.nextFloat());
-                double y = (double) (pos.getY() + 1);
-                double z = (double) ((float) pos.getZ() + random.nextFloat());
-                world.addParticle(GWParticleTypes.ENCHANTEDBLACK, x, y, z, 0.0D, 0.0D, 0.0D);
 
-            }
-
-        }
-
-    }
 }

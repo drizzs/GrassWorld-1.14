@@ -1,72 +1,108 @@
 package com.drizzs.grassworld.api.particle.types;
 
-import com.drizzs.grassworld.api.particle.GrassParticleSprite;
+import com.drizzs.grassworld.api.particle.GWParticle;
+import com.drizzs.grassworld.api.particle.GWParticleSpawn;
+import com.drizzs.grassworld.util.GWIP;
 import net.minecraft.client.particle.*;
-import net.minecraft.particles.BasicParticleType;
-import net.minecraft.particles.ParticleTypes;
+import net.minecraft.client.renderer.ActiveRenderInfo;
+import net.minecraft.client.renderer.BufferBuilder;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.registries.ObjectHolder;
 
 
-public class EnchantedBlack extends GrassParticleSprite
+public class EnchantedBlack extends GWParticle
 {
+    private final float rotSpeed;
+    private float angle;
+    private final float scale;
+    private final int MAX_FRAME_ID = 5;
+    protected int currentFrame = 0;
+    private boolean directionRight = true;
+    private int lastTick = 0;
 
-
-    protected EnchantedBlack(World world, double x, double y, double z) {
-        super(world, x, y, z, 0.0D, 0.0D, 0.0D);
-        this.motionX *= 0;
-        this.motionY *= 0.800000011920929D;
-        this.motionZ *= 0;
-        this.motionY = (double) (this.rand.nextFloat() * 0.4F + 0.05F);
-        this.particleScale *= this.rand.nextFloat() * 2.0F + 0.2F;
-        this.maxAge = (int) (20.0D / (Math.random() * 0.8D + 0.2D));
+    public EnchantedBlack(World world, double posX, double posY, double posZ, double motionX, double motionY, double motionZ) {
+        super(world, posX, posY, posZ, motionX, motionY, motionZ);
+        this.motionX = this.motionX * 0.009999999776482582d + motionX;
+        this.motionY = this.motionY * 0.009999999776482582d + motionY;
+        this.motionZ = this.motionZ * 0.009999999776482582d + motionZ;
+        this.scale = this.particleScale = 0.5f;
+        this.rotSpeed = ((float)Math.random() - 0.5F) * 0.1F;
+        this.particleAngle = (float)Math.random() * ((float)Math.PI * 2F);
+        this.angle = (float)Math.random() * ((float)Math.PI * 2F);
+        this.particleGravity = 0.035F;
+        this.particleRed = 1f;
+        this.particleGreen = 1f;
+        this.particleBlue = 1f;
+        this.maxAge = (int) (15d / (Math.random() * 0.8d + 0.2d)) + 4;
     }
 
-        public void tick() {
-        this.prevPosX = this.posX;
-        this.prevPosY = this.posY;
-        this.prevPosZ = this.posZ;
-        float f = (float)this.age / (float)this.maxAge;
+    @Override
+    public void move(double x, double y, double z) {
+        super.move(x, y, z);
+    }
 
-        if (this.age++ >= this.maxAge) {
-            this.setExpired();
-        } else {
-            this.motionY -= 0.03D;
-            this.move(this.motionX, this.motionY, this.motionZ);
-            this.motionX *= 0.0D;
-            this.motionY *= 6.9990000128746033D;
-            this.motionZ *= 0.0D;
-            if (this.onGround) {
-                this.motionX *= 0.699999988079071D;
-                this.motionZ *= 0.699999988079071D;
+    @Override
+    public void onPreRender(BufferBuilder buffer, ActiveRenderInfo activeInfo, float partialTicks, float rotationX, float rotationZ, float rotationYZ, float rotationXY, float rotationXZ) {
+        super.onPreRender(buffer, activeInfo, partialTicks, rotationX, rotationZ, rotationYZ, rotationXY, rotationXZ);
+        Entity entity = activeInfo.getRenderViewEntity();
+        if (entity.ticksExisted >= this.lastTick + 5) {
+            if (this.currentFrame == MAX_FRAME_ID) {
+                this.directionRight = false;
+            } else if (currentFrame == 0) {
+                this.directionRight = true;
             }
+            this.currentFrame = this.currentFrame + (directionRight ? 1 : -1);
+            this.lastTick = entity.ticksExisted;
         }
-
-    }
-    public IParticleRenderType getRenderType() {
-        return IParticleRenderType.PARTICLE_SHEET_OPAQUE;
+        float f = ((float) this.age + partialTicks) / (float) this.maxAge;
+        this.particleScale = this.scale * (1f - f * f * 0.5f);
     }
 
-    public float getScale(float float1) {
-        float f = ((float)this.age + float1) / (float)this.maxAge;
-        return this.particleScale * (1.0F - f * f);
+    @Override
+    public void tick() {
+        super.tick();
+        this.prevParticleAngle = this.particleAngle;
+        this.particleAngle += (float)Math.PI * this.rotSpeed * 2.0F;
+        if (this.onGround) {
+            this.prevParticleAngle = this.particleAngle = 0.0F;
+        }
+        this.motionX += Math.cos(angle) * 0.0025;
+        this.motionY *= 1.06D;
+        this.motionZ += Math.sin(angle) * 0.0025;
+    }
+
+    @Override
+    public int getBrightnessForRender(float partialTick) {
+        float f = ((float) this.age + partialTick) / (float) this.maxAge;
+        f = MathHelper.clamp(f, 0f, 1f);
+        int i = super.getBrightnessForRender(partialTick);
+        int j = i & 255;
+        int k = i >> 16 & 255;
+        j = j + (int) (f * 15f * 16f);
+        if (j > 240) {
+            j = 240;
+        }
+        return j | k << 16;
+    }
+
+    @Override
+    public ResourceLocation getTexture() {
+        return GWParticleTextures.ENCHANTEDBLACK[currentFrame];
     }
 
     @OnlyIn(Dist.CLIENT)
-    public static class Factory implements IParticleFactory<BasicParticleType> {
-        private final IAnimatedSprite spriteSet;
+    public static class Factory implements GWIP {
 
-        public Factory(IAnimatedSprite p_i50495_1_) {
-            this.spriteSet = p_i50495_1_;
+        @Override
+        public Particle makeParticle(World world, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed, int... params) {
+            return new EnchantedBlack(world, x, y, z, xSpeed, ySpeed, zSpeed);
         }
 
-        public Particle makeParticle(BasicParticleType typeIn, World worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-            EnchantedBlack enchantedblack = new EnchantedBlack(worldIn, x, y, z);
-            enchantedblack.selectSpriteRandomly(this.spriteSet);
-            return enchantedblack;
-        }
     }
+
 
 }

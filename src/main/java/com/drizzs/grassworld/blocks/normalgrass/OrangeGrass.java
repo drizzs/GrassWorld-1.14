@@ -1,14 +1,10 @@
 package com.drizzs.grassworld.blocks.normalgrass;
 
-import com.drizzs.grassworld.api.particle.GWParticleTypes;
+import com.drizzs.grassworld.api.particle.GWParticleSpawn;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.GrassBlock;
 import net.minecraft.block.IGrowable;
-import net.minecraft.fluid.IFluidState;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -81,14 +77,18 @@ public class OrangeGrass extends GrassBlock
 
         if (rand.nextInt(5) == 0) {
             for(int i = 0; i < rand.nextInt(1) + 1; ++i) {
-                worldIn.addParticle(ParticleTypes.LAVA, (double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 10.5F), (double)((float)pos.getZ() + 0.5F), 0F, 20F, 0F);
+                int v1 = 0.(rand.nextInt(9));
+                int v2 = rand.nextInt(9);
+                int v3 = rand.nextInt(9);
+
+                GWParticleSpawn.ENCHANTEDBLACK.spawn(worldIn, 0, 0, 0, v1, v2, v3);
             }
         }
 
 
     }
 
-    }
+}
 
 
 

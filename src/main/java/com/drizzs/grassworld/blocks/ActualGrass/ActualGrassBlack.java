@@ -12,7 +12,10 @@ public class ActualGrassBlack extends TallGrassBlock {
 
 
     public ActualGrassBlack(Properties properties) {
+
         super(properties);
+
+
     }
 
     @Override
