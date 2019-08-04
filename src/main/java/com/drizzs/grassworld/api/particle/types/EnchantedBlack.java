@@ -1,7 +1,7 @@
 package com.drizzs.grassworld.api.particle.types;
 
 import com.drizzs.grassworld.api.particle.GWParticle;
-import com.drizzs.grassworld.api.particle.GWParticleSpawn;
+import com.drizzs.grassworld.api.particle.GWParticleTextures;
 import com.drizzs.grassworld.util.GWIP;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.renderer.ActiveRenderInfo;
@@ -16,7 +16,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class EnchantedBlack extends GWParticle
 {
-    private final float rotSpeed;
+    private final float decaySpeed;
     private float angle;
     private final float scale;
     private final int MAX_FRAME_ID = 5;
@@ -30,14 +30,14 @@ public class EnchantedBlack extends GWParticle
         this.motionY = this.motionY * 0.009999999776482582d + motionY;
         this.motionZ = this.motionZ * 0.009999999776482582d + motionZ;
         this.scale = this.particleScale = 0.5f;
-        this.rotSpeed = ((float)Math.random() - 0.5F) * 0.1F;
+        this.decaySpeed = ((float)Math.random() - 0.5F) * 0.1F;
         this.particleAngle = (float)Math.random() * ((float)Math.PI * 2F);
         this.angle = (float)Math.random() * ((float)Math.PI * 2F);
-        this.particleGravity = 0.035F;
+        this.particleGravity = -0.9F;
         this.particleRed = 1f;
         this.particleGreen = 1f;
         this.particleBlue = 1f;
-        this.maxAge = (int) (15d / (Math.random() * 0.8d + 0.2d)) + 4;
+        this.maxAge = (int) (.5d / (Math.random() * 0.8d + 0.2d)) + 4;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class EnchantedBlack extends GWParticle
     public void tick() {
         super.tick();
         this.prevParticleAngle = this.particleAngle;
-        this.particleAngle += (float)Math.PI * this.rotSpeed * 2.0F;
+        this.particleAngle += (float)Math.PI * this.decaySpeed * 2.0F;
         if (this.onGround) {
             this.prevParticleAngle = this.particleAngle = 0.0F;
         }
