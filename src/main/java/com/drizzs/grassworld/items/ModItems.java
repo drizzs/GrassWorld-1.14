@@ -145,11 +145,11 @@ public class ModItems {
 
     }
 
-    public static Item registerItem(Item item, String name)
-    {
-        item.setRegistryName(name);
-        ForgeRegistries.ITEMS.register(item);
-        return item;
-    }
+        public static Item registerItem(Item item, String name)
+        {
+            item.setRegistryName(name);
+            ForgeRegistries.ITEMS.register(item);
+            return item;
+        }
 }
 

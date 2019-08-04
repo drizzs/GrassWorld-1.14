@@ -35,9 +35,9 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 
         public void spawn(World world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, int... parameters) {
-            if (world.isRemote) {
+
                 spawn(create(world, x, y, z, velocityX, velocityY, velocityZ, parameters));
-            }
+
         }
 
         @OnlyIn(Dist.CLIENT)

@@ -73,18 +73,13 @@ public class OrangeGrass extends GrassBlock {
 
     @OnlyIn(Dist.CLIENT)
     public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-
-        if (rand.nextInt(5) == 0) {
-            for (int i = 0; i < rand.nextInt(1) + 1; ++i) {
-
+        
+            if (rand.nextInt(8) == 0) {
                 System.out.print("Tick Works");
-                GWParticleSpawn.ENCHANTEDBLACK.spawn(worldIn, 0, 0, 0, 0d, 0.004d, 0d);
+                GWParticleSpawn.ENCHANTEDBLACK.spawn(worldIn, rand.nextInt(8) / 10, .2D, rand.nextInt(8) / 10, 0, 0, 0);
             }
-        }
-
 
     }
-
 }
 
 

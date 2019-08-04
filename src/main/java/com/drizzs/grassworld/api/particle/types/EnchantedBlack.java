@@ -17,7 +17,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class EnchantedBlack extends GWParticle
 {
     private final float decaySpeed;
-    private float angle;
     private final float scale;
     private final int MAX_FRAME_ID = 5;
     protected int currentFrame = 0;
@@ -26,18 +25,14 @@ public class EnchantedBlack extends GWParticle
 
     public EnchantedBlack(World world, double posX, double posY, double posZ, double motionX, double motionY, double motionZ) {
         super(world, posX, posY, posZ, motionX, motionY, motionZ);
-        this.motionX = this.motionX * 0.009999999776482582d + motionX;
-        this.motionY = this.motionY * 0.009999999776482582d + motionY;
-        this.motionZ = this.motionZ * 0.009999999776482582d + motionZ;
-        this.scale = this.particleScale = 0.5f;
-        this.decaySpeed = ((float)Math.random() - 0.5F) * 0.1F;
-        this.particleAngle = (float)Math.random() * ((float)Math.PI * 2F);
-        this.angle = (float)Math.random() * ((float)Math.PI * 2F);
-        this.particleGravity = -0.9F;
-        this.particleRed = 1f;
-        this.particleGreen = 1f;
-        this.particleBlue = 1f;
-        this.maxAge = (int) (.5d / (Math.random() * 0.8d + 0.2d)) + 4;
+        int z = rand.nextInt(11)/100;
+        this.motionX = 0;
+        this.motionY = 0.2;
+        this.motionZ = 0;
+        this.scale = this.particleScale = z;
+        this.decaySpeed = 0.1F;
+        this.particleGravity = 0;
+        this.maxAge = (int) .7;
     }
 
     @Override
@@ -59,20 +54,17 @@ public class EnchantedBlack extends GWParticle
             this.lastTick = entity.ticksExisted;
         }
         float f = ((float) this.age + partialTicks) / (float) this.maxAge;
-        this.particleScale = this.scale * (1f - f * f * 0.5f);
+        this.particleScale = this.scale;
     }
 
     @Override
     public void tick() {
         super.tick();
         this.prevParticleAngle = this.particleAngle;
-        this.particleAngle += (float)Math.PI * this.decaySpeed * 2.0F;
-        if (this.onGround) {
-            this.prevParticleAngle = this.particleAngle = 0.0F;
-        }
-        this.motionX += Math.cos(angle) * 0.0025;
-        this.motionY *= 1.06D;
-        this.motionZ += Math.sin(angle) * 0.0025;
+        this.particleAngle += this.decaySpeed * 0.1F;
+        this.motionX = 0;
+        this.motionY = 1;
+        this.motionZ = 0;
     }
 
     @Override
