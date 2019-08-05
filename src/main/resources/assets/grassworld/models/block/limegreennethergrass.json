@@ -2,7 +2,7 @@
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
     "bottom": "minecraft:block/dirt",
-    "top": "grassworld:blocks/limegreennethergrass2",
+    "top": "grassworld:blocks/limegreen_grass2",
     "side": "grassworld:blocks/limegreennethergrass1"
   }
 }

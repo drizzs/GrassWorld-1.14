@@ -1,6 +1,6 @@
 package com.drizzs.grassworld.blocks;
 
-import com.drizzs.grassworld.blocks.ActualGrass.ActualGrassOrange;
+import com.drizzs.grassworld.blocks.ActualGrass.ActualGrass;
 import com.drizzs.grassworld.blocks.enchantedgrass.*;
 import com.drizzs.grassworld.blocks.endgrass.normal.*;
 import com.drizzs.grassworld.blocks.fancygrass.*;
@@ -72,22 +72,22 @@ public class ModBlocks
         GrassWorldBlocks.enchanted_magenta_grass = registerBlock(new EnchantedMagentaGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "enchanted_magenta_grass");
         GrassWorldBlocks.enchanted_cyan_grass = registerBlock(new EnchantedCyanGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "enchanted_cyan_grass");
 
-        GrassWorldBlocks.actualgrass_orange = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_orange");
-        GrassWorldBlocks.actualgrass_cyan = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_cyan");
-        GrassWorldBlocks.actualgrass_red = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_red");
-        GrassWorldBlocks.actualgrass_yellow = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_yellow");
-        GrassWorldBlocks.actualgrass_brown = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_brown");
-        GrassWorldBlocks.actualgrass_pink = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_pink");
-        GrassWorldBlocks.actualgrass_purple = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_purple");
-        GrassWorldBlocks.actualgrass_green = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_green");
-        GrassWorldBlocks.actualgrass_limegreen = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_limegreen");
-        GrassWorldBlocks.actualgrass_blue = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_blue");
-        GrassWorldBlocks.actualgrass_lightblue = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_lightblue");
-        GrassWorldBlocks.actualgrass_grey = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_grey");
-        GrassWorldBlocks.actualgrass_lightgrey = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_lightgrey");
-        GrassWorldBlocks.actualgrass_magenta = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_magenta");
-        GrassWorldBlocks.actualgrass_black = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_black");
-        GrassWorldBlocks.actualgrass_white = registerBlock(new ActualGrassOrange((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_white");
+        GrassWorldBlocks.actualgrass_orange = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_orange");
+        GrassWorldBlocks.actualgrass_cyan = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_cyan");
+        GrassWorldBlocks.actualgrass_red = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_red");
+        GrassWorldBlocks.actualgrass_yellow = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_yellow");
+        GrassWorldBlocks.actualgrass_brown = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_brown");
+        GrassWorldBlocks.actualgrass_pink = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_pink");
+        GrassWorldBlocks.actualgrass_purple = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_purple");
+        GrassWorldBlocks.actualgrass_green = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_green");
+        GrassWorldBlocks.actualgrass_limegreen = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_limegreen");
+        GrassWorldBlocks.actualgrass_blue = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_blue");
+        GrassWorldBlocks.actualgrass_lightblue = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_lightblue");
+        GrassWorldBlocks.actualgrass_grey = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_grey");
+        GrassWorldBlocks.actualgrass_lightgrey = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_lightgrey");
+        GrassWorldBlocks.actualgrass_magenta = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_magenta");
+        GrassWorldBlocks.actualgrass_black = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_black");
+        GrassWorldBlocks.actualgrass_white = registerBlock(new ActualGrass((Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.PLANT))), "actualgrass_white");
 
         GrassWorldBlocks.plankblack = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "plankblack");
         GrassWorldBlocks.plankred = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "plankred");

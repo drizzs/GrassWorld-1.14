@@ -5,6 +5,7 @@ import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.GrassBlock;
 import net.minecraft.block.IGrowable;
+import net.minecraft.client.renderer.texture.ITickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -71,15 +72,6 @@ public class OrangeGrass extends GrassBlock {
 
     }
 
-    @OnlyIn(Dist.CLIENT)
-    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-        
-            if (rand.nextInt(8) == 0) {
-                System.out.print("Tick Works");
-                GWParticleSpawn.ENCHANTEDBLACK.spawn(worldIn, rand.nextInt(8) / 10, .2D, rand.nextInt(8) / 10, 0, 0, 0);
-            }
-
-    }
 }
 
 
