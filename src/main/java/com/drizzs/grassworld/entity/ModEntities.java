@@ -14,7 +14,7 @@ import net.minecraftforge.event.RegistryEvent;
 
 public class ModEntities
 {
-    public static EntityType<?> GREEN_ENDERMAN = EntityType.Builder.create(GreenEnderman:: new, EntityClassification.MONSTER).build("grassworld:greenenderman").setRegistryName("greenenderman");
+    public static EntityType<?> GREENENDERMAN = EntityType.Builder.create(GreenEnderman:: new, EntityClassification.MONSTER).build("grassworld:greenenderman").setRegistryName("greenenderman");
 
 
 
@@ -22,11 +22,9 @@ public class ModEntities
     {
         event.getRegistry().registerAll
                 (
-            GrassWorldItems.grassworldentityegg = registerEntitySpawnEgg(GREEN_ENDERMAN, 0x16DA00 , 0xDBD232, "green_enderman")
-
+            GrassWorldItems.grassworldentityegg = registerEntitySpawnEgg(GREENENDERMAN, 0x16DA00 , 0xDBD232, "greenenderman_egg")
 
             );
-
 
     }
 
@@ -39,7 +37,7 @@ public class ModEntities
 
     public static void registerEntityWorldSpawns()
     {
-        registerEntityWorldSpawn(GREEN_ENDERMAN, Biomes.SMALL_END_ISLANDS);
+        registerEntityWorldSpawn(GREENENDERMAN, Biomes.SMALL_END_ISLANDS);
     }
 
     public static void registerEntityWorldSpawn(EntityType<?> entity, Biome... biomes)

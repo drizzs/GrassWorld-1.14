@@ -38,7 +38,7 @@ public class PinkNetherSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.pinknethergrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

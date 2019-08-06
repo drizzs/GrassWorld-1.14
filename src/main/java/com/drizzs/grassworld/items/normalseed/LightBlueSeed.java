@@ -38,7 +38,7 @@ public class LightBlueSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.lightblue_grass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

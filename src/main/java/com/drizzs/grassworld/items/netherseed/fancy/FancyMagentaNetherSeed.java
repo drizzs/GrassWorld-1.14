@@ -38,7 +38,7 @@ public class FancyMagentaNetherSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.fancymagentanethergrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

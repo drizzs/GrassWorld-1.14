@@ -38,7 +38,7 @@ public class WhiteEndSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.whiteendgrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

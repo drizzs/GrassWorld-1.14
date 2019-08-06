@@ -107,7 +107,7 @@ public class GrassWorld
     {
         event.getRegistry().registerAll
                 (
-                        ModEntities.GREEN_ENDERMAN
+                        ModEntities.GREENENDERMAN
 
         );
         ModEntities.registerEntityWorldSpawns();

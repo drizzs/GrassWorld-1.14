@@ -38,7 +38,7 @@ public class EnchantedGreySeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.enchanted_grey_grass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

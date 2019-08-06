@@ -38,7 +38,7 @@ public class PurpleEndSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.purpleendgrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

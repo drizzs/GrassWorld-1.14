@@ -40,7 +40,7 @@ public class OrangeSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.orange_grass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

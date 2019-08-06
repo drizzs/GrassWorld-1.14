@@ -38,7 +38,7 @@ public class FancyLightGreyNetherSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.fancylightgreynethergrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

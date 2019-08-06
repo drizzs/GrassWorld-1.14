@@ -38,7 +38,7 @@ public class FancyRedEndSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.fancyredendgrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

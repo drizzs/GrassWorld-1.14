@@ -38,7 +38,7 @@ public class CyanSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.cyan_grass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

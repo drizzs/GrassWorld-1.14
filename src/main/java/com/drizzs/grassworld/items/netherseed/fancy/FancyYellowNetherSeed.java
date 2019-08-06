@@ -38,7 +38,7 @@ public class FancyYellowNetherSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.fancyyellownethergrass.getDefaultState());
-
+            item.shrink(1);
         }
 
 

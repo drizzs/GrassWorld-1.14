@@ -38,7 +38,7 @@ public class RedNetherSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.rednethergrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

@@ -38,7 +38,7 @@ public class WhiteNetherSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.whitenethergrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

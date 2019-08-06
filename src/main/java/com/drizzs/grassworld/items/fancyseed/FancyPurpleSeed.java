@@ -38,7 +38,7 @@ public class FancyPurpleSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.fancy_purple_grass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

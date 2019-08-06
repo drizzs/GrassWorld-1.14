@@ -38,6 +38,7 @@ public class BlackSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.black_grass.getDefaultState());
+            item.shrink(1);
 
         }
         return ActionResultType.SUCCESS;

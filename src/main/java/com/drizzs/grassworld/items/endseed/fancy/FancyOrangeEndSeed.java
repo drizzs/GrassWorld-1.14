@@ -38,7 +38,7 @@ public class FancyOrangeEndSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.fancyorangeendgrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

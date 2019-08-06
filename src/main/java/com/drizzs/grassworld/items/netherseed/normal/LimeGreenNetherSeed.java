@@ -38,7 +38,7 @@ public class LimeGreenNetherSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.limegreennethergrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

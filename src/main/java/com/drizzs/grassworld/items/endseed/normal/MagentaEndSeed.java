@@ -38,7 +38,7 @@ public class MagentaEndSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.magentaendgrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

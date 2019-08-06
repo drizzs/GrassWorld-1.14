@@ -38,7 +38,7 @@ public class EnchantedLightBlueSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.enchanted_lightblue_grass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

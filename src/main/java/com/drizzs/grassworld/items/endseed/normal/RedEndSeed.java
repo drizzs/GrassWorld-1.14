@@ -38,7 +38,7 @@ public class RedEndSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.redendgrass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

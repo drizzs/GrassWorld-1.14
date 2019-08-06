@@ -38,7 +38,7 @@ public class PinkSeed extends Item {
         {
 
             world.setBlockState(blockpos, GrassWorldBlocks.pink_grass.getDefaultState());
-
+            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 

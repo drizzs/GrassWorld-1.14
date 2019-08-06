@@ -1,9 +1,12 @@
 package com.drizzs.grassworld.blocks.normalgrass;
 
+import com.drizzs.grassworld.api.particle.GWParticleSpawn;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.GrassBlock;
 import net.minecraft.block.IGrowable;
+import net.minecraft.particles.ParticleType;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -67,6 +70,11 @@ public class BlackGrass extends GrassBlock {
 
     }
 
+    @Override
+    public void animateTick(BlockState state, World worldIn, BlockPos pos, Random random) {
+        super.tick(state, worldIn, pos, random);
+        System.out.print("This block ticks");
+        GWParticleSpawn.ENCHANTEDBLACK.spawn(worldIn, 10, .2D, 10, 0, 0, 0);
 
-
+    }
 }
