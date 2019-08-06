@@ -1,4 +1,4 @@
-package com.drizzs.grassworld.api.particle;
+package com.drizzs.grassworld.particle;
 
 import com.drizzs.grassworld.GrassWorld;
 import net.minecraft.util.ResourceLocation;

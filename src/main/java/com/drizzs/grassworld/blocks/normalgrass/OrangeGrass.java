@@ -1,6 +1,5 @@
 package com.drizzs.grassworld.blocks.normalgrass;
 
-import com.drizzs.grassworld.api.particle.GWParticleSpawn;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.GrassBlock;

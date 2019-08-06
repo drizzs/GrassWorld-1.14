@@ -1,17 +1,20 @@
 package com.drizzs.grassworld.blocks.normalgrass;
 
-import com.drizzs.grassworld.api.particle.GWParticleSpawn;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
+import com.drizzs.grassworld.particle.GWParticleSpawn;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.GrassBlock;
 import net.minecraft.block.IGrowable;
-import net.minecraft.particles.ParticleType;
-import net.minecraft.particles.ParticleTypes;
+import net.minecraft.client.renderer.texture.ITickable;
+import net.minecraft.client.renderer.texture.ITickableTextureObject;
+import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.DecoratedFeatureConfig;
 import net.minecraft.world.gen.feature.FlowersFeature;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.List;
 import java.util.Random;
@@ -69,12 +72,13 @@ public class BlackGrass extends GrassBlock {
         }
 
     }
-
+    @OnlyIn(Dist.CLIENT)
     @Override
     public void animateTick(BlockState state, World worldIn, BlockPos pos, Random random) {
-        super.tick(state, worldIn, pos, random);
         System.out.print("This block ticks");
         GWParticleSpawn.ENCHANTEDBLACK.spawn(worldIn, 10, .2D, 10, 0, 0, 0);
 
     }
+
+
 }

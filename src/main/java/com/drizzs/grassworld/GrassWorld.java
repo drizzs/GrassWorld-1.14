@@ -1,8 +1,7 @@
 package com.drizzs.grassworld;
 
 import com.drizzs.grassworld.blocks.ModBlocks;
-import com.drizzs.grassworld.client.renders.GrassRenderRegistry;
-import com.drizzs.grassworld.entity.ModEntities;
+
 import com.drizzs.grassworld.items.ModItems;
 import com.drizzs.grassworld.proxy.ClientProxy;
 import com.drizzs.grassworld.proxy.CommonProxy;
@@ -61,7 +60,6 @@ public class GrassWorld
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        GrassRenderRegistry.registerEntityRenderers();
         LOGGER.info("Client Registering stuff");
     }
 
@@ -96,20 +94,5 @@ public class GrassWorld
         }
     }
 
-    @SubscribeEvent
-    public static void registerItems(final RegistryEvent.Register<Item> event)
-    {
-        ModEntities.registerEntityEggs(event);
-    }
 
-    @SubscribeEvent
-    public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event)
-    {
-        event.getRegistry().registerAll
-                (
-                        ModEntities.GREENENDERMAN
-
-        );
-        ModEntities.registerEntityWorldSpawns();
-    }
 }

@@ -1,6 +1,5 @@
 package com.drizzs.grassworld.items;
 
-import com.drizzs.grassworld.entity.ModEntities;
 import com.drizzs.grassworld.items.enchantedseed.*;
 import com.drizzs.grassworld.items.endseed.fancy.*;
 import com.drizzs.grassworld.items.endseed.normal.*;
@@ -10,7 +9,6 @@ import com.drizzs.grassworld.items.netherseed.normal.*;
 import com.drizzs.grassworld.items.normalseed.*;
 import com.drizzs.grassworld.util.ItemGroupGW;
 import net.minecraft.item.Item;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModItems {

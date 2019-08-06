@@ -1,9 +1,9 @@
-package com.drizzs.grassworld.api.particle.types;
+package com.drizzs.grassworld.particle.types;
 
-import com.drizzs.grassworld.api.particle.GWParticle;
-import com.drizzs.grassworld.api.particle.GWParticleTextures;
+import com.drizzs.grassworld.particle.GWParticle;
+import com.drizzs.grassworld.particle.GWParticleTextures;
 import com.drizzs.grassworld.util.GWIP;
-import net.minecraft.client.particle.*;
+import net.minecraft.client.particle.Particle;
 import net.minecraft.client.renderer.ActiveRenderInfo;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.entity.Entity;
