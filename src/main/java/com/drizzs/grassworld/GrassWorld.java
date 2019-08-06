@@ -1,11 +1,15 @@
 package com.drizzs.grassworld;
 
 import com.drizzs.grassworld.blocks.ModBlocks;
+import com.drizzs.grassworld.client.renders.GrassRenderRegistry;
+import com.drizzs.grassworld.entity.ModEntities;
 import com.drizzs.grassworld.items.ModItems;
 import com.drizzs.grassworld.proxy.ClientProxy;
 import com.drizzs.grassworld.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.EntityType;
+import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,6 +25,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.swing.text.html.parser.Entity;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -45,6 +50,7 @@ public class GrassWorld
         ModBlocks.init();
         ModItems.init();
 
+
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -55,8 +61,8 @@ public class GrassWorld
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        // do something that can only be done on the client
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+        GrassRenderRegistry.registerEntityRenderers();
+        LOGGER.info("Client Registering stuff");
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -88,5 +94,22 @@ public class GrassWorld
             // register a new block here
             LOGGER.info("HELLO from Register Block");
         }
+    }
+
+    @SubscribeEvent
+    public static void registerItems(final RegistryEvent.Register<Item> event)
+    {
+        ModEntities.registerEntityEggs(event);
+    }
+
+    @SubscribeEvent
+    public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event)
+    {
+        event.getRegistry().registerAll
+                (
+                        ModEntities.GREEN_ENDERMAN
+
+        );
+        ModEntities.registerEntityWorldSpawns();
     }
 }
