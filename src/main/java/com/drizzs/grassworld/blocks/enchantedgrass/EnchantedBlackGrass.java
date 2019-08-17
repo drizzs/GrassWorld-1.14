@@ -15,7 +15,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.List;
 import java.util.Random;
 
-@OnlyIn(Dist.CLIENT)
+
 public class EnchantedBlackGrass extends GrassBlock
 {
 
