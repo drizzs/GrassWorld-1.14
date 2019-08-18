@@ -15,11 +15,11 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class RedEndBiome extends Biome {
+public class OrangeEndBiome extends Biome {
 
-    public RedEndBiome()
+    public OrangeEndBiome()
     {
-        super((new Builder()).surfaceBuilder(SurfaceBuilder.DEFAULT, GrassSurfaces.REDEND).precipitation(RainType.NONE).category(Category.THEEND).depth(0.1F).scale(0.2F).temperature(0.5F).downfall(0.5F).waterColor(4159204).waterFogColor(329011).parent((String)null));
+        super((new Builder()).surfaceBuilder(SurfaceBuilder.DEFAULT, GrassSurfaces.ORANGEEND).precipitation(RainType.NONE).category(Category.THEEND).depth(0.1F).scale(0.2F).temperature(0.5F).downfall(0.5F).waterColor(4159204).waterFogColor(329011).parent((String)null));
         DefaultBiomeFeatures.func_225489_aq(this);
 
 

@@ -1,6 +1,7 @@
 package com.drizzs.grassworld.biomes;
 
-import com.drizzs.grassworld.biomes.endbiomes.RedEndBiome;
+import com.drizzs.grassworld.biomes.endbiomes.*;
+import com.drizzs.grassworld.util.config.BiomeConfig;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeManager;
@@ -29,36 +30,45 @@ public class GrassBiomes {
     public static Biome cyanend;
     public static Biome magentaend;
 
+
     @SubscribeEvent
     public static void registerBiomes(final RegistryEvent.Register<Biome> event)
     {
-        redend = registerBiome(new RedEndBiome(), "redend", BiomeDictionary.Type.END);
-        greenend = registerBiome(new RedEndBiome(), "greenend", BiomeDictionary.Type.END);
-        limegreenend = registerBiome(new RedEndBiome(), "limegreenend", BiomeDictionary.Type.END);
-        blueend = registerBiome(new RedEndBiome(), "blueend", BiomeDictionary.Type.END);
-        lightblueend = registerBiome(new RedEndBiome(), "lightblueend", BiomeDictionary.Type.END);
-        greyend = registerBiome(new RedEndBiome(), "greyend", BiomeDictionary.Type.END);
-        lightgreyend = registerBiome(new RedEndBiome(), "lightgreyend", BiomeDictionary.Type.END);
-        orangeend = registerBiome(new RedEndBiome(), "orangeend", BiomeDictionary.Type.END);
-        pinkend = registerBiome(new RedEndBiome(), "pinkend", BiomeDictionary.Type.END);
-        purpleend = registerBiome(new RedEndBiome(), "purpleend", BiomeDictionary.Type.END);
-        yellowend = registerBiome(new RedEndBiome(), "yellowend", BiomeDictionary.Type.END);
-        whiteend = registerBiome(new RedEndBiome(), "whiteend", BiomeDictionary.Type.END);
-        blackend = registerBiome(new RedEndBiome(), "blackend", BiomeDictionary.Type.END);
-        brownend = registerBiome(new RedEndBiome(), "brownend", BiomeDictionary.Type.END);
-        cyanend = registerBiome(new RedEndBiome(), "cyanend", BiomeDictionary.Type.END);
-        magentaend = registerBiome(new RedEndBiome(), "magentaend", BiomeDictionary.Type.END);
-    }
 
-    public static Biome registerBiome(Biome biome, String name, BiomeDictionary.Type types) {
+            redend = registerBiome(new RedEndBiome(), "redend", 1000, BiomeDictionary.Type.END);
+            greenend = registerBiome(new GreenEndBiome(), "greenend", 1000, BiomeDictionary.Type.END);
+            limegreenend = registerBiome(new LimeGreenEndBiome(), "limegreenend", 10, BiomeDictionary.Type.END);
+            blueend = registerBiome(new BlueEndBiome(), "blueend", 10, BiomeDictionary.Type.END);
+            lightblueend = registerBiome(new LightBlueEndBiome(), "lightblueend", 10, BiomeDictionary.Type.END);
+            greyend = registerBiome(new GreyEndBiome(), "greyend", 10, BiomeDictionary.Type.END);
+            lightgreyend = registerBiome(new LightGreyEndBiome(), "lightgreyend", 10, BiomeDictionary.Type.END);
+            orangeend = registerBiome(new OrangeEndBiome(), "orangeend", 10, BiomeDictionary.Type.END);
+            pinkend = registerBiome(new PinkEndBiome(), "pinkend", 10, BiomeDictionary.Type.END);
+            purpleend = registerBiome(new PurpleEndBiome(), "purpleend", 10, BiomeDictionary.Type.END);
+            yellowend = registerBiome(new YellowEndBiome(), "yellowend", 10, BiomeDictionary.Type.END);
+            whiteend = registerBiome(new WhiteEndBiome(), "whiteend", 10, BiomeDictionary.Type.END);
+            blackend = registerBiome(new BlackEndBiome(), "blackend", 10, BiomeDictionary.Type.END);
+            brownend = registerBiome(new BrownEndBiome(), "brownend", 10, BiomeDictionary.Type.END);
+            cyanend = registerBiome(new CyanEndBiome(), "cyanend", 10, BiomeDictionary.Type.END);
+            magentaend = registerBiome(new MagentaEndBiome(), "magentaend", 10, BiomeDictionary.Type.END);
+        }
+
+
+
+
+
+        public static Biome registerBiome (Biome biome, String name,int weight, BiomeDictionary.Type types)
+        {
         biome.setRegistryName(name);
         ForgeRegistries.BIOMES.register(biome);
         BiomeManager.addSpawnBiome(biome);
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, weight));
         BiomeDictionary.addTypes(biome, types);
         System.out.println(name + "registered");
         return biome;
+
+
+
     }
-
-
 
 }

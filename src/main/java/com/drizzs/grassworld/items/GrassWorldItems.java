@@ -125,7 +125,7 @@ public class GrassWorldItems
     public static Item fancyyellownetherseed;
     public static Item fancygreennetherseed;
     public static Item fancylimegreennetherseed;
-
+    public static Item green_egg;
 
 
 

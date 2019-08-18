@@ -2,9 +2,12 @@ package com.drizzs.grassworld;
 
 import com.drizzs.grassworld.blocks.ModBlocks;
 
+import com.drizzs.grassworld.entity.endtity.GreenEndermanEntity;
+import com.drizzs.grassworld.entity.render.EnderRender;
 import com.drizzs.grassworld.items.ModItems;
 import com.drizzs.grassworld.proxy.ClientProxy;
 import com.drizzs.grassworld.proxy.CommonProxy;
+import com.drizzs.grassworld.util.config.GrassConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
@@ -14,13 +17,17 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
     import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -36,15 +43,18 @@ public class GrassWorld
 
     public static CommonProxy proxy = DistExecutor.runForDist(() -> ClientProxy::new, () -> CommonProxy::new);
 
-    private static final Logger LOGGER = LogManager.getLogger(MOD_ID);
+    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     public GrassWorld() {
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, GrassConfig.config);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        GrassConfig.loadConfig(GrassConfig.config, FMLPaths.CONFIGDIR.get().resolve("grassworld-config.toml").toString());
         MinecraftForge.EVENT_BUS.register(this);
         ModBlocks.init();
         ModItems.init();
@@ -60,6 +70,8 @@ public class GrassWorld
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+
+        RenderingRegistry.registerEntityRenderingHandler(GreenEndermanEntity.class, EnderRender::new);
         LOGGER.info("Client Registering stuff");
     }
 
