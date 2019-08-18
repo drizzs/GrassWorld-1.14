@@ -1,4 +1,4 @@
-package com.drizzs.grassworld.biomes.features;
+package com.drizzs.grassworld.biomes.features.actualgrass;
 
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import com.mojang.datafixers.Dynamic;

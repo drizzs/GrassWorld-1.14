@@ -3,7 +3,6 @@ package com.drizzs.grassworld.biomes.features.actualgrass;
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
 import com.mojang.datafixers.Dynamic;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
@@ -15,9 +14,9 @@ import net.minecraft.world.gen.feature.NoFeatureConfig;
 import java.util.Random;
 import java.util.function.Function;
 
-public class RedGrassFeature extends Feature<NoFeatureConfig>
+public class PinkGrassFeature extends Feature<NoFeatureConfig>
 {
-    public RedGrassFeature(Function<Dynamic<?>, ? extends NoFeatureConfig> deserializer)
+    public PinkGrassFeature(Function<Dynamic<?>, ? extends NoFeatureConfig> deserializer)
     {
         super(deserializer);
     }
