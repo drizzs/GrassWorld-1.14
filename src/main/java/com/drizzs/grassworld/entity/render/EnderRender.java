@@ -17,11 +17,7 @@ public class EnderRender extends EndermanRenderer {
 
     private static final ResourceLocation TEXTURE = new ResourceLocation("grassworld:textures/entity/greenenderman.png");
 
-    /**
-     * Constructor method for renderer
-     *
-     * @param renderManagerIn the renderManager
-     */
+   
     public EnderRender(final EntityRendererManager renderManagerIn)
     {
         super(renderManagerIn, new GreenEnderModel<>(0));
