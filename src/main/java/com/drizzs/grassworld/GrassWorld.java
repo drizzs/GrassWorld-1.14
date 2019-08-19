@@ -3,7 +3,6 @@ package com.drizzs.grassworld;
 import com.drizzs.grassworld.blocks.ModBlocks;
 
 import com.drizzs.grassworld.entity.endtity.GreenEndermanEntity;
-import com.drizzs.grassworld.entity.render.EnderRender;
 import com.drizzs.grassworld.items.ModItems;
 import com.drizzs.grassworld.proxy.ClientProxy;
 import com.drizzs.grassworld.proxy.CommonProxy;
@@ -71,7 +70,6 @@ public class GrassWorld
 
     private void doClientStuff(final FMLClientSetupEvent event) {
 
-        RenderingRegistry.registerEntityRenderingHandler(GreenEndermanEntity.class, EnderRender::new);
         LOGGER.info("Client Registering stuff");
     }
 

@@ -2,6 +2,7 @@ package com.drizzs.grassworld.biomes;
 
 import com.drizzs.grassworld.biomes.endbiomes.*;
 import com.drizzs.grassworld.util.config.BiomeConfig;
+import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeManager;
