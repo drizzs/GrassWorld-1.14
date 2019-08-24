@@ -21,7 +21,39 @@ public class GrassWorldBlocks {
     public static Block brown_grass;
     public static Block green_grass;
 
+    public static Block orange_log;
+    public static Block blue_log;
+    public static Block black_log;
+    public static Block white_log;
+    public static Block yellow_log;
+    public static Block red_log;
+    public static Block grey_log;
+    public static Block lightgrey_log;
+    public static Block lightblue_log;
+    public static Block limegreen_log;
+    public static Block magenta_log;
+    public static Block cyan_log;
+    public static Block pink_log;
+    public static Block purple_log;
+    public static Block brown_log;
+    public static Block green_log;
 
+    public static Block orange_leaves;
+    public static Block blue_leaves;
+    public static Block black_leaves;
+    public static Block white_leaves;
+    public static Block yellow_leaves;
+    public static Block red_leaves;
+    public static Block grey_leaves;
+    public static Block lightgrey_leaves;
+    public static Block lightblue_leaves;
+    public static Block limegreen_leaves;
+    public static Block magenta_leaves;
+    public static Block cyan_leaves;
+    public static Block pink_leaves;
+    public static Block purple_leaves;
+    public static Block brown_leaves;
+    public static Block green_leaves;
 
     public static Block fancy_blue_grass;
     public static Block fancy_black_grass;

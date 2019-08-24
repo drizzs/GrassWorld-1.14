@@ -32,8 +32,8 @@ public class GrassSurfaces {
     static
     {
 
-        REDEND = new SurfaceBuilderConfig(GrassWorldBlocks.redendgrass.getDefaultState(), Blocks.END_STONE.getDefaultState(), Blocks.END_STONE.getDefaultState());
-        GREENEND = new SurfaceBuilderConfig(GrassWorldBlocks.greenendgrass.getDefaultState(), Blocks.END_STONE.getDefaultState(), Blocks.END_STONE.getDefaultState());
+            REDEND = new SurfaceBuilderConfig(GrassWorldBlocks.redendgrass.getDefaultState(), Blocks.END_STONE.getDefaultState(), Blocks.END_STONE.getDefaultState());
+            GREENEND = new SurfaceBuilderConfig(GrassWorldBlocks.greenendgrass.getDefaultState(), Blocks.END_STONE.getDefaultState(), Blocks.END_STONE.getDefaultState());
         LIMEGREENEND = new SurfaceBuilderConfig(GrassWorldBlocks.limegreenendgrass.getDefaultState(), Blocks.END_STONE.getDefaultState(), Blocks.END_STONE.getDefaultState());
         BLUEEND = new SurfaceBuilderConfig(GrassWorldBlocks.blueendgrass.getDefaultState(), Blocks.END_STONE.getDefaultState(), Blocks.END_STONE.getDefaultState());
         LIGHTBLUEEND = new SurfaceBuilderConfig(GrassWorldBlocks.lightblueendgrass.getDefaultState(), Blocks.END_STONE.getDefaultState(), Blocks.END_STONE.getDefaultState());

@@ -4,6 +4,8 @@ import com.drizzs.grassworld.biomes.endbiomes.*;
 import com.drizzs.grassworld.util.config.BiomeConfig;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.provider.BiomeProvider;
+import net.minecraft.world.biome.provider.EndBiomeProvider;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.event.RegistryEvent;
@@ -36,22 +38,22 @@ public class GrassBiomes {
     public static void registerBiomes(final RegistryEvent.Register<Biome> event)
     {
 
-            redend = registerBiome(new RedEndBiome(), "redend", 1000, BiomeDictionary.Type.END);
-            greenend = registerBiome(new GreenEndBiome(), "greenend", 1000, BiomeDictionary.Type.END);
-            limegreenend = registerBiome(new LimeGreenEndBiome(), "limegreenend", 10, BiomeDictionary.Type.END);
-            blueend = registerBiome(new BlueEndBiome(), "blueend", 10, BiomeDictionary.Type.END);
-            lightblueend = registerBiome(new LightBlueEndBiome(), "lightblueend", 10, BiomeDictionary.Type.END);
-            greyend = registerBiome(new GreyEndBiome(), "greyend", 10, BiomeDictionary.Type.END);
+            redend = registerBiome(new RedEndBiome(), "redend", 0, BiomeDictionary.Type.END);
+            greenend = registerBiome(new GreenEndBiome(), "greenend", 0, BiomeDictionary.Type.END);
+            limegreenend = registerBiome(new LimeGreenEndBiome(), "limegreenend", 0, BiomeDictionary.Type.END);
+            blueend = registerBiome(new BlueEndBiome(), "blueend", 0, BiomeDictionary.Type.END);
+            lightblueend = registerBiome(new LightBlueEndBiome(), "lightblueend", 0, BiomeDictionary.Type.END);
+            greyend = registerBiome(new GreyEndBiome(), "greyend", 0, BiomeDictionary.Type.END);
             lightgreyend = registerBiome(new LightGreyEndBiome(), "lightgreyend", 10, BiomeDictionary.Type.END);
-            orangeend = registerBiome(new OrangeEndBiome(), "orangeend", 10, BiomeDictionary.Type.END);
-            pinkend = registerBiome(new PinkEndBiome(), "pinkend", 10, BiomeDictionary.Type.END);
-            purpleend = registerBiome(new PurpleEndBiome(), "purpleend", 10, BiomeDictionary.Type.END);
-            yellowend = registerBiome(new YellowEndBiome(), "yellowend", 10, BiomeDictionary.Type.END);
-            whiteend = registerBiome(new WhiteEndBiome(), "whiteend", 10, BiomeDictionary.Type.END);
-            blackend = registerBiome(new BlackEndBiome(), "blackend", 10, BiomeDictionary.Type.END);
-            brownend = registerBiome(new BrownEndBiome(), "brownend", 10, BiomeDictionary.Type.END);
-            cyanend = registerBiome(new CyanEndBiome(), "cyanend", 10, BiomeDictionary.Type.END);
-            magentaend = registerBiome(new MagentaEndBiome(), "magentaend", 10, BiomeDictionary.Type.END);
+            orangeend = registerBiome(new OrangeEndBiome(), "orangeend", 0, BiomeDictionary.Type.END);
+            pinkend = registerBiome(new PinkEndBiome(), "pinkend", 0, BiomeDictionary.Type.END);
+            purpleend = registerBiome(new PurpleEndBiome(), "purpleend", 0, BiomeDictionary.Type.END);
+            yellowend = registerBiome(new YellowEndBiome(), "yellowend", 0, BiomeDictionary.Type.END);
+            whiteend = registerBiome(new WhiteEndBiome(), "whiteend", 0, BiomeDictionary.Type.END);
+            blackend = registerBiome(new BlackEndBiome(), "blackend", 0, BiomeDictionary.Type.END);
+            brownend = registerBiome(new BrownEndBiome(), "brownend", 0, BiomeDictionary.Type.END);
+            cyanend = registerBiome(new CyanEndBiome(), "cyanend", 0, BiomeDictionary.Type.END);
+            magentaend = registerBiome(new MagentaEndBiome(), "magentaend", 0, BiomeDictionary.Type.END);
         }
 
 
@@ -68,8 +70,7 @@ public class GrassBiomes {
         System.out.println(name + "registered");
         return biome;
 
-
-
     }
+
 
 }

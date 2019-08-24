@@ -174,6 +174,40 @@ public class ModBlocks
         GrassWorldBlocks.fancymagentanethergrass = registerBlock(new FancyMagentaNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancymagentanethergrass");
         GrassWorldBlocks.fancycyannethergrass = registerBlock(new FancyCyanNetherGrass((Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))), "fancycyannethergrass");
 
+        GrassWorldBlocks.black_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "black_log");
+        GrassWorldBlocks.red_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "red_log");
+        GrassWorldBlocks.yellow_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "yellow_log");
+        GrassWorldBlocks.blue_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "blue_log");
+        GrassWorldBlocks.lightblue_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "lightblue_log");
+        GrassWorldBlocks.grey_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "grey_log");
+        GrassWorldBlocks.lightgrey_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "lightgrey_log");
+        GrassWorldBlocks.green_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "green_log");
+        GrassWorldBlocks.limegreen_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "limegreen_log");
+        GrassWorldBlocks.orange_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "orange_log");
+        GrassWorldBlocks.pink_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "pink_log");
+        GrassWorldBlocks.magenta_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "magenta_log");
+        GrassWorldBlocks.cyan_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "cyan_log");
+        GrassWorldBlocks.purple_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "purple_log");
+        GrassWorldBlocks.white_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "white_log");
+        GrassWorldBlocks.brown_log = registerBlock(new Block((Block.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD))), "brown_log");
+
+        GrassWorldBlocks.black_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "black_leaves");
+        GrassWorldBlocks.red_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "red_leaves");
+        GrassWorldBlocks.yellow_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "yellow_leaves");
+        GrassWorldBlocks.blue_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "blue_leaves");
+        GrassWorldBlocks.lightblue_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "lightblue_leaves");
+        GrassWorldBlocks.grey_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "grey_leaves");
+        GrassWorldBlocks.lightgrey_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "lightgrey_leaves");
+        GrassWorldBlocks.green_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "green_leaves");
+        GrassWorldBlocks.limegreen_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "limegreen_leaves");
+        GrassWorldBlocks.orange_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "orange_leaves");
+        GrassWorldBlocks.pink_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "pink_leaves");
+        GrassWorldBlocks.magenta_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "magenta_leaves");
+        GrassWorldBlocks.cyan_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "cyan_leaves");
+        GrassWorldBlocks.purple_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "purple_leaves");
+        GrassWorldBlocks.white_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "white_leaves");
+        GrassWorldBlocks.brown_leaves = registerBlock(new Block((Block.Properties.create(Material.LEAVES, MaterialColor.BROWN).hardnessAndResistance(0).sound(SoundType.PLANT))), "brown_leaves");
+
 
     }
 

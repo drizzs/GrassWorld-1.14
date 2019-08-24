@@ -1,5 +1,6 @@
 package com.drizzs.grassworld.biomes.endbiomes;
 
+import com.drizzs.grassworld.biomes.features.actualgrass.CyanGrassFeature;
 import com.drizzs.grassworld.biomes.features.actualgrass.RedGrassFeature;
 import com.drizzs.grassworld.biomes.surfacebuilders.GrassSurfaces;
 import net.minecraft.entity.EntityClassification;
@@ -19,11 +20,11 @@ public class CyanEndBiome extends Biome {
 
     public CyanEndBiome()
     {
-        super((new Builder()).surfaceBuilder(SurfaceBuilder.DEFAULT, GrassSurfaces.CYANEND).precipitation(RainType.NONE).category(Category.THEEND).depth(0.1F).scale(0.2F).temperature(0.5F).downfall(0.5F).waterColor(4159204).waterFogColor(329011).parent((String)null));
+        super((new Builder()).surfaceBuilder(SurfaceBuilder.DEFAULT, GrassSurfaces.CYANEND).precipitation(RainType.NONE).category(Category.THEEND).depth(0.01F).scale(0.2F).temperature(0.5F).downfall(0.5F).waterColor(4159204).waterFogColor(329011).parent((String)null));
         DefaultBiomeFeatures.func_225489_aq(this);
 
 
-        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(new RedGrassFeature(NoFeatureConfig::deserialize), IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(12)));
+        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(new CyanGrassFeature(NoFeatureConfig::deserialize), IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(6)));
         this.addSpawn(EntityClassification.MONSTER, new SpawnListEntry(EntityType.ENDERMAN, 10, 4, 4));
     }
 

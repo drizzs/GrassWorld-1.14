@@ -23,7 +23,7 @@ public class BlackGrassFeature extends Feature<NoFeatureConfig>
 
     public BlockState chooseGrassState(Random rand)
     {
-        return rand.nextInt(3) == 0 ? GrassWorldBlocks.actualgrass_orange.getDefaultState() : GrassWorldBlocks.actualgrass_red.getDefaultState();
+        return rand.nextInt(3) == 0 ? GrassWorldBlocks.actualgrass_black.getDefaultState() : GrassWorldBlocks.actualgrass_grey.getDefaultState();
     }
 
     @Override
