@@ -192,4 +192,21 @@ public class GrassWorldBlocks {
     public static Block fancybrownnethergrass;
     public static Block fancygreennethergrass;
 
+    public static Block glowingbluegrass;
+    public static Block glowingblackgrass;
+    public static Block glowingwhitegrass;
+    public static Block glowingyellowgrass;
+    public static Block glowingredgrass;
+    public static Block glowinggreygrass;
+    public static Block glowinglightgreygrass;
+    public static Block glowinglightbluegrass;
+    public static Block glowinglimegreengrass;
+    public static Block glowingmagentagrass;
+    public static Block glowingcyangrass;
+    public static Block glowingpinkgrass;
+    public static Block glowingpurplegrass;
+    public static Block glowingbrowngrass;
+    public static Block glowinggreengrass;
+    public static Block glowingorangegrass;
+
 }

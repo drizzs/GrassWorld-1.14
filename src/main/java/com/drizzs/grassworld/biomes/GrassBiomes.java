@@ -64,7 +64,6 @@ public class GrassBiomes {
         {
         biome.setRegistryName(name);
         ForgeRegistries.BIOMES.register(biome);
-        BiomeManager.addSpawnBiome(biome);
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, weight));
         BiomeDictionary.addTypes(biome, types);
         System.out.println(name + "registered");

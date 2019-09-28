@@ -1,6 +1,7 @@
 package com.drizzs.grassworld.blocks.enchantedgrass;
 
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
+import com.drizzs.grassworld.particle.types.ShimmerParticleData;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.Direction;
@@ -99,5 +100,14 @@ public class EnchantedBlackGrass extends GrassBlock
                 return isBeach && hasWater;
         }
         return false;
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    @Override
+    public void animateTick(BlockState state, World world, BlockPos pos, Random r) {
+        if (r.nextInt(1) == 0) {
+            ShimmerParticleData data = ShimmerParticleData.shimmer(r.nextFloat() * 0.2F + 1F, 0F, 1F, 1F, 5);
+            world.addParticle(data, pos.getX() + r.nextFloat(), pos.getY() + 1.05, pos.getZ() + r.nextFloat(), 5, 5, 5);
+        }
     }
 }

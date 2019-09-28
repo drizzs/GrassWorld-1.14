@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": [
+            { "model": "grassworld:block/grey_leaves" }
+        ]
+    }
+}

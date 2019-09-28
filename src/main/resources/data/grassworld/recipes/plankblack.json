@@ -1,0 +1,13 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "grassworld:black_log"
+    }
+  ],
+  "result": {
+    "item": "grassworld:plankblack",
+    "count": 4
+  }
+}

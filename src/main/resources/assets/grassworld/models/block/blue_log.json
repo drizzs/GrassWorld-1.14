@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "grassworld:blocks/blue_log",
+    "side": "grassworld:blocks/blue_log2"
+  }
+}

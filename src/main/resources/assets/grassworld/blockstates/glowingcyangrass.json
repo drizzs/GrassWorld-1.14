@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "grassworld:block/glowingcyangrass" },
+            { "model": "grassworld:block/glowingcyangrass", "y": 90 },
+            { "model": "grassworld:block/glowingcyangrass", "y": 180 },
+            { "model": "grassworld:block/glowingcyangrass", "y": 270 }
+        ]
+    }
+}

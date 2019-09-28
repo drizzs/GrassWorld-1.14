@@ -24,6 +24,23 @@ public class GrassWorldItems
     public static Item greenseed;
     public static Item limegreenseed;
 
+    public static Item glowingorangeseed;
+    public static Item glowingblueseed;
+    public static Item glowingredseed;
+    public static Item glowinglightblueseed;
+    public static Item glowinggreyseed;
+    public static Item glowinglightgreyseed;
+    public static Item glowingpinkseed;
+    public static Item glowingpurpleseed;
+    public static Item glowingmagentaseed;
+    public static Item glowingcyanseed;
+    public static Item glowingblackseed;
+    public static Item glowingbrownseed;
+    public static Item glowingwhiteseed;
+    public static Item glowingyellowseed;
+    public static Item glowinggreenseed;
+    public static Item glowinglimegreenseed;
+
     public static Item fancy_orangeseed;
     public static Item fancy_blueseed;
     public static Item fancy_redseed;

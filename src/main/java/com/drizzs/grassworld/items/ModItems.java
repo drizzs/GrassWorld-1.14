@@ -4,16 +4,21 @@ import com.drizzs.grassworld.items.enchantedseed.*;
 import com.drizzs.grassworld.items.endseed.fancy.*;
 import com.drizzs.grassworld.items.endseed.normal.*;
 import com.drizzs.grassworld.items.fancyseed.*;
+import com.drizzs.grassworld.items.glowing.*;
 import com.drizzs.grassworld.items.netherseed.fancy.*;
 import com.drizzs.grassworld.items.netherseed.normal.*;
 import com.drizzs.grassworld.items.normalseed.*;
 import com.drizzs.grassworld.util.ItemGroupGW;
 import net.minecraft.item.Item;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
-
+@Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
 public class ModItems {
 
-    public static void init()
+    @SubscribeEvent
+    public static void registerItems(final RegistryEvent.Register<Item> event)
     {
         GrassWorldItems.orangeseed = registerItem(new OrangeSeed(new Item.Properties().group(ItemGroupGW.instance)), "orangeseed");
         GrassWorldItems.blueseed = registerItem(new BlueSeed(new Item.Properties().group(ItemGroupGW.instance)), "blueseed");
@@ -136,6 +141,22 @@ public class ModItems {
 
         GrassWorldItems.gw_icon = registerItem(new Item(new Item.Properties()), "gw_icon");
 
+        GrassWorldItems.glowingorangeseed = registerItem(new GlowingOrangeSeed(new Item.Properties()), "glowingorangeseed");
+        GrassWorldItems.glowingblueseed = registerItem(new GlowingBlueSeed(new Item.Properties()), "glowingblueseed");
+        GrassWorldItems.glowingredseed = registerItem(new GlowingRedSeed(new Item.Properties()), "glowingredseed");
+        GrassWorldItems.glowinglightblueseed = registerItem(new GlowingLightBlueSeed(new Item.Properties()), "glowinglightblueseed");
+        GrassWorldItems.glowinggreyseed = registerItem(new GlowingGreySeed(new Item.Properties()), "glowinggreyseed");
+        GrassWorldItems.glowinglightgreyseed = registerItem(new GlowingLightGreySeed(new Item.Properties()), "glowinglightgreyseed");
+        GrassWorldItems.glowingcyanseed = registerItem(new GlowingCyanSeed(new Item.Properties()), "glowingcyanseed");
+        GrassWorldItems.glowingmagentaseed = registerItem(new GlowingMagentaSeed(new Item.Properties()), "glowingmagentaseed");
+        GrassWorldItems.glowingpurpleseed = registerItem(new GlowingPurpleSeed(new Item.Properties()), "glowingpurpleseed");
+        GrassWorldItems.glowingpinkseed = registerItem(new GlowingPinkSeed(new Item.Properties()), "glowingpinkseed");
+        GrassWorldItems.glowinggreenseed = registerItem(new GlowingGreenSeed(new Item.Properties()), "glowinggreenseed");
+        GrassWorldItems.glowinglimegreenseed = registerItem(new GlowingLimeGreenSeed(new Item.Properties()), "glowinglimegreenseed");
+        GrassWorldItems.glowingblackseed = registerItem(new GlowingBlackSeed(new Item.Properties()), "glowingblackseed");
+        GrassWorldItems.glowingwhiteseed = registerItem(new GlowingWhiteSeed(new Item.Properties()), "glowingwhiteseed");
+        GrassWorldItems.glowingbrownseed = registerItem(new GlowingBrownSeed(new Item.Properties()), "glowingbrownseed");
+        GrassWorldItems.glowingyellowseed = registerItem(new GlowingYellowSeed(new Item.Properties()), "glowingyellowseed");
 
 
     }

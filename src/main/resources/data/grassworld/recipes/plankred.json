@@ -1,0 +1,13 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "grassworld:red_log"
+    }
+  ],
+  "result": {
+    "item": "grassworld:plankred",
+    "count": 4
+  }
+}

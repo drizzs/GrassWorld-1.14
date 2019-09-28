@@ -1,12 +1,8 @@
 package com.drizzs.grassworld.blocks.normalgrass;
 
 import com.drizzs.grassworld.blocks.GrassWorldBlocks;
-import com.drizzs.grassworld.particle.GWParticleSpawn;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.ITickable;
-import net.minecraft.client.renderer.texture.ITickableTextureObject;
-import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -101,14 +97,6 @@ public class BlackGrass extends GrassBlock {
                 return isBeach && hasWater;
         }
         return false;
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    @Override
-    public void animateTick(BlockState state, World worldIn, BlockPos pos, Random random) {
-        System.out.print("This block ticks");
-        GWParticleSpawn.ENCHANTEDBLACK.spawn(worldIn, 10, .2D, 10, 0, 0, 0);
-
     }
 
 

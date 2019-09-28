@@ -1,0 +1,13 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "grassworld:pink_log"
+    }
+  ],
+  "result": {
+    "item": "grassworld:plankpink",
+    "count": 4
+  }
+}

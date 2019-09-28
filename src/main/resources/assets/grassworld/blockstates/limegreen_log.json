@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "grassworld:block/limegreen_log" },
+        "axis=z":  { "model": "grassworld:block/limegreen_log",  "x": 90  },
+        "axis=x":  { "model": "grassworld:block/limegreen_log", "x": 90, "y": 90  }
+    }
+}
