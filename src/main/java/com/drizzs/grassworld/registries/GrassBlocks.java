@@ -1,11 +1,24 @@
 package com.drizzs.grassworld.registries;
 
+import com.drizzs.grassworld.blocks.ActualGrass;
+import com.drizzs.grassworld.blocks.GrassBase;
+import com.drizzs.grassworld.blocks.UniqueGrassBase;
+import com.drizzs.grassworld.util.group.GrassGroup;
+import com.drizzs.grassworld.util.lib.GrassContentLib;
+import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
 public class GrassBlocks
 {
-/*
+
     @SubscribeEvent
     public static void registerBlocks(final RegistryEvent.Register<Block> event)
     {
@@ -234,6 +247,6 @@ public class GrassBlocks
         ForgeRegistries.BLOCKS.register(block);
         return block;
     }
-    */
+
 }
 
