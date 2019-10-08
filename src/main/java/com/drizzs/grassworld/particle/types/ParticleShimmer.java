@@ -1,7 +1,7 @@
 package com.drizzs.grassworld.particle.types;
 
 import com.drizzs.grassworld.particle.ParticleRenderDispatcher;
-import com.drizzs.grassworld.util.config.Config;
+import com.drizzs.grassworld.update.util.ConfigHandler;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.IParticleRenderType;
@@ -81,7 +81,7 @@ public class ParticleShimmer extends Particle {
         ParticleRenderDispatcher.depthIgnoringShimmerCount = 0;
 
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 0.75F);
-        Minecraft.getInstance().textureManager.bindTexture(Config.CLIENT.particleOn.get() ? grassParticles : particles);
+        Minecraft.getInstance().textureManager.bindTexture(ConfigHandler.CLIENT.particleOn.get() ? grassParticles : particles);
 
         if (!queuedRenders.isEmpty()) {
             tessellator.getBuffer().begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX_LMAP_COLOR);
