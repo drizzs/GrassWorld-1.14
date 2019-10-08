@@ -1,7 +1,7 @@
 package com.drizzs.grassworld.particle.types;
 
 import com.drizzs.grassworld.particle.ParticleRenderDispatcher;
-import com.drizzs.grassworld.update.util.ConfigHandler;
+import com.drizzs.grassworld.util.ConfigHandler;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.IParticleRenderType;

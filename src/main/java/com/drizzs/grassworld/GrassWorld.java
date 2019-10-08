@@ -1,7 +1,7 @@
 package com.drizzs.grassworld;
 
 
-import com.drizzs.grassworld.update.util.ConfigHandler;
+import com.drizzs.grassworld.util.ConfigHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
