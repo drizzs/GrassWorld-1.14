@@ -1,0 +1,38 @@
+{
+  "replace": false,
+  "values": [
+    "grassworld:blackendgrass",
+    "grassworld:blueendgrass",
+    "grassworld:brownendgrass",
+    "grassworld:cyanendgrass",
+    "grassworld:greyendgrass",
+    "grassworld:greenendgrass",
+    "grassworld:lightgreyendgrass",
+    "grassworld:limegreenendgrass",
+    "grassworld:lightblueendgrass",
+    "grassworld:magentaendgrass",
+    "grassworld:pinkendgrass",
+    "grassworld:purpleendgrass",
+    "grassworld:redendgrass",
+    "grassworld:whiteendgrass",
+    "grassworld:yellowendgrass",
+    "grassworld:orangeendgrass",
+
+    "grassworld:fancyblackendgrass",
+    "grassworld:fancyblueendgrass",
+    "grassworld:fancybrownendgrass",
+    "grassworld:fancycyanendgrass",
+    "grassworld:fancygreyendgrass",
+    "grassworld:fancygreenendgrass",
+    "grassworld:fancylightgreyendgrass",
+    "grassworld:fancylimegreenendgrass",
+    "grassworld:fancylightblueendgrass",
+    "grassworld:fancymagentaendgrass",
+    "grassworld:fancypinkendgrass",
+    "grassworld:fancypurpleendgrass",
+    "grassworld:fancyredendgrass",
+    "grassworld:fancywhiteendgrass",
+    "grassworld:fancyyellowendgrass",
+    "grassworld:fancyorangeendgrass"
+  ]
+}

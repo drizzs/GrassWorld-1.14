@@ -18,22 +18,22 @@ public class GrassFeatures {
     @SubscribeEvent
     public static void registerFeature(RegistryEvent.Register<Feature<?>> event) {
 
-        GrassFeatureLib.REDGRASS = registerFeature("redgrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_red.getDefaultState()));
-        GrassFeatureLib.CYANGRASS = registerFeature("cyangrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_cyan.getDefaultState()));
-        GrassFeatureLib.BLUEGRASS = registerFeature("bluegrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_blue.getDefaultState()));
-        GrassFeatureLib.GREENGRASS = registerFeature("greengrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_green.getDefaultState()));
-        GrassFeatureLib.LIMEGREENGRASS = registerFeature("limegreengrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_limegreen.getDefaultState()));
-        GrassFeatureLib.LIGHTBLUEGRASS = registerFeature("lightbluegrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_lightblue.getDefaultState()));
-        GrassFeatureLib.YELLOWGRASS = registerFeature("yellowgrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_yellow.getDefaultState()));
-        GrassFeatureLib.PINKGRASS = registerFeature("pinkgrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_pink.getDefaultState()));
-        GrassFeatureLib.PURPLEGRASS = registerFeature("purplegrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_purple.getDefaultState()));
-        GrassFeatureLib.MAGENTAGRASS = registerFeature("magentagrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_magenta.getDefaultState()));
-        GrassFeatureLib.ORANGEGRASS = registerFeature("orangegrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_orange.getDefaultState()));
-        GrassFeatureLib.BLACKGRASS = registerFeature("blackgrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_black.getDefaultState()));
-        GrassFeatureLib.BROWNGRASS = registerFeature("browngrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_brown.getDefaultState()));
-        GrassFeatureLib.WHITEGRASS = registerFeature("whitegrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_white.getDefaultState()));
-        GrassFeatureLib.GREYGRASS = registerFeature("greygrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_grey.getDefaultState()));
-        GrassFeatureLib.LIGHTGREYGRASS = registerFeature("lightgreygrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrass_lightgrey.getDefaultState()));
+        GrassFeatureLib.REDGRASS = registerFeature("redgrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrassred.getDefaultState()));
+        GrassFeatureLib.CYANGRASS = registerFeature("cyangrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrasscyan.getDefaultState()));
+        GrassFeatureLib.BLUEGRASS = registerFeature("bluegrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrassblue.getDefaultState()));
+        GrassFeatureLib.GREENGRASS = registerFeature("greengrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrassgreen.getDefaultState()));
+        GrassFeatureLib.LIMEGREENGRASS = registerFeature("limegreengrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrasslimegreen.getDefaultState()));
+        GrassFeatureLib.LIGHTBLUEGRASS = registerFeature("lightbluegrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrasslightblue.getDefaultState()));
+        GrassFeatureLib.YELLOWGRASS = registerFeature("yellowgrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrassyellow.getDefaultState()));
+        GrassFeatureLib.PINKGRASS = registerFeature("pinkgrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrasspink.getDefaultState()));
+        GrassFeatureLib.PURPLEGRASS = registerFeature("purplegrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrasspurple.getDefaultState()));
+        GrassFeatureLib.MAGENTAGRASS = registerFeature("magentagrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrassmagenta.getDefaultState()));
+        GrassFeatureLib.ORANGEGRASS = registerFeature("orangegrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrassorange.getDefaultState()));
+        GrassFeatureLib.BLACKGRASS = registerFeature("blackgrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrassblack.getDefaultState()));
+        GrassFeatureLib.BROWNGRASS = registerFeature("browngrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrassbrown.getDefaultState()));
+        GrassFeatureLib.WHITEGRASS = registerFeature("whitegrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrasswhite.getDefaultState()));
+        GrassFeatureLib.GREYGRASS = registerFeature("greygrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrassgrey.getDefaultState()));
+        GrassFeatureLib.LIGHTGREYGRASS = registerFeature("lightgreygrassfeature", new GrassFeature(NoFeatureConfig::deserialize, GrassContentLib.actualgrasslightgrey.getDefaultState()));
 
         GrassFeatureLib.REDISLANDFEATURE = registerFeature("redislandfeature", new RedIslandFeature(NoFeatureConfig::deserialize));
         GrassFeatureLib.CYANISLANDFEATURE = registerFeature("cyanislandfeature", new CyanIslandFeature(NoFeatureConfig::deserialize));

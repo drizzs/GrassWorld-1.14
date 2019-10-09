@@ -34,13 +34,13 @@ public class PinkIslandFeature extends Feature<NoFeatureConfig> {
                         else{
                             int next = random.nextInt(8);
                             if(next == 0 || next == 3 || next == 4 || next == 7){
-                                this.setBlockState(world, pos1, GrassContentLib.pink_grass.getDefaultState());
+                                this.setBlockState(world, pos1, GrassContentLib.pinkgrass.getDefaultState());
                             }
                             else if(next == 1 || next == 5 || next == 8){
-                                this.setBlockState(world, pos1, GrassContentLib.fancy_pink_grass.getDefaultState());
+                                this.setBlockState(world, pos1, GrassContentLib.fancypinkgrass.getDefaultState());
                             }
                             else if(next == 2){
-                                this.setBlockState(world, pos1, GrassContentLib.enchanted_pink_grass.getDefaultState());
+                                this.setBlockState(world, pos1, GrassContentLib.enchantedpinkgrass.getDefaultState());
                             }
                             else if(next == 6){
                                 this.setBlockState(world, pos1, GrassContentLib.glowingpinkgrass.getDefaultState());

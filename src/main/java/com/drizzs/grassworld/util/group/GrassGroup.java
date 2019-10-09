@@ -16,7 +16,7 @@ public class GrassGroup extends ItemGroup {
     @Override
     public ItemStack createIcon()
     {
-        return new ItemStack(GrassContentLib.gw_icon);
+        return new ItemStack(GrassContentLib.gwicon);
     }
 
 

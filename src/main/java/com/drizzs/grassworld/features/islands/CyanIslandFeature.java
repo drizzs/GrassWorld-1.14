@@ -34,13 +34,13 @@ public class CyanIslandFeature extends Feature<NoFeatureConfig> {
                         else{
                             int next = random.nextInt(8);
                             if(next == 0 || next == 3 || next == 4 || next == 7){
-                                this.setBlockState(world, pos1, GrassContentLib.cyan_grass.getDefaultState());
+                                this.setBlockState(world, pos1, GrassContentLib.cyangrass.getDefaultState());
                             }
                             else if(next == 1 || next == 5 || next == 8){
-                                this.setBlockState(world, pos1, GrassContentLib.fancy_cyan_grass.getDefaultState());
+                                this.setBlockState(world, pos1, GrassContentLib.fancycyangrass.getDefaultState());
                             }
                             else if(next == 2){
-                                this.setBlockState(world, pos1, GrassContentLib.enchanted_cyan_grass.getDefaultState());
+                                this.setBlockState(world, pos1, GrassContentLib.enchantedcyangrass.getDefaultState());
                             }
                             else if(next == 6){
                                 this.setBlockState(world, pos1, GrassContentLib.glowingcyangrass.getDefaultState());

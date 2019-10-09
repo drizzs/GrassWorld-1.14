@@ -1,5 +1,9 @@
 package com.drizzs.grassworld.blocks;
 
+import com.drizzs.grassworld.util.GrassConfigHandler;
+import com.drizzs.grassworld.util.GrassHolders;
+import com.drizzs.grassworld.util.lib.GrassContentLib;
+import com.drizzs.grassworld.util.tags.GrassTags;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.Direction;
@@ -15,17 +19,17 @@ import java.util.Random;
 
 public class GrassBase extends GrassBlock {
 
-    public BlockState grass;
 
-    public GrassBase(Properties properties, BlockState grass) {
+    public GrassBase(Properties properties, String id) {
         super(properties);
-        this.grass = grass;
+        setRegistryName(id);
 
     }
 
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {
         BlockPos blockpos = pos.up();
-        BlockState blockstate = this.grass;
+        GrassHolders.grass = grassPicker();
+        BlockState blockstate = GrassHolders.grass;
 
         for (int i = 0; i < 128; ++i) {
             BlockPos blockpos1 = blockpos;
@@ -100,5 +104,117 @@ public class GrassBase extends GrassBlock {
         return false;
     }
 
+    public BlockState grassPicker(){
+        if(GrassConfigHandler.COMMON.ALLGRASS.get()){
+            randomGrassPicker();
+        }
+        else if(this.isIn(GrassTags.Blocks.BLUEGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrassblue.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.BLACKGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrassblack.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.BROWNGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrassbrown.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.CYANGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrasscyan.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.GREENGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrassgreen.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.GREYGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrassgrey.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.LIGHTGREYGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrasslightgrey.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.LIGHTBLUEGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrasslightblue.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.LIMEGREENGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrasslimegreen.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.MAGENTAGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrassmagenta.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.ORANGEGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrassorange.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.PINKGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrasspink.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.PURPLEGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrasspurple.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.REDGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrassred.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.WHITEGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrasswhite.getDefaultState();
+        }
+        else if(this.isIn(GrassTags.Blocks.YELLOWGRASS)){
+            GrassHolders.grass = GrassContentLib.actualgrassyellow.getDefaultState();
+        }
+        else{
+            randomGrassPicker();
+        }
+        return GrassHolders.grass;
+    }
+
+
+    public BlockState randomGrassPicker(){
+        Random random = this.RANDOM;
+        int grass = random.nextInt(15);
+        if(grass == 0){
+            GrassHolders.grass = GrassContentLib.actualgrassblue.getDefaultState();
+        }
+        else if(grass == 1){
+            GrassHolders.grass = GrassContentLib.actualgrassblack.getDefaultState();
+        }
+        else if(grass == 2){
+            GrassHolders.grass = GrassContentLib.actualgrassbrown.getDefaultState();
+        }
+        else if(grass == 3){
+            GrassHolders.grass = GrassContentLib.actualgrasscyan.getDefaultState();
+        }
+        else if(grass == 4){
+            GrassHolders.grass = GrassContentLib.actualgrassgreen.getDefaultState();
+        }
+        else if(grass == 5){
+            GrassHolders.grass = GrassContentLib.actualgrassgrey.getDefaultState();
+        }
+        else if(grass == 6){
+            GrassHolders.grass = GrassContentLib.actualgrasslightgrey.getDefaultState();
+        }
+        else if(grass == 7){
+            GrassHolders.grass = GrassContentLib.actualgrasslightblue.getDefaultState();
+        }
+        else if(grass == 8){
+            GrassHolders.grass = GrassContentLib.actualgrasslimegreen.getDefaultState();
+        }
+        else if(grass == 9){
+            GrassHolders.grass = GrassContentLib.actualgrassmagenta.getDefaultState();
+        }
+        else if(grass == 10){
+            GrassHolders.grass = GrassContentLib.actualgrassorange.getDefaultState();
+        }
+        else if(grass == 11){
+            GrassHolders.grass = GrassContentLib.actualgrasspink.getDefaultState();
+        }
+        else if(grass == 12){
+            GrassHolders.grass = GrassContentLib.actualgrasspurple.getDefaultState();
+        }
+        else if(grass == 13){
+            GrassHolders.grass = GrassContentLib.actualgrassred.getDefaultState();
+        }
+        else if(grass == 14){
+            GrassHolders.grass = GrassContentLib.actualgrasswhite.getDefaultState();
+        }
+        else if(grass == 15){
+            GrassHolders.grass = GrassContentLib.actualgrassyellow.getDefaultState();
+        }
+        return GrassHolders.grass;
+    }
 
 }

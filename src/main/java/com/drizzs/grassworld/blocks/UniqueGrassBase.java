@@ -1,5 +1,8 @@
 package com.drizzs.grassworld.blocks;
 
+import com.drizzs.grassworld.util.GrassHolders;
+import com.drizzs.grassworld.util.tags.GrassTags;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SnowBlock;
@@ -14,11 +17,9 @@ import java.util.Random;
 
 public class UniqueGrassBase extends GrassBase {
 
-    public BlockState blockgrowth;
-
-    public UniqueGrassBase(Properties properties, BlockState grass, BlockState blockgrowth) {
-        super(properties, grass);
-        this.blockgrowth = blockgrowth;
+    public UniqueGrassBase(Properties properties, String id) {
+        super(properties, id);
+        GrassHolders.blockGrowth = blockGrowth();
     }
 
     private static boolean getLightLevel(BlockState state, IWorldReader iworld, BlockPos pos) {
@@ -45,7 +46,7 @@ public class UniqueGrassBase extends GrassBase {
             if (!worldIn.isAreaLoaded(pos, 3))
                 return; // Forge: prevent loading unloaded chunks when checking neighbor's light and spreading
             if (!getLightLevel(state, worldIn, pos)) {
-                worldIn.setBlockState(pos, this.blockgrowth);
+                worldIn.setBlockState(pos, GrassHolders.blockGrowth);
 
 
             } else {
@@ -54,7 +55,7 @@ public class UniqueGrassBase extends GrassBase {
 
                     for (int i = 0; i < 4; ++i) {
                         BlockPos blockpos = pos.add(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
-                        if (worldIn.getBlockState(blockpos) == this.blockgrowth && getFluidState(blockstate, worldIn, blockpos)) {
+                        if (worldIn.getBlockState(blockpos) == GrassHolders.blockGrowth && getFluidState(blockstate, worldIn, blockpos)) {
                             worldIn.setBlockState(blockpos, blockstate.with(SNOWY, Boolean.valueOf(worldIn.getBlockState(blockpos.up()).getBlock() == Blocks.SNOW)));
 
                         }
@@ -64,7 +65,17 @@ public class UniqueGrassBase extends GrassBase {
             }
         }
 
+    }
 
+    public BlockState blockGrowth(){
+
+        if (this.isIn(GrassTags.Blocks.NETHERGRASS)) {
+            GrassHolders.blockGrowth = Blocks.NETHERRACK.getDefaultState();
+        }
+        if (this.isIn(GrassTags.Blocks.ENDGRASS)) {
+            GrassHolders.blockGrowth = Blocks.END_STONE.getDefaultState();
+        }
+        return GrassHolders.blockGrowth;
     }
 
 }

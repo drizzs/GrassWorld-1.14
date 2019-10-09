@@ -1,0 +1,39 @@
+{
+  "replace": false,
+  "values": [
+    "grassworld:blacknethergrass",
+    "grassworld:bluenethergrass",
+    "grassworld:brownnethergrass",
+    "grassworld:cyannethergrass",
+    "grassworld:greynethergrass",
+    "grassworld:greennethergrass",
+    "grassworld:lightgreynethergrass",
+    "grassworld:limegreennethergrass",
+    "grassworld:lightbluenethergrass",
+    "grassworld:magentanethergrass",
+    "grassworld:pinknethergrass",
+    "grassworld:purplenethergrass",
+    "grassworld:rednethergrass",
+    "grassworld:whitenethergrass",
+    "grassworld:yellownethergrass",
+    "grassworld:orangenethergrass",
+
+    "grassworld:fancyblacknethergrass",
+    "grassworld:fancybluenethergrass",
+    "grassworld:fancybrownnethergrass",
+    "grassworld:fancycyannethergrass",
+    "grassworld:fancygreynethergrass",
+    "grassworld:fancygreennethergrass",
+    "grassworld:fancylightgreynethergrass",
+    "grassworld:fancylimegreennethergrass",
+    "grassworld:fancylightbluenethergrass",
+    "grassworld:fancymagentanethergrass",
+    "grassworld:fancypinknethergrass",
+    "grassworld:fancypurplenethergrass",
+    "grassworld:fancyrednethergrass",
+    "grassworld:fancywhitenethergrass",
+    "grassworld:fancyyellownethergrass",
+    "grassworld:fancyorangenethergrass"
+
+  ]
+}

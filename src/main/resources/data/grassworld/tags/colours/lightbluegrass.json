@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "grassworld:glowinglightbluegrass",
+    "grassworld:enchantedlightbluegrass",
+    "grassworld:fancylightblueendgrass",
+    "grassworld:fancylightbluegrass",
+    "grassworld:lightbluenethergrass",
+    "grassworld:lightblueendgrass",
+    "grassworld:lightbluegrass",
+    "grassworld:fancylightbluenethergrass"
+  ]
+}

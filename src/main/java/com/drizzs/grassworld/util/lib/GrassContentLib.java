@@ -2,82 +2,1020 @@ package com.drizzs.grassworld.util.lib;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.world.biome.Biome;
+import net.minecraftforge.registries.ObjectHolder;
 
 public class GrassContentLib {
 
     //Blocks
+    //Normal Grass
+    @ObjectHolder("grassworld:orangegrass")
+    public static Block orangegrass;
 
-    // Normal Grass
-    public static Block orange_grass, blue_grass, black_grass, white_grass, yellow_grass, red_grass, grey_grass, lightgrey_grass, lightblue_grass, limegreen_grass, magenta_grass, cyan_grass, pink_grass, purple_grass, brown_grass, green_grass;
+    @ObjectHolder("grassworld:bluegrass")
+    public static Block bluegrass;
+
+    @ObjectHolder("grassworld:blackgrass")
+    public static Block blackgrass;
+
+    @ObjectHolder("grassworld:whitegrass")
+    public static Block whitegrass;
+
+    @ObjectHolder("grassworld:yellowgrass")
+    public static Block yellowgrass;
+
+    @ObjectHolder("grassworld:redgrass")
+    public static Block redgrass;
+
+    @ObjectHolder("grassworld:greygrass")
+    public static Block greygrass;
+
+    @ObjectHolder("grassworld:lightgreygrass")
+    public static Block lightgreygrass;
+
+    @ObjectHolder("grassworld:lightbluegrass")
+    public static Block lightbluegrass;
+
+    @ObjectHolder("grassworld:limegreengrass")
+    public static Block limegreengrass;
+
+    @ObjectHolder("grassworld:magentagrass")
+    public static Block magentagrass;
+
+    @ObjectHolder("grassworld:cyangrass")
+    public static Block cyangrass;
+
+    @ObjectHolder("grassworld:pinkgrass")
+    public static Block pinkgrass;
+
+    @ObjectHolder("grassworld:purplegrass")
+    public static Block purplegrass;
+
+    @ObjectHolder("grassworld:browngrass")
+    public static Block browngrass;
+
+    @ObjectHolder("grassworld:greengrass")
+    public static Block greengrass;
 
     //Logs
-    public static Block orange_log, blue_log, black_log, white_log, yellow_log, red_log, grey_log, lightgrey_log, lightblue_log, limegreen_log, magenta_log, cyan_log, pink_log, purple_log, brown_log, green_log;
+    @ObjectHolder("grassworld:orangelog")
+    public static Block orangelog;
+
+    @ObjectHolder("grassworld:bluelog")
+    public static Block bluelog;
+
+    @ObjectHolder("grassworld:blacklog")
+    public static Block blacklog;
+
+    @ObjectHolder("grassworld:whitelog")
+    public static Block whitelog;
+
+    @ObjectHolder("grassworld:yellowlog")
+    public static Block yellowlog;
+
+    @ObjectHolder("grassworld:redlog")
+    public static Block redlog;
+
+    @ObjectHolder("grassworld:greylog")
+    public static Block greylog;
+
+    @ObjectHolder("grassworld:lightgreylog")
+    public static Block lightgreylog;
+
+    @ObjectHolder("grassworld:lightbluelog")
+    public static Block lightbluelog;
+
+    @ObjectHolder("grassworld:limegreenlog")
+    public static Block limegreenlog;
+
+    @ObjectHolder("grassworld:magentalog")
+    public static Block magentalog;
+
+    @ObjectHolder("grassworld:cyanlog")
+    public static Block cyanlog;
+
+    @ObjectHolder("grassworld:pinklog")
+    public static Block pinklog;
+
+    @ObjectHolder("grassworld:purplelog")
+    public static Block purplelog;
+
+    @ObjectHolder("grassworld:brownlog")
+    public static Block brownlog;
+
+    @ObjectHolder("grassworld:greenlog")
+    public static Block greenlog;
+
 
     //Leaves
-    public static Block orange_leaves, blue_leaves, black_leaves, white_leaves, yellow_leaves, red_leaves, grey_leaves, lightgrey_leaves, lightblue_leaves, limegreen_leaves, magenta_leaves, cyan_leaves, pink_leaves, purple_leaves, brown_leaves, green_leaves;
+    @ObjectHolder("grassworld:orangeleaves")
+    public static Block orangeleaves;
+
+    @ObjectHolder("grassworld:blueleaves")
+    public static Block blueleaves;
+
+    @ObjectHolder("grassworld:blackleaves")
+    public static Block blackleaves;
+
+    @ObjectHolder("grassworld:whiteleaves")
+    public static Block whiteleaves;
+
+    @ObjectHolder("grassworld:yellowleaves")
+    public static Block yellowleaves;
+
+    @ObjectHolder("grassworld:redleaves")
+    public static Block redleaves;
+
+    @ObjectHolder("grassworld:greyleaves")
+    public static Block greyleaves;
+
+    @ObjectHolder("grassworld:lightgreyleaves")
+    public static Block lightgreyleaves;
+
+    @ObjectHolder("grassworld:lightblueleaves")
+    public static Block lightblueleaves;
+
+    @ObjectHolder("grassworld:limegreenleaves")
+    public static Block limegreenleaves;
+
+    @ObjectHolder("grassworld:magentaleaves")
+    public static Block magentaleaves;
+
+    @ObjectHolder("grassworld:cyanleaves")
+    public static Block cyanleaves;
+
+    @ObjectHolder("grassworld:pinkleaves")
+    public static Block pinkleaves;
+
+    @ObjectHolder("grassworld:purpleleaves")
+    public static Block purpleleaves;
+
+    @ObjectHolder("grassworld:brownleaves")
+    public static Block brownleaves;
+
+    @ObjectHolder("grassworld:greenleaves")
+    public static Block greenleaves;
 
     //Fancy Grass
-    public static Block fancy_blue_grass, fancy_black_grass, fancy_white_grass, fancy_yellow_grass, fancy_red_grass, fancy_grey_grass, fancy_lightgrey_grass, fancy_lightblue_grass, fancy_limegreen_grass, fancy_magenta_grass, fancy_cyan_grass, fancy_pink_grass, fancy_purple_grass, fancy_brown_grass, fancy_green_grass, fancy_orange_grass;
+    @ObjectHolder("grassworld:fancybluegrass")
+    public static Block fancybluegrass;
+
+    @ObjectHolder("grassworld:fancyblackgrass")
+    public static Block fancyblackgrass;
+
+    @ObjectHolder("grassworld:fancywhitegrass")
+    public static Block fancywhitegrass;
+
+    @ObjectHolder("grassworld:fancyyellowgrass")
+    public static Block fancyyellowgrass;
+
+    @ObjectHolder("grassworld:fancyredgrass")
+    public static Block fancyredgrass;
+
+    @ObjectHolder("grassworld:fancygreygrass")
+    public static Block fancygreygrass;
+
+    @ObjectHolder("grassworld:fancylightgreygrass")
+    public static Block fancylightgreygrass;
+
+    @ObjectHolder("grassworld:fancylightbluegrass")
+    public static Block fancylightbluegrass;
+
+    @ObjectHolder("grassworld:fancylimegreengrass")
+    public static Block fancylimegreengrass;
+
+    @ObjectHolder("grassworld:fancymagentagrass")
+    public static Block fancymagentagrass;
+
+    @ObjectHolder("grassworld:fancycyangrass")
+    public static Block fancycyangrass;
+
+    @ObjectHolder("grassworld:fancypinkgrass")
+    public static Block fancypinkgrass;
+
+    @ObjectHolder("grassworld:fancypurplegrass")
+    public static Block fancypurplegrass;
+
+    @ObjectHolder("grassworld:fancybrowngrass")
+    public static Block fancybrowngrass;
+
+    @ObjectHolder("grassworld:fancygreengrass")
+    public static Block fancygreengrass;
+
+    @ObjectHolder("grassworld:fancyorangegrass")
+    public static Block fancyorangegrass;
 
     //Enchanted Grass
-    public static Block enchanted_orange_grass, enchanted_blue_grass, enchanted_black_grass, enchanted_white_grass, enchanted_yellow_grass, enchanted_red_grass, enchanted_grey_grass, enchanted_lightgrey_grass, enchanted_lightblue_grass, enchanted_limegreen_grass, enchanted_magenta_grass, enchanted_cyan_grass, enchanted_pink_grass, enchanted_purple_grass, enchanted_brown_grass, enchanted_green_grass;
+    @ObjectHolder("grassworld:enchantedorangegrass")
+    public static Block enchantedorangegrass;
+
+    @ObjectHolder("grassworld:enchantedbluegrass")
+    public static Block enchantedbluegrass;
+
+    @ObjectHolder("grassworld:enchantedblackgrass")
+    public static Block enchantedblackgrass;
+
+    @ObjectHolder("grassworld:enchantedwhitegrass")
+    public static Block enchantedwhitegrass;
+
+    @ObjectHolder("grassworld:enchantedyellowgrass")
+    public static Block enchantedyellowgrass;
+
+    @ObjectHolder("grassworld:enchantedredgrass")
+    public static Block enchantedredgrass;
+
+    @ObjectHolder("grassworld:enchantedgreygrass")
+    public static Block enchantedgreygrass;
+
+    @ObjectHolder("grassworld:enchantedlightgreygrass")
+    public static Block enchantedlightgreygrass;
+
+    @ObjectHolder("grassworld:enchantedlightbluegrass")
+    public static Block enchantedlightbluegrass;
+
+    @ObjectHolder("grassworld:enchantedlimegreengrass")
+    public static Block enchantedlimegreengrass;
+
+    @ObjectHolder("grassworld:enchantedmagentagrass")
+    public static Block enchantedmagentagrass;
+
+    @ObjectHolder("grassworld:enchantedcyangrass")
+    public static Block enchantedcyangrass;
+
+    @ObjectHolder("grassworld:enchantedpinkgrass")
+    public static Block enchantedpinkgrass;
+
+    @ObjectHolder("grassworld:enchantedpurplegrass")
+    public static Block enchantedpurplegrass;
+
+    @ObjectHolder("grassworld:enchantedbrowngrass")
+    public static Block enchantedbrowngrass;
+
+    @ObjectHolder("grassworld:enchantedgreengrass")
+    public static Block enchantedgreengrass;
+
+    //ActualGrass
+    @ObjectHolder("grassworld:actualgrassorange")
+    public static Block actualgrassorange;
+
+    @ObjectHolder("grassworld:actualgrasscyan")
+    public static Block actualgrasscyan;
+
+    @ObjectHolder("grassworld:actualgrassred")
+    public static Block actualgrassred;
+
+    @ObjectHolder("grassworld:actualgrassbrown")
+    public static Block actualgrassbrown;
+
+    @ObjectHolder("grassworld:actualgrasspink")
+    public static Block actualgrasspink;
+
+    @ObjectHolder("grassworld:actualgrasspurple")
+    public static Block actualgrasspurple;
+
+    @ObjectHolder("grassworld:actualgrassgreen")
+    public static Block actualgrassgreen;
+
+    @ObjectHolder("grassworld:actualgrasslimegreen")
+    public static Block actualgrasslimegreen;
+
+    @ObjectHolder("grassworld:actualgrasslightgrey")
+    public static Block actualgrasslightgrey;
+
+    @ObjectHolder("grassworld:actualgrassgrey")
+    public static Block actualgrassgrey;
+
+    @ObjectHolder("grassworld:actualgrasslightblue")
+    public static Block actualgrasslightblue;
+
+    @ObjectHolder("grassworld:actualgrassyellow")
+    public static Block actualgrassyellow;
+
+    @ObjectHolder("grassworld:actualgrasswhite")
+    public static Block actualgrasswhite;
+
+    @ObjectHolder("grassworld:actualgrassmagenta")
+    public static Block actualgrassmagenta;
+
+    @ObjectHolder("grassworld:actualgrassblack")
+    public static Block actualgrassblack;
+
+    @ObjectHolder("grassworld:actualgrassblue")
+    public static Block actualgrassblue;
+
+    //Planks
+    @ObjectHolder("grassworld:plankred")
+    public static Block plankred;
+
+    @ObjectHolder("grassworld:plankblue")
+    public static Block plankblue;
+
+    @ObjectHolder("grassworld:plankgreen")
+    public static Block plankgreen;
+
+    @ObjectHolder("grassworld:planklimegreen")
+    public static Block planklimegreen;
+
+    @ObjectHolder("grassworld:plankorange")
+    public static Block plankorange;
+
+    @ObjectHolder("grassworld:planklightblue")
+    public static Block planklightblue;
+
+    @ObjectHolder("grassworld:plankgrey")
+    public static Block plankgrey;
+
+    @ObjectHolder("grassworld:planklightgrey")
+    public static Block planklightgrey;
+
+    @ObjectHolder("grassworld:plankmagenta")
+    public static Block plankmagenta;
+
+    @ObjectHolder("grassworld:plankbrown")
+    public static Block plankbrown;
+
+    @ObjectHolder("grassworld:plankwhite")
+    public static Block plankwhite;
+
+    @ObjectHolder("grassworld:plankblack")
+    public static Block plankblack;
+
+    @ObjectHolder("grassworld:plankpurple")
+    public static Block plankpurple;
+
+    @ObjectHolder("grassworld:plankpink")
+    public static Block plankpink;
+
+    @ObjectHolder("grassworld:plankcyan")
+    public static Block plankcyan;
+
+    @ObjectHolder("grassworld:plankyellow")
+    public static Block plankyellow;
+
+    //End Grass
+    @ObjectHolder("grassworld:orangeendgrass")
+    public static Block orangeendgrass;
+
+    @ObjectHolder("grassworld:blueendgrass")
+    public static Block blueendgrass;
+
+    @ObjectHolder("grassworld:blackendgrass")
+    public static Block blackendgrass;
+
+    @ObjectHolder("grassworld:whiteendgrass")
+    public static Block whiteendgrass;
+
+    @ObjectHolder("grassworld:yellowendgrass")
+    public static Block yellowendgrass;
+
+    @ObjectHolder("grassworld:redendgrass")
+    public static Block redendgrass;
+
+    @ObjectHolder("grassworld:greyendgrass")
+    public static Block greyendgrass;
+
+    @ObjectHolder("grassworld:lightgreyendgrass")
+    public static Block lightgreyendgrass;
+
+    @ObjectHolder("grassworld:lightblueendgrass")
+    public static Block lightblueendgrass;
+
+    @ObjectHolder("grassworld:limegreenendgrass")
+    public static Block limegreenendgrass;
+
+    @ObjectHolder("grassworld:magentaendgrass")
+    public static Block magentaendgrass;
+
+    @ObjectHolder("grassworld:cyanendgrass")
+    public static Block cyanendgrass;
+
+    @ObjectHolder("grassworld:pinkendgrass")
+    public static Block pinkendgrass;
+
+    @ObjectHolder("grassworld:purpleendgrass")
+    public static Block purpleendgrass;
+
+    @ObjectHolder("grassworld:brownendgrass")
+    public static Block brownendgrass;
+
+    @ObjectHolder("grassworld:greenendgrass")
+    public static Block greenendgrass;
 
 
-    public static Block actualgrass_orange,actualgrass_cyan,actualgrass_red,actualgrass_brown,actualgrass_pink,actualgrass_purple,actualgrass_green,actualgrass_limegreen,actualgrass_lightgrey,actualgrass_grey,actualgrass_lightblue,actualgrass_yellow,actualgrass_white,actualgrass_magenta,actualgrass_black,actualgrass_blue;
+    //Fancy End Grass
+    @ObjectHolder("grassworld:fancyorangeendgrass")
+    public static Block fancyorangeendgrass;
+
+    @ObjectHolder("grassworld:fancyblueendgrass")
+    public static Block fancyblueendgrass;
+
+    @ObjectHolder("grassworld:fancyblackendgrass")
+    public static Block fancyblackendgrass;
+
+    @ObjectHolder("grassworld:fancywhiteendgrass")
+    public static Block fancywhiteendgrass;
+
+    @ObjectHolder("grassworld:fancyyellowendgrass")
+    public static Block fancyyellowendgrass;
+
+    @ObjectHolder("grassworld:fancyredendgrass")
+    public static Block fancyredendgrass;
+
+    @ObjectHolder("grassworld:fancygreyendgrass")
+    public static Block fancygreyendgrass;
+
+    @ObjectHolder("grassworld:fancylightgreyendgrass")
+    public static Block fancylightgreyendgrass;
+
+    @ObjectHolder("grassworld:fancylightblueendgrass")
+    public static Block fancylightblueendgrass;
+
+    @ObjectHolder("grassworld:fancylimegreenendgrass")
+    public static Block fancylimegreenendgrass;
+
+    @ObjectHolder("grassworld:fancymagentaendgrass")
+    public static Block fancymagentaendgrass;
+
+    @ObjectHolder("grassworld:fancycyanendgrass")
+    public static Block fancycyanendgrass;
+
+    @ObjectHolder("grassworld:fancypinkendgrass")
+    public static Block fancypinkendgrass;
+
+    @ObjectHolder("grassworld:fancypurpleendgrass")
+    public static Block fancypurpleendgrass;
+
+    @ObjectHolder("grassworld:fancybrownendgrass")
+    public static Block fancybrownendgrass;
+
+    @ObjectHolder("grassworld:fancygreenendgrass")
+    public static Block fancygreenendgrass;
 
 
-    public static Block plankred,plankblue,plankgreen,planklimegreen,plankorange,planklightblue,plankgrey,planklightgrey,plankmagenta,plankbrown,plankwhite,plankblack,plankpurple,plankpink,plankcyan,plankyellow;
+    //NetherGrass
+    @ObjectHolder("grassworld:orangenethergrass")
+    public static Block orangenethergrass;
+
+    @ObjectHolder("grassworld:bluenethergrass")
+    public static Block bluenethergrass;
+
+    @ObjectHolder("grassworld:blacknethergrass")
+    public static Block blacknethergrass;
+
+    @ObjectHolder("grassworld:whitenethergrass")
+    public static Block whitenethergrass;
+
+    @ObjectHolder("grassworld:yellownethergrass")
+    public static Block yellownethergrass;
+
+    @ObjectHolder("grassworld:rednethergrass")
+    public static Block rednethergrass;
+
+    @ObjectHolder("grassworld:greynethergrass")
+    public static Block greynethergrass;
+
+    @ObjectHolder("grassworld:lightgreynethergrass")
+    public static Block lightgreynethergrass;
+
+    @ObjectHolder("grassworld:lightbluenethergrass")
+    public static Block lightbluenethergrass;
+
+    @ObjectHolder("grassworld:limegreennethergrass")
+    public static Block limegreennethergrass;
+
+    @ObjectHolder("grassworld:magentanethergrass")
+    public static Block magentanethergrass;
+
+    @ObjectHolder("grassworld:cyannethergrass")
+    public static Block cyannethergrass;
+
+    @ObjectHolder("grassworld:pinknethergrass")
+    public static Block pinknethergrass;
+
+    @ObjectHolder("grassworld:purplenethergrass")
+    public static Block purplenethergrass;
+
+    @ObjectHolder("grassworld:brownnethergrass")
+    public static Block brownnethergrass;
+
+    @ObjectHolder("grassworld:greennethergrass")
+    public static Block greennethergrass;
+
+    //Fancy Nether Grass
+    @ObjectHolder("grassworld:fancyorangenethergrass")
+    public static Block fancyorangenethergrass;
+
+    @ObjectHolder("grassworld:fancybluenethergrass")
+    public static Block fancybluenethergrass;
+
+    @ObjectHolder("grassworld:fancyblacknethergrass")
+    public static Block fancyblacknethergrass;
+
+    @ObjectHolder("grassworld:fancywhitenethergrass")
+    public static Block fancywhitenethergrass;
+
+    @ObjectHolder("grassworld:fancyyellownethergrass")
+    public static Block fancyyellownethergrass;
+
+    @ObjectHolder("grassworld:fancyrednethergrass")
+    public static Block fancyrednethergrass;
+
+    @ObjectHolder("grassworld:fancygreynethergrass")
+    public static Block fancygreynethergrass;
+
+    @ObjectHolder("grassworld:fancylightgreynethergrass")
+    public static Block fancylightgreynethergrass;
+
+    @ObjectHolder("grassworld:fancylightbluenethergrass")
+    public static Block fancylightbluenethergrass;
+
+    @ObjectHolder("grassworld:fancylimegreennethergrass")
+    public static Block fancylimegreennethergrass;
+
+    @ObjectHolder("grassworld:fancymagentanethergrass")
+    public static Block fancymagentanethergrass;
+
+    @ObjectHolder("grassworld:fancycyannethergrass")
+    public static Block fancycyannethergrass;
+
+    @ObjectHolder("grassworld:fancypinknethergrass")
+    public static Block fancypinknethergrass;
+
+    @ObjectHolder("grassworld:fancypurplenethergrass")
+    public static Block fancypurplenethergrass;
+
+    @ObjectHolder("grassworld:fancybrownnethergrass")
+    public static Block fancybrownnethergrass;
+
+    @ObjectHolder("grassworld:fancygreennethergrass")
+    public static Block fancygreennethergrass;
 
 
-    public static Block orangeendgrass,blueendgrass,blackendgrass,whiteendgrass,yellowendgrass,redendgrass,greyendgrass,lightgreyendgrass,lightblueendgrass,limegreenendgrass,magentaendgrass,cyanendgrass,pinkendgrass,purpleendgrass,brownendgrass,greenendgrass;
+    //Glowing Grass
+    @ObjectHolder("grassworld:glowingbluegrass")
+    public static Block glowingbluegrass;
 
+    @ObjectHolder("grassworld:glowingblackgrass")
+    public static Block glowingblackgrass;
 
-    public static Block fancyorangeendgrass,fancyblueendgrass,fancyblackendgrass,fancywhiteendgrass,fancyyellowendgrass,fancyredendgrass,fancygreyendgrass,fancylightgreyendgrass,fancylightblueendgrass,fancylimegreenendgrass,fancymagentaendgrass,fancycyanendgrass,fancypinkendgrass,fancypurpleendgrass,fancybrownendgrass,fancygreenendgrass;
+    @ObjectHolder("grassworld:glowingwhitegrass")
+    public static Block glowingwhitegrass;
 
+    @ObjectHolder("grassworld:glowingyellowgrass")
+    public static Block glowingyellowgrass;
 
-    public static Block orangenethergrass,bluenethergrass,blacknethergrass,whitenethergrass,yellownethergrass,rednethergrass,greynethergrass,lightgreynethergrass,lightbluenethergrass,limegreennethergrass,magentanethergrass,cyannethergrass,pinknethergrass,purplenethergrass,brownnethergrass,greennethergrass;
+    @ObjectHolder("grassworld:glowingredgrass")
+    public static Block glowingredgrass;
 
+    @ObjectHolder("grassworld:glowinggreygrass")
+    public static Block glowinggreygrass;
 
-    public static Block fancyorangenethergrass,fancybluenethergrass,fancyblacknethergrass,fancywhitenethergrass,fancyyellownethergrass,fancyrednethergrass,fancygreynethergrass,fancylightgreynethergrass,fancylightbluenethergrass,fancylimegreennethergrass,fancymagentanethergrass,fancycyannethergrass,fancypinknethergrass,fancypurplenethergrass,fancybrownnethergrass,fancygreennethergrass;
+    @ObjectHolder("grassworld:glowinglightgreygrass")
+    public static Block glowinglightgreygrass;
 
+    @ObjectHolder("grassworld:glowinglightbluegrass")
+    public static Block glowinglightbluegrass;
 
-    public static Block glowingbluegrass,glowingblackgrass,glowingwhitegrass,glowingyellowgrass,glowingredgrass,glowinggreygrass,glowinglightgreygrass,glowinglightbluegrass,glowinglimegreengrass,glowingmagentagrass,glowingcyangrass,glowingpinkgrass,glowingpurplegrass,glowingbrowngrass,glowinggreengrass,glowingorangegrass;
+    @ObjectHolder("grassworld:glowinglimegreengrass")
+    public static Block glowinglimegreengrass;
+
+    @ObjectHolder("grassworld:glowingmagentagrass")
+    public static Block glowingmagentagrass;
+
+    @ObjectHolder("grassworld:glowingcyangrass")
+    public static Block glowingcyangrass;
+
+    @ObjectHolder("grassworld:glowingpinkgrass")
+    public static Block glowingpinkgrass;
+
+    @ObjectHolder("grassworld:glowingpurplegrass")
+    public static Block glowingpurplegrass;
+
+    @ObjectHolder("grassworld:glowingbrowngrass")
+    public static Block glowingbrowngrass;
+
+    @ObjectHolder("grassworld:glowinggreengrass")
+    public static Block glowinggreengrass;
+
+    @ObjectHolder("grassworld:glowingorangegrass")
+    public static Block glowingorangegrass;
+
 
     //Items
 
-    public static Item gw_icon;
+    @ObjectHolder("grassworld:gwicon")
+    public static Item gwicon;
+
+    //Normal Seeds
 
 
-    public static Item orangeseed,blueseed,redseed,lightblueseed,greyseed,lightgreyseed,pinkseed,purpleseed,magentaseed,cyanseed,blackseed,brownseed,whiteseed,yellowseed,greenseed,limegreenseed;
+    @ObjectHolder("grassworld:glowingorangegrass")
+    public static Item orangeseed;
+
+    @ObjectHolder("grassworld:blueseed")
+    public static Item blueseed;
+
+    @ObjectHolder("grassworld:redseed")
+    public static Item redseed;
+
+    @ObjectHolder("grassworld:lightblueseed")
+    public static Item lightblueseed;
+
+    @ObjectHolder("grassworld:greyseed")
+    public static Item greyseed;
+
+    @ObjectHolder("grassworld:lightgreyseed")
+    public static Item lightgreyseed;
+
+    @ObjectHolder("grassworld:pinkseed")
+    public static Item pinkseed;
+
+    @ObjectHolder("grassworld:purpleseed")
+    public static Item purpleseed;
+
+    @ObjectHolder("grassworld:magentaseed")
+    public static Item magentaseed;
+
+    @ObjectHolder("grassworld:cyanseed")
+    public static Item cyanseed;
+
+    @ObjectHolder("grassworld:blackseed")
+    public static Item blackseed;
+
+    @ObjectHolder("grassworld:brownseed")
+    public static Item brownseed;
+
+    @ObjectHolder("grassworld:whiteseed")
+    public static Item whiteseed;
+
+    @ObjectHolder("grassworld:yellowseed")
+    public static Item yellowseed;
+
+    @ObjectHolder("grassworld:greenseed")
+    public static Item greenseed;
+
+    @ObjectHolder("grassworld:limegreenseed")
+    public static Item limegreenseed;
 
 
-    public static Item glowingorangeseed,glowingblueseed,glowingredseed,glowinglightblueseed,glowinggreyseed,glowinglightgreyseed,glowingpinkseed,glowingpurpleseed,glowingmagentaseed,glowingcyanseed,glowingblackseed,glowingbrownseed,glowingwhiteseed,glowingyellowseed,glowinggreenseed,glowinglimegreenseed;
+    //Glowing Seed
+    @ObjectHolder("grassworld:glowingorangeseed")
+    public static Item glowingorangeseed;
+
+    @ObjectHolder("grassworld:glowingblueseed")
+    public static Item glowingblueseed;
+
+    @ObjectHolder("grassworld:glowingredseed")
+    public static Item glowingredseed;
+
+    @ObjectHolder("grassworld:glowinglightblueseed")
+    public static Item glowinglightblueseed;
+
+    @ObjectHolder("grassworld:glowinggreyseed")
+    public static Item glowinggreyseed;
+
+    @ObjectHolder("grassworld:glowinglightgreyseed")
+    public static Item glowinglightgreyseed;
+
+    @ObjectHolder("grassworld:glowingpinkseed")
+    public static Item glowingpinkseed;
+
+    @ObjectHolder("grassworld:glowingpurpleseed")
+    public static Item glowingpurpleseed;
+
+    @ObjectHolder("grassworld:glowingmagentaseed")
+    public static Item glowingmagentaseed;
+
+    @ObjectHolder("grassworld:glowingcyanseed")
+    public static Item glowingcyanseed;
+
+    @ObjectHolder("grassworld:glowingblackseed")
+    public static Item glowingblackseed;
+
+    @ObjectHolder("grassworld:glowingbrownseed")
+    public static Item glowingbrownseed;
+
+    @ObjectHolder("grassworld:glowingwhiteseed")
+    public static Item glowingwhiteseed;
+
+    @ObjectHolder("grassworld:glowingyellowseed")
+    public static Item glowingyellowseed;
+
+    @ObjectHolder("grassworld:glowinggreenseed")
+    public static Item glowinggreenseed;
+
+    @ObjectHolder("grassworld:glowinglimegreenseed")
+    public static Item glowinglimegreenseed;
 
 
-    public static Item fancy_orangeseed,fancy_blueseed,fancy_redseed,fancy_lightblueseed,fancy_greyseed,fancy_lightgreyseed,fancy_pinkseed,fancy_purpleseed,fancy_magentaseed,fancy_cyanseed,fancy_blackseed,fancy_brownseed,fancy_whiteseed,fancy_yellowseed,fancy_greenseed,fancy_limegreenseed;
+    //Fancy Seed
+    @ObjectHolder("grassworld:fancyblueseed")
+    public static Item fancyorangeseed;
+
+    @ObjectHolder("grassworld:fancyblueseed")
+    public static Item fancyblueseed;
+
+    @ObjectHolder("grassworld:fancyredseed")
+    public static Item fancyredseed;
+
+    @ObjectHolder("grassworld:fancylightblueseed")
+    public static Item fancylightblueseed;
+
+    @ObjectHolder("grassworld:fancygreyseed")
+    public static Item fancygreyseed;
+
+    @ObjectHolder("grassworld:fancylightgreyseed")
+    public static Item fancylightgreyseed;
+
+    @ObjectHolder("grassworld:fancypinkseed")
+    public static Item fancypinkseed;
+
+    @ObjectHolder("grassworld:fancypurpleseed")
+    public static Item fancypurpleseed;
+
+    @ObjectHolder("grassworld:fancymagentaseed")
+    public static Item fancymagentaseed;
+
+    @ObjectHolder("grassworld:fancycyanseed")
+    public static Item fancycyanseed;
+
+    @ObjectHolder("grassworld:fancyblackseed")
+    public static Item fancyblackseed;
+
+    @ObjectHolder("grassworld:fancybrownseed")
+    public static Item fancybrownseed;
+
+    @ObjectHolder("grassworld:fancywhiteseed")
+    public static Item fancywhiteseed;
+
+    @ObjectHolder("grassworld:fancyyellowseed")
+    public static Item fancyyellowseed;
+
+    @ObjectHolder("grassworld:fancygreenseed")
+    public static Item fancygreenseed;
+
+    @ObjectHolder("grassworld:fancylimegreenseed")
+    public static Item fancylimegreenseed;
 
 
-    public static Item enchanted_orangeseed,enchanted_blueseed,enchanted_redseed,enchanted_lightblueseed,enchanted_greyseed,enchanted_lightgreyseed,enchanted_pinkseed,enchanted_purpleseed,enchanted_magentaseed,enchanted_cyanseed,enchanted_blackseed,enchanted_brownseed,enchanted_whiteseed,enchanted_yellowseed,enchanted_greenseed,enchanted_limegreenseed;
+    //Enchanted Seeds
+    @ObjectHolder("grassworld:enchantedorangeseed")
+    public static Item enchantedorangeseed;
+
+    @ObjectHolder("grassworld:enchantedblueseed")
+    public static Item enchantedblueseed;
+
+    @ObjectHolder("grassworld:enchantedredseed")
+    public static Item enchantedredseed;
+
+    @ObjectHolder("grassworld:enchantedlightblueseed")
+    public static Item enchantedlightblueseed;
+
+    @ObjectHolder("grassworld:enchantedgreyseed")
+    public static Item enchantedgreyseed;
+
+    @ObjectHolder("grassworld:enchantedlightgreyseed")
+    public static Item enchantedlightgreyseed;
+
+    @ObjectHolder("grassworld:enchantedpinkseed")
+    public static Item enchantedpinkseed;
+
+    @ObjectHolder("grassworld:enchantedpurpleseed")
+    public static Item enchantedpurpleseed;
+
+    @ObjectHolder("grassworld:enchantedmagentaseed")
+    public static Item enchantedmagentaseed;
+
+    @ObjectHolder("grassworld:enchantedcyanseed")
+    public static Item enchantedcyanseed;
+
+    @ObjectHolder("grassworld:enchantedblackseed")
+    public static Item enchantedblackseed;
+
+    @ObjectHolder("grassworld:enchantedbrownseed")
+    public static Item enchantedbrownseed;
+
+    @ObjectHolder("grassworld:enchantedwhiteseed")
+    public static Item enchantedwhiteseed;
+
+    @ObjectHolder("grassworld:enchantedyellowseed")
+    public static Item enchantedyellowseed;
+
+    @ObjectHolder("grassworld:enchantedgreenseed")
+    public static Item enchantedgreenseed;
+
+    @ObjectHolder("grassworld:enchantedlimegreenseed")
+    public static Item enchantedlimegreenseed;
 
 
-    public static Item orangeendseed,blueendseed,redendseed,lightblueendseed,greyendseed,lightgreyendseed,pinkendseed,purpleendseed,magentaendseed,cyanendseed,blackendseed,brownendseed,whiteendseed,yellowendseed,greenendseed,limegreenendseed;
+    //End Seed
+    @ObjectHolder("grassworld:orangeendseed")
+    public static Item orangeendseed;
+
+    @ObjectHolder("grassworld:blueendseed")
+    public static Item blueendseed;
+
+    @ObjectHolder("grassworld:redendseed")
+    public static Item redendseed;
+
+    @ObjectHolder("grassworld:lightblueendseed")
+    public static Item lightblueendseed;
+
+    @ObjectHolder("grassworld:greyendseed")
+    public static Item greyendseed;
+
+    @ObjectHolder("grassworld:lightgreyendseed")
+    public static Item lightgreyendseed;
+
+    @ObjectHolder("grassworld:pinkendseed")
+    public static Item pinkendseed;
+
+    @ObjectHolder("grassworld:purpleendseed")
+    public static Item purpleendseed;
+
+    @ObjectHolder("grassworld:magentaendseed")
+    public static Item magentaendseed;
+
+    @ObjectHolder("grassworld:cyanendseed")
+    public static Item cyanendseed;
+
+    @ObjectHolder("grassworld:blackendseed")
+    public static Item blackendseed;
+
+    @ObjectHolder("grassworld:brownendseed")
+    public static Item brownendseed;
+
+    @ObjectHolder("grassworld:whiteendseed")
+    public static Item whiteendseed;
+
+    @ObjectHolder("grassworld:yellowendseed")
+    public static Item yellowendseed;
+
+    @ObjectHolder("grassworld:greenendseed")
+    public static Item greenendseed;
+
+    @ObjectHolder("grassworld:limegreenendseed")
+    public static Item limegreenendseed;
 
 
-    public static Item orangenetherseed,bluenetherseed,rednetherseed,lightbluenetherseed,greynetherseed,lightgreynetherseed,pinknetherseed,purplenetherseed,magentanetherseed,cyannetherseed,blacknetherseed,brownnetherseed,whitenetherseed,yellownetherseed,greennetherseed,limegreennetherseed;
+    //Nether Seeds
+    @ObjectHolder("grassworld:orangenetherseed")
+    public static Item orangenetherseed;
+
+    @ObjectHolder("grassworld:bluenetherseed")
+    public static Item bluenetherseed;
+
+    @ObjectHolder("grassworld:rednetherseed")
+    public static Item rednetherseed;
+
+    @ObjectHolder("grassworld:lightbluenetherseed")
+    public static Item lightbluenetherseed;
+
+    @ObjectHolder("grassworld:greynetherseed")
+    public static Item greynetherseed;
+
+    @ObjectHolder("grassworld:lightgreynetherseed")
+    public static Item lightgreynetherseed;
+
+    @ObjectHolder("grassworld:pinknetherseed")
+    public static Item pinknetherseed;
+
+    @ObjectHolder("grassworld:purplenetherseed")
+    public static Item purplenetherseed;
+
+    @ObjectHolder("grassworld:magentanetherseed")
+    public static Item magentanetherseed;
+
+    @ObjectHolder("grassworld:cyannetherseed")
+    public static Item cyannetherseed;
+
+    @ObjectHolder("grassworld:blacknetherseed")
+    public static Item blacknetherseed;
+
+    @ObjectHolder("grassworld:brownnetherseed")
+    public static Item brownnetherseed;
+
+    @ObjectHolder("grassworld:whitenetherseed")
+    public static Item whitenetherseed;
+
+    @ObjectHolder("grassworld:yellownetherseed")
+    public static Item yellownetherseed;
+
+    @ObjectHolder("grassworld:greennetherseed")
+    public static Item greennetherseed;
+
+    @ObjectHolder("grassworld:limegreennetherseed")
+    public static Item limegreennetherseed;
 
 
-    public static Item fancyorangeendseed,fancyblueendseed,fancyredendseed,fancylightblueendseed,fancygreyendseed,fancylightgreyendseed,fancypinkendseed,fancypurpleendseed,fancymagentaendseed,fancycyanendseed,fancyblackendseed,fancybrownendseed,fancywhiteendseed,fancyyellowendseed,fancygreenendseed,fancylimegreenendseed;
+    //Fancy End Seeds
+    @ObjectHolder("grassworld:fancyorangeendseed")
+    public static Item fancyorangeendseed;
+
+    @ObjectHolder("grassworld:fancyblueendseed")
+    public static Item fancyblueendseed;
+
+    @ObjectHolder("grassworld:fancyredendseed")
+    public static Item fancyredendseed;
+
+    @ObjectHolder("grassworld:fancylightblueendseed")
+    public static Item fancylightblueendseed;
+
+    @ObjectHolder("grassworld:fancygreyendseed")
+    public static Item fancygreyendseed;
+
+    @ObjectHolder("grassworld:fancylightgreyendseed")
+    public static Item fancylightgreyendseed;
+
+    @ObjectHolder("grassworld:fancypinkendseed")
+    public static Item fancypinkendseed;
+
+    @ObjectHolder("grassworld:fancypurpleendseed")
+    public static Item fancypurpleendseed;
+
+    @ObjectHolder("grassworld:fancymagentaendseed")
+    public static Item fancymagentaendseed;
+
+    @ObjectHolder("grassworld:fancycyanendseed")
+    public static Item fancycyanendseed;
+
+    @ObjectHolder("grassworld:fancyblackendseed")
+    public static Item fancyblackendseed;
+
+    @ObjectHolder("grassworld:fancybrownendseed")
+    public static Item fancybrownendseed;
+
+    @ObjectHolder("grassworld:fancywhiteendseed")
+    public static Item fancywhiteendseed;
+
+    @ObjectHolder("grassworld:fancyyellowendseed")
+    public static Item fancyyellowendseed;
+
+    @ObjectHolder("grassworld:fancygreenendseed")
+    public static Item fancygreenendseed;
+
+    @ObjectHolder("grassworld:fancylimegreenendseed")
+    public static Item fancylimegreenendseed;
 
 
-    public static Item fancyorangenetherseed,fancybluenetherseed,fancyrednetherseed,fancylightbluenetherseed,fancygreynetherseed,fancylightgreynetherseed,fancypinknetherseed,fancypurplenetherseed,fancymagentanetherseed,fancycyannetherseed,fancyblacknetherseed,fancybrownnetherseed,fancywhitenetherseed,fancyyellownetherseed,fancygreennetherseed,fancylimegreennetherseed,green_egg;
+    //Fancy Nether Seeds
+    @ObjectHolder("grassworld:fancyorangenetherseed")
+    public static Item fancyorangenetherseed;
+
+    @ObjectHolder("grassworld:fancybluenetherseed")
+    public static Item fancybluenetherseed;
+
+    @ObjectHolder("grassworld:fancyrednetherseed")
+    public static Item fancyrednetherseed;
+
+    @ObjectHolder("grassworld:fancylightbluenetherseed")
+    public static Item fancylightbluenetherseed;
+
+    @ObjectHolder("grassworld:fancygreynetherseed")
+    public static Item fancygreynetherseed;
+
+    @ObjectHolder("grassworld:fancylightgreynetherseed")
+    public static Item fancylightgreynetherseed;
+
+    @ObjectHolder("grassworld:fancypinknetherseed")
+    public static Item fancypinknetherseed;
+
+    @ObjectHolder("grassworld:fancypurplenetherseed")
+    public static Item fancypurplenetherseed;
+
+    @ObjectHolder("grassworld:fancymagentanetherseed")
+    public static Item fancymagentanetherseed;
+
+    @ObjectHolder("grassworld:fancycyannetherseed")
+    public static Item fancycyannetherseed;
+
+    @ObjectHolder("grassworld:fancyblacknetherseed")
+    public static Item fancyblacknetherseed;
+
+    @ObjectHolder("grassworld:fancybrownnetherseed")
+    public static Item fancybrownnetherseed;
+
+    @ObjectHolder("grassworld:fancywhitenetherseed")
+    public static Item fancywhitenetherseed;
+
+    @ObjectHolder("grassworld:fancyyellownetherseed")
+    public static Item fancyyellownetherseed;
+
+    @ObjectHolder("grassworld:fancygreennetherseed")
+    public static Item fancygreennetherseed;
+
+    @ObjectHolder("grassworld:fancylimegreennetherseed")
+    public static Item fancylimegreennetherseed;
 
 
+
+
+    @ObjectHolder("grassworld:greenegg")
+    public static Item greenegg;
+
+
+
+
+    @ObjectHolder("grassworld:grassworldentityegg")
     public static Item grassworldentityegg;
-
-
-    //Biomes
-
-    public static Biome redend, greenend, limegreenend, blueend, lightblueend, greyend, lightgreyend, orangeend, pinkend, purpleend, yellowend, whiteend, blackend, brownend, cyanend, magentaend;
 
 }

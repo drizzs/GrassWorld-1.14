@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "grassworld:enchantedblackgrass",
+    "grassworld:enchantedbluegrass",
+    "grassworld:enchantedbrowngrass",
+    "grassworld:enchantedcyangrass",
+    "grassworld:enchantedgreygrass",
+    "grassworld:enchantedgreengrass",
+    "grassworld:enchantedlightgreygrass",
+    "grassworld:enchantedlimegreengrass",
+    "grassworld:enchantedlightbluegrass",
+    "grassworld:enchantedmagentagrass",
+    "grassworld:enchantedpinkgrass",
+    "grassworld:enchantedpurplegrass",
+    "grassworld:enchantedredgrass",
+    "grassworld:enchantedwhitegrass",
+    "grassworld:enchantedyellowgrass",
+    "grassworld:enchantedorangegrass"
+  ]
+}

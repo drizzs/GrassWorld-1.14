@@ -34,13 +34,13 @@ public class LightBlueIslandFeature extends Feature<NoFeatureConfig> {
                         else{
                             int next = random.nextInt(8);
                             if(next == 0 || next == 3 || next == 4 || next == 7){
-                                this.setBlockState(world, pos1, GrassContentLib.lightblue_grass.getDefaultState());
+                                this.setBlockState(world, pos1, GrassContentLib.lightbluegrass.getDefaultState());
                             }
                             else if(next == 1 || next == 5 || next == 8){
-                                this.setBlockState(world, pos1, GrassContentLib.fancy_lightblue_grass.getDefaultState());
+                                this.setBlockState(world, pos1, GrassContentLib.fancylightbluegrass.getDefaultState());
                             }
                             else if(next == 2){
-                                this.setBlockState(world, pos1, GrassContentLib.enchanted_lightblue_grass.getDefaultState());
+                                this.setBlockState(world, pos1, GrassContentLib.enchantedlightbluegrass.getDefaultState());
                             }
                             else if(next == 6){
                                 this.setBlockState(world, pos1, GrassContentLib.glowinglightbluegrass.getDefaultState());

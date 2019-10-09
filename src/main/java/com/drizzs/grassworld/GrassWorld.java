@@ -1,7 +1,7 @@
 package com.drizzs.grassworld;
 
 
-import com.drizzs.grassworld.util.ConfigHandler;
+import com.drizzs.grassworld.util.GrassConfigHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -25,8 +25,8 @@ public class GrassWorld
 
     public GrassWorld() {
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ConfigHandler.CLIENT_SPEC);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.COMMON_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, GrassConfigHandler.CLIENT_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GrassConfigHandler.COMMON_SPEC);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);

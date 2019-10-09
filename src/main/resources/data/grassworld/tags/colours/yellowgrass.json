@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "grassworld:glowingyellowgrass",
+    "grassworld:enchantedyellowgrass",
+    "grassworld:fancyyellowendgrass",
+    "grassworld:fancyyellowgrass",
+    "grassworld:yellownethergrass",
+    "grassworld:yellowendgrass",
+    "grassworld:yellowgrass",
+    "grassworld:fancyyellownethergrass"
+  ]
+}

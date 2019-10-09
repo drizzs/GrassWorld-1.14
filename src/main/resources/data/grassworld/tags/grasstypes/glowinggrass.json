@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "grassworld:glowingblackgrass",
+    "grassworld:glowingbluegrass",
+    "grassworld:glowingbrowngrass",
+    "grassworld:glowingcyangrass",
+    "grassworld:glowinggreygrass",
+    "grassworld:glowinggreengrass",
+    "grassworld:glowinglightgreygrass",
+    "grassworld:glowinglimegreengrass",
+    "grassworld:glowinglightbluegrass",
+    "grassworld:glowingmagentagrass",
+    "grassworld:glowingpinkgrass",
+    "grassworld:glowingpurplegrass",
+    "grassworld:glowingredgrass",
+    "grassworld:glowingwhitegrass",
+    "grassworld:glowingyellowgrass",
+    "grassworld:glowingorangegrass"
+  ]
+}
