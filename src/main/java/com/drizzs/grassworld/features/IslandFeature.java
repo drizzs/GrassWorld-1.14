@@ -32,7 +32,7 @@ public class IslandFeature extends Feature<NoFeatureConfig> {
             for(int k = MathHelper.floor(-f); k <= MathHelper.ceil(f); ++k) {
                 for(int j = MathHelper.floor(-f); j <= MathHelper.ceil(f); ++j) {
                     if ((float)(k * k + j * j) <= (f + 1.0F) * (f + 1.0F)) {
-                        BlockPos pos1 = pos.add(k, i + 10, j);
+                        BlockPos pos1 = pos.add(k, i + 50, j);
                         if(world.getBlockState(pos1.up()).isIn(GrassTags.Blocks.GRASSWORLDGRASS)){
                             this.setBlockState(world, pos1, Blocks.DIRT.getDefaultState());
                         }
