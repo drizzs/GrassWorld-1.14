@@ -1,19 +1,19 @@
 {
-	"type": "minecraft:crafting_shapeless",
-	"ingredients": [
-		{
-			"item": "minecraft:black_dye"
-		},
-		{
-			"item": "minecraft:wheat_seeds"
-		},
-		{
-			"item": "minecraft:gold_ingot"
-		}
-	],
-	"result": {
-		"item": "grassworld:enchanted_blackseed"
-	}
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:black_dye"
+    },
+    {
+      "item": "minecraft:wheat_seeds"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "result": {
+    "item": "grassworld:enchantedblackseed"
+  }
 }
 	
 	

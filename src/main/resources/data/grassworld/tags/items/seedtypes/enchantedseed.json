@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "grassworld:enchantedblueseed",
+    "grassworld:enchantedblackseed",
+    "grassworld:enchantedbrownseed",
+    "grassworld:enchantedcyanseed",
+    "grassworld:enchantedgreenseed",
+    "grassworld:enchantedgreyseed",
+    "grassworld:enchantedlightgreyseed",
+    "grassworld:enchantedlightblueseed",
+    "grassworld:enchantedlimegreenseed",
+    "grassworld:enchantedmagentaseed",
+    "grassworld:enchantedpinkseed",
+    "grassworld:enchantedpurpleseed",
+    "grassworld:enchantedorangeseed",
+    "grassworld:enchantedredseed",
+    "grassworld:enchantedwhiteseed",
+    "grassworld:enchantedyellowseed"
+  ]
+}

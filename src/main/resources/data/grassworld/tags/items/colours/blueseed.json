@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "grassworld:blueseed",
+    "grassworld:fancyblueseed",
+    "grassworld:enchantedblueseed",
+    "grassworld:glowingblueseed",
+    "grassworld:bluenetherseed",
+    "grassworld:blueendseed",
+    "grassworld:fancyblueendseed",
+    "grassworld:fancybluenetherseed"
+  ]
+}

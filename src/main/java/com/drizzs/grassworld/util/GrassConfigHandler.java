@@ -42,16 +42,25 @@ public class GrassConfigHandler {
 
     public static class Common {
 
-        public final ForgeConfigSpec.BooleanValue ALLGRASS;
-
+        public final ForgeConfigSpec.BooleanValue ALLGRASSGROWTH;
+        public final ForgeConfigSpec.BooleanValue ALLGRASSFEATURE;
+        public final ForgeConfigSpec.BooleanValue RAINBOWISLANDS;
 
         public Common(ForgeConfigSpec.Builder builder) {
-            builder.push("Grass Spawn");
-            ALLGRASS = builder
-                    .comment("If True, Any Colour of Grass will Spawn on any Coloured Grass Block")
-                    .define("AllGrass", false);
+            builder.push("BoneMeal Grass Spawn");
+            ALLGRASSGROWTH = builder
+                    .comment("If True, Any Colour of Grass will Spawn on any Coloured Grass Block when BoneMeal is Applied")
+                    .define("AllGrassGrowth", false);
             builder.pop();
 
+            builder.push("Grass Feature Spawn");
+            ALLGRASSFEATURE = builder
+                    .comment("If True, Any Colour of Grass will Spawn on any GrassBlock in the world! This happens during Worldgen.")
+                    .define("AllGrassFeature", false);
+            RAINBOWISLANDS = builder
+                    .comment("If True, All Grass Islands will spawn in Multiple Colours instead of the standard single colour.")
+                    .define("RainbowIslands", false);
+            builder.pop();
         }
 
     }

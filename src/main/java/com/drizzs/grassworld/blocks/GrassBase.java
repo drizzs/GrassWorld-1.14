@@ -105,7 +105,7 @@ public class GrassBase extends GrassBlock {
     }
 
     public BlockState grassPicker(){
-        if(GrassConfigHandler.COMMON.ALLGRASS.get()){
+        if(GrassConfigHandler.COMMON.ALLGRASSGROWTH.get()){
             randomGrassPicker();
         }
         else if(this.isIn(GrassTags.Blocks.BLUEGRASS)){

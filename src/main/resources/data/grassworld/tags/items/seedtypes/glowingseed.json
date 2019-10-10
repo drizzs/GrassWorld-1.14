@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+
+    "grassworld:glowingblueseed",
+    "grassworld:glowingblackseed",
+    "grassworld:glowingbrownseed",
+    "grassworld:glowingcyanseed",
+    "grassworld:glowinggreenseed",
+    "grassworld:glowinggreyseed",
+    "grassworld:glowinglightgreyseed",
+    "grassworld:glowinglightblueseed",
+    "grassworld:glowinglimegreenseed",
+    "grassworld:glowingmagentaseed",
+    "grassworld:glowingpinkseed",
+    "grassworld:glowingpurpleseed",
+    "grassworld:glowingorangeseed",
+    "grassworld:glowingredseed",
+    "grassworld:glowingwhiteseed",
+    "grassworld:glowingyellowseed"
+  ]
+}

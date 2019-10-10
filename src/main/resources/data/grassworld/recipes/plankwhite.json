@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "grassworld:white_log"
+      "item": "grassworld:whitelog"
     }
   ],
   "result": {

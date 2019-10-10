@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "grassworld:enchanted_blackseed"
+      "item": "grassworld:enchantedblackseed"
     },
     {
       "item": "minecraft:glowstone"

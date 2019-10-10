@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "grassworld:lightgrey_log"
+      "item": "grassworld:lightgreylog"
     }
   ],
   "result": {

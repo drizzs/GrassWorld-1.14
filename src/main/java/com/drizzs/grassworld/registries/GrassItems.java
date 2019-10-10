@@ -1,15 +1,11 @@
 package com.drizzs.grassworld.registries;
 
 import com.drizzs.grassworld.items.GrassWorldSeed;
-import com.drizzs.grassworld.items.GrassWorldSeed;
-import com.drizzs.grassworld.items.GrassWorldSeed;
 import com.drizzs.grassworld.util.group.GrassGroup;
-import com.drizzs.grassworld.util.lib.GrassContentLib;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GrassItems {
@@ -68,22 +64,22 @@ public class GrassItems {
         event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "enchantedbrownseed"));
         event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "enchantedyellowseed"));
 
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingorangeseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingblueseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingredseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowinglightblueseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowinggreyseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowinglightgreyseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingcyanseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingmagentaseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingpurpleseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingpinkseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowinggreenseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowinglimegreenseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingblackseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingwhiteseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingbrownseed"));
-        event.getRegistry().register(new GrassWorldSeed(new Item.Properties(), "glowingyellowseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingorangeseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingblueseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingredseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowinglightblueseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowinggreyseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowinglightgreyseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingcyanseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingmagentaseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingpurpleseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingpinkseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowinggreenseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowinglimegreenseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingblackseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingwhiteseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingbrownseed"));
+        event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "glowingyellowseed"));
 
         event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "orangeendseed"));
         event.getRegistry().register(new GrassWorldSeed(new Item.Properties().group(GrassGroup.instance), "blueendseed"));

@@ -20,7 +20,7 @@ public class GrassWorldSeed extends Item {
     public GrassWorldSeed(Properties group, String id) {
         super(new Properties().group(GrassGroup.instance).maxStackSize(16));
         setRegistryName(id);
-        GrassHolders.grassBlock = grassBlockPicker();
+
     }
 
     @Nonnull
@@ -28,11 +28,28 @@ public class GrassWorldSeed extends Item {
         World world = context.getWorld();
         BlockPos blockpos = context.getPos();
         ItemStack item = context.getItem();
+        if (this.isIn(GrassTags.Items.DIRTSEED)) {
+            if (world.getBlockState(blockpos).getBlock().isIn(GrassTags.Blocks.OVERWORLDSEEDDIRT)) {
+                GrassHolders.grassBlock = grassBlockPicker();
+                world.setBlockState(blockpos, GrassHolders.grassBlock);
+                item.shrink(1);
+            }
+        } else if
+        (this.isIn(GrassTags.Items.NETHERSEED)) {
+            if (world.getBlockState(blockpos).getBlock().isIn(GrassTags.Blocks.NETHERSEEDDIRT)) {
+                GrassHolders.grassBlock = grassBlockPicker();
+                world.setBlockState(blockpos, GrassHolders.grassBlock);
+                item.shrink(1);
+            }
 
-        if (world.getBlockState(blockpos).getBlock().isIn(GrassTags.Blocks.OVERWORLDSEEDDIRT)) {
+        } else if
+        (this.isIn(GrassTags.Items.ENDSEED)) {
+            if (world.getBlockState(blockpos).getBlock().isIn(GrassTags.Blocks.ENDSEEDDIRT)) {
+                GrassHolders.grassBlock = grassBlockPicker();
+                world.setBlockState(blockpos, GrassHolders.grassBlock);
+                item.shrink(1);
+            }
 
-            world.setBlockState(blockpos, GrassHolders.grassBlock);
-            item.shrink(1);
         }
         return ActionResultType.SUCCESS;
 
@@ -338,9 +355,6 @@ public class GrassWorldSeed extends Item {
 
             }
 
-        }
-        else{
-            GrassHolders.grassBlock = GrassContentLib.blackgrass.getDefaultState();
         }
 
         return GrassHolders.grassBlock;

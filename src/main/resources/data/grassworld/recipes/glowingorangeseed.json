@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "grassworld:enchanted_orangeseed"
+      "item": "grassworld:enchantedorangeseed"
     },
     {
       "item": "minecraft:glowstone"

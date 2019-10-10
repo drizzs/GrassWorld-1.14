@@ -11,6 +11,8 @@ public class GrassHolders
     public static BlockState grassBlock = null;
     public static BlockState grass = null;
     public static BlockState blockGrowth = null;
+    public static BlockState featureblock = null;
+    public static BlockState islandblock = null;
 
 
 }
