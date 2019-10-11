@@ -127,13 +127,13 @@ public class GrassConfigHandler {
             builder.push("Feature General");
             GRASSFEATURE = builder
                     .comment("If True, This will activate the spawning grass feature that spawns grass in the world on all grass blocks. DOES NOT WORK")
-                    .define("GrassFeature", false);
+                    .define("GrassFeature", true);
             ALLGRASSFEATURE = builder
                     .comment("If True, Any Colour of Grass will Spawn on any GrassBlock in the world! This happens during Worldgen. DOES NOT WORK")
                     .define("AllGrassFeature", false);
             RAINBOWISLANDS = builder
                     .comment("If True, All Grass Islands will spawn in Multiple Colours instead of the standard single colour. DOES NOT WORK")
-                    .define("RainbowIslands", false);
+                    .define("RainbowIslands", true);
             ISLANDFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off! DOES NOT WORK")
                     .define("IslandGrassFeature", true);
@@ -154,7 +154,7 @@ public class GrassConfigHandler {
                     .define("BlackGrassFeature", true);
             BLACKGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("BlackGrassFeatureWeight", 2,1,10);
+                    .defineInRange("BlackGrassFeatureWeight", 10,1,10);
             builder.pop();
 
             builder.push("Brown Grass Feature Spawn");

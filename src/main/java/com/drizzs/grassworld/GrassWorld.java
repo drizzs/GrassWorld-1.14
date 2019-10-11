@@ -33,7 +33,6 @@ public class GrassWorld
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-
         MinecraftForge.EVENT_BUS.register(this);
 
     }

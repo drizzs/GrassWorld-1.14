@@ -16,6 +16,8 @@ import net.minecraft.world.gen.feature.NoFeatureConfig;
 import java.util.Random;
 import java.util.function.Function;
 
+import static com.drizzs.grassworld.util.lib.GrassFeatureLib.*;
+
 public class GrassSpawningFeature extends Feature<NoFeatureConfig>
 {
 
@@ -32,9 +34,9 @@ public class GrassSpawningFeature extends Feature<NoFeatureConfig>
     public boolean place(IWorld world, ChunkGenerator<? extends GenerationSettings> generator, Random rand, BlockPos pos, NoFeatureConfig config)
     {
         GrassHolders.featureblock = grassFeaturePicker(rand);
-        BlockState BlockState = GrassHolders.featureblock;
+        BlockState state = GrassHolders.featureblock;
 
-        for (BlockState BlockState1 = world.getBlockState(pos); (BlockState1.isAir(world, pos) || BlockState1.isIn(BlockTags.LEAVES)) && pos.getY() > 0; BlockState1 = world.getBlockState(pos))
+        for (BlockState state1 = world.getBlockState(pos); (state1.isAir(world, pos) || state1.isIn(BlockTags.LEAVES)) && pos.getY() > 0; state1 = world.getBlockState(pos))
         {
             pos = pos.down();
         }
@@ -44,9 +46,9 @@ public class GrassSpawningFeature extends Feature<NoFeatureConfig>
         for (int j = 0; j < 128; ++j)
         {
             BlockPos blockpos = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
-            if (world.isAirBlock(blockpos) && BlockState.isValidPosition(world, blockpos))
+            if (world.isAirBlock(blockpos) && state.isValidPosition(world, blockpos))
             {
-                world.setBlockState(blockpos, BlockState, 2);
+                world.setBlockState(blockpos, state, 2);
                 ++i;
             }
         }
@@ -59,52 +61,52 @@ public class GrassSpawningFeature extends Feature<NoFeatureConfig>
         if(GrassConfigHandler.COMMON.ALLGRASSFEATURE.get()){
             randomGrassPicker(random);
         }
-        else if(this.getRegistryName().equals("grassworld:redgrassfeature")){
+        else if(this.equals(REDGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrassred.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:bluegrassfeature")){
+        else if(this.equals(BLUEGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrassblue.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:blackgrassfeature")){
+        else if(this.equals(BLACKGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrassblack.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:limegreengrassfeature")){
+        else if(this.equals(LIMEGREENGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrasslimegreen.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:lightbluegrassfeature")){
+        else if(this.equals(LIGHTBLUEGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrasslightblue.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:pinkgrassfeature")){
+        else if(this.equals(PINKGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrasspink.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:orangegrassfeature")){
+        else if(this.equals(ORANGEGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrassorange.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:magentagrassfeature")){
+        else if(this.equals(MAGENTAGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrassmagenta.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:purplegrassfeature")){
+        else if(this.equals(PURPLEGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrasspurple.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:yellowgrassfeature")){
+        else if(this.equals(YELLOWGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrassyellow.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:whitegrassfeature")){
+        else if(this.equals(WHITEGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrasswhite.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:lightgreygrassfeature")){
+        else if(this.equals(LIGHTGREYGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrasslightgrey.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:greygrassfeature")){
+        else if(this.equals(GREYGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrassgrey.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:cyangrassfeature")){
+        else if(this.equals(CYANGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrasscyan.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:browngrassfeature")){
+        else if(this.equals(BROWNGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrassbrown.getDefaultState();
         }
-        else if(this.getRegistryName().equals("grassworld:greengrassfeature")){
+        else if(this.equals(GREENGRASS)){
             GrassHolders.featureblock = GrassContentLib.actualgrassgreen.getDefaultState();
         }
         else{
