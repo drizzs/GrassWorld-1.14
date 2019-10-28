@@ -1007,15 +1007,4 @@ public class GrassContentLib {
     public static Item fancylimegreennetherseed;
 
 
-
-
-    @ObjectHolder("grassworld:greenegg")
-    public static Item greenegg;
-
-
-
-
-    @ObjectHolder("grassworld:grassworldentityegg")
-    public static Item grassworldentityegg;
-
 }

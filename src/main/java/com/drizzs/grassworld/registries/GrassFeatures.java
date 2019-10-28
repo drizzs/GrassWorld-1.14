@@ -1,12 +1,15 @@
 package com.drizzs.grassworld.registries;
 
-import com.drizzs.grassworld.features.IslandFeature;
-import com.drizzs.grassworld.features.GrassSpawningFeature;
+import com.drizzs.grassworld.features.GrassIslandPiece;
+import com.drizzs.grassworld.features.GrassIslandPieceold;
+import com.drizzs.grassworld.features.GrassIslandStructure;
 import com.drizzs.grassworld.util.GrassConfigHandler;
-import com.drizzs.grassworld.util.GrassHolders;
-import com.drizzs.grassworld.util.lib.GrassFeatureLib;
-import net.minecraft.block.Blocks;
+import com.drizzs.grassworld.util.lib.GrassContentLib;
+import net.minecraft.block.BlockState;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.FlatGenerationSettings;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placement.*;
@@ -14,7 +17,11 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 
+import static com.drizzs.grassworld.GrassWorld.MOD_ID;
+import static com.drizzs.grassworld.util.lib.GrassFeatureLib.*;
 import static net.minecraft.world.biome.Biome.createDecoratedFeature;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -22,131 +29,123 @@ public class GrassFeatures {
 
     @SubscribeEvent
     public static void registerFeature(RegistryEvent.Register<Feature<?>> event) {
+        BaseRegistryAdapter<Feature<?>> registry = new BaseRegistryAdapter<>(event.getRegistry());
+        event.getRegistry().register(new GrassFeature(GrassFeatureConfig::deserialize).setRegistryName("grassfeature"));
+        event.getRegistry().register(new GrassIslandStructure(NoFeatureConfig::deserialize).setRegistryName("islandfeature"));
+        ISLANDPIECE = Registry.register(Registry.STRUCTURE_PIECE, registry.getResource("islandpiece"), GrassIslandPiece::new);
+    }
 
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "redgrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "cyangrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "bluegrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "greengrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "limegreengrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "lightbluegrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "yellowgrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "purplegrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "magentagrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "orangegrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "blackgrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "browngrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "whitegrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "greygrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "lightgreygrassfeature"));
-        event.getRegistry().register(new GrassSpawningFeature(NoFeatureConfig::deserialize, "pinkgrassfeature"));
 
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "redislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "cyanislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "blueislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "greenislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "limegreenislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "lightblueislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "yellowislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "pinkislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "purpleislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "magentaislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "orangeislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "brownislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "blackislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "whiteislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "greyislandfeature"));
-        event.getRegistry().register(new IslandFeature(NoFeatureConfig::deserialize, "lightgreyislandfeature"));
+
+        @SubscribeEvent
+    public static void onFeatureRegistryEvent(RegistryEvent.Register<Feature<?>> event) {
+        ConfiguredFeature<?> ISLAND_FEATURE = Biome.createDecoratedFeature(ISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.NOPE, IPlacementConfig.NO_PLACEMENT_CONFIG);
+        FlatGenerationSettings.FEATURE_STAGES.put(ISLAND_FEATURE, GenerationStage.Decoration.SURFACE_STRUCTURES);
+        FlatGenerationSettings.STRUCTURES.put("grassworld:islandfeature", new ConfiguredFeature[] { ISLAND_FEATURE });
+        FlatGenerationSettings.FEATURE_CONFIGS.put(ISLAND_FEATURE, IFeatureConfig.NO_FEATURE_CONFIG);
+
+
+        if(GrassConfigHandler.COMMON.OVERWORLDISLANDFEATURE.get()){
+
+            featureOverWorldIslandSpawn();
+        }
+
+        if (GrassConfigHandler.COMMON.GRASSFEATURE.get()) {
+            if (GrassConfigHandler.COMMON.BLACKGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrassblack.getDefaultState(), GrassConfigHandler.COMMON.BLACKGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.BLUEGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrassblue.getDefaultState(), GrassConfigHandler.COMMON.BLUEGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.GREYGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrassgrey.getDefaultState(), GrassConfigHandler.COMMON.GREYGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.MAGENTAGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrassmagenta.getDefaultState(), GrassConfigHandler.COMMON.MAGENTAGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.CYANGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrasscyan.getDefaultState(), GrassConfigHandler.COMMON.CYANGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.ORANGEGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrassorange.getDefaultState(), GrassConfigHandler.COMMON.ORANGEGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.BROWNGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrassbrown.getDefaultState(), GrassConfigHandler.COMMON.BROWNGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.GREENGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrassgreen.getDefaultState(), GrassConfigHandler.COMMON.GREENGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.REDGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrassred.getDefaultState(), GrassConfigHandler.COMMON.REDGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.PURPLEGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrasspurple.getDefaultState(), GrassConfigHandler.COMMON.PURPLEGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.PINKGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrasspink.getDefaultState(), GrassConfigHandler.COMMON.PINKGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.WHITEGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrasswhite.getDefaultState(), GrassConfigHandler.COMMON.WHITEGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.YELLOWGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrassyellow.getDefaultState(), GrassConfigHandler.COMMON.YELLOWGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.LIMEGREENGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrasslimegreen.getDefaultState(), GrassConfigHandler.COMMON.LIMEGREENGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.LIGHTGREYGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrasslightgrey.getDefaultState(), GrassConfigHandler.COMMON.LIGHTGREYGRASSFEATUREWEIGHT.get());
+            }
+            if (GrassConfigHandler.COMMON.LIGHTBLUEGRASSFEATURE.get()) {
+                featureOverWorldGrassSpawn(GrassContentLib.actualgrasslightblue.getDefaultState(), GrassConfigHandler.COMMON.LIGHTBLUEGRASSFEATUREWEIGHT.get());
+            }
+        }
 
     }
 
-    @SubscribeEvent
-    public static void onFeatureRegistryEvent(RegistryEvent.Register<Feature<?>> event) {
-        if (GrassConfigHandler.COMMON.GRASSFEATURE.get()) {
-            if (GrassConfigHandler.COMMON.BLACKGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.BLACKGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.BLACKGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.BLUEGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.BLUEGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.BLUEGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.GREYGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.GREYGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.GREYGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.MAGENTAGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.MAGENTAGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.MAGENTAGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.CYANGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.CYANGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.CYANGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.ORANGEGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.ORANGEGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.ORANGEGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.BROWNGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.BROWNGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.BROWNGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.GREENGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.GREENGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.GREENGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.REDGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.REDGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.REDGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.PURPLEGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.PURPLEGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.PURPLEGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.PINKGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.PINKGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.PINKGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.WHITEGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.WHITEGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.WHITEGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.YELLOWGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.YELLOWGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.YELLOWGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.LIMEGREENGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.LIMEGREENGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.LIMEGREENGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.LIGHTGREYGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.LIGHTGREYGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.LIGHTGREYGRASSFEATUREWEIGHT.get()))));
-            } else if (GrassConfigHandler.COMMON.LIGHTBLUEGRASSFEATURE.get()) {
-                ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GrassFeatureLib.LIGHTBLUEGRASS, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP, new FrequencyConfig(GrassConfigHandler.COMMON.LIGHTBLUEGRASSFEATUREWEIGHT.get()))));
-            }
+    public static void featureOverWorldIslandSpawn() {
+        for (Biome biome : ForgeRegistries.BIOMES) {
+            if (!biome.getCategory().equals(Biome.Category.NETHER) && !biome.getCategory().equals(Biome.Category.THEEND)) {
+                biome.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, Biome.createDecoratedFeature(ISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.NOPE, IPlacementConfig.NO_PLACEMENT_CONFIG));
+                biome.addStructure(ISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG); }
+        }
 
-            if(GrassConfigHandler.COMMON.ISLANDFEATURE.get()){
-                if(GrassConfigHandler.COMMON.BLACKISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.BLACKISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_32, new FrequencyConfig(GrassConfigHandler.COMMON.BLACKISLANDFEATUREWEIGHT.get()))));
-                }
-                else if(GrassConfigHandler.COMMON.BLUEISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.BLUEISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.BROWNISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.BROWNISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.CYANISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.CYANISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.GREENISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.GREENISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.GREYISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.GREYISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.LIGHTBLUEISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.LIGHTBLUEISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.LIGHTGREYISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.LIGHTGREYISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.LIMEGREENISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.LIMEGREENISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.MAGENTAISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.MAGENTAISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.ORANGEISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.ORANGEISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.PINKISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.PINKISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.PURPLEISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.PURPLEISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.REDISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.REDISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.WHITEISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.WHITEISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-                else if(GrassConfigHandler.COMMON.YELLOWISLANDFEATURE.get()) {
-                    ForgeRegistries.BIOMES.forEach(biome -> biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, createDecoratedFeature(GrassFeatureLib.YELLOWISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.END_ISLAND, IPlacementConfig.NO_PLACEMENT_CONFIG)));
-                }
-            }
+    }
 
+    public static void featureOverWorldGrassSpawn(BlockState state, int frequency) {
+        for (Biome biome : ForgeRegistries.BIOMES) {
+            if (!biome.getCategory().equals(Biome.Category.NETHER) && !biome.getCategory().equals(Biome.Category.THEEND)) {
+                biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(GRASSFEATURE, new GrassFeatureConfig(state), Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(frequency)));
+            }
+        }
+
+    }
+
+    private static <T extends IPlacementConfig, G extends Placement<T>> G register(String key, G p_214999_1_) {
+        return (G) (Registry.<Placement<?>>register(Registry.DECORATOR, key, p_214999_1_));
+    }
+
+
+    public static class BaseRegistryAdapter<T extends IForgeRegistryEntry<T>> {
+
+        protected final IForgeRegistry<T> registry;
+
+        public BaseRegistryAdapter(IForgeRegistry<T> registry) {
+            this.registry = registry;
+        }
+
+        public ResourceLocation getResource(String name) {
+            return new ResourceLocation(MOD_ID, name);
+        }
+
+        public <I extends T> I register(I forgeRegitryEntry, String name) {
+            return this.register(forgeRegitryEntry, this.getResource(name));
+        }
+
+        public <I extends T> I register(I forgeRegistryEntry, ResourceLocation location) {
+            forgeRegistryEntry.setRegistryName(location);
+            registry.register(forgeRegistryEntry);
+            return forgeRegistryEntry;
         }
     }
 }

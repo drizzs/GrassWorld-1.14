@@ -4,6 +4,7 @@ import net.minecraft.client.particle.IParticleFactory;
 import net.minecraft.particles.ParticleType;
 
 public class ShimmerParticleType extends ParticleType<ShimmerParticleData> {
+
     public ShimmerParticleType() {
         super(false, ShimmerParticleData.DESERIALIZER);
     }

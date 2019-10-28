@@ -1,8 +1,11 @@
 package com.drizzs.grassworld.blocks;
 
+import com.drizzs.grassworld.particle.GrassParticleRegistry;
+import com.drizzs.grassworld.particle.types.ShimmerParticleData;
 import com.drizzs.grassworld.util.GrassConfigHandler;
 import com.drizzs.grassworld.util.GrassHolders;
 import com.drizzs.grassworld.util.lib.GrassContentLib;
+import com.drizzs.grassworld.util.lib.GrassFeatureLib;
 import com.drizzs.grassworld.util.tags.GrassTags;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -13,6 +16,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.DecoratedFeatureConfig;
 import net.minecraft.world.gen.feature.FlowersFeature;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.List;
 import java.util.Random;
@@ -215,6 +220,18 @@ public class GrassBase extends GrassBlock {
             GrassHolders.grass = GrassContentLib.actualgrassyellow.getDefaultState();
         }
         return GrassHolders.grass;
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    @Override
+    public void animateTick(BlockState stateIn, World world, BlockPos pos, Random rand)
+    {
+        if(this.isIn(GrassTags.Blocks.ENCHANTEDGRASS)){
+            ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.2F + 1F, 1F, 0F, 1F, 5);
+            world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
+        }
+
+
     }
 
 }

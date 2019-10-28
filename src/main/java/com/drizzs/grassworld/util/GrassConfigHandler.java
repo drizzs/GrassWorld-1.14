@@ -43,10 +43,8 @@ public class GrassConfigHandler {
     public static class Common {
 
         public final ForgeConfigSpec.BooleanValue ALLGRASSGROWTH;
-        public final ForgeConfigSpec.BooleanValue ALLGRASSFEATURE;
         public final ForgeConfigSpec.BooleanValue RAINBOWISLANDS;
         public final ForgeConfigSpec.BooleanValue GRASSFEATURE;
-        public final ForgeConfigSpec.BooleanValue ISLANDFEATURE;
 
         public final ForgeConfigSpec.BooleanValue BLUEGRASSFEATURE;
         public final ForgeConfigSpec.BooleanValue BLACKGRASSFEATURE;
@@ -82,39 +80,11 @@ public class GrassConfigHandler {
         public final ForgeConfigSpec.IntValue WHITEGRASSFEATUREWEIGHT;
         public final ForgeConfigSpec.IntValue YELLOWGRASSFEATUREWEIGHT;
 
-        public final ForgeConfigSpec.BooleanValue BLUEISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue BLACKISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue BROWNISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue CYANISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue GREENISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue GREYISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue LIGHTBLUEISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue LIGHTGREYISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue LIMEGREENISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue MAGENTAISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue PINKISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue PURPLEISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue ORANGEISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue REDISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue WHITEISLANDFEATURE;
-        public final ForgeConfigSpec.BooleanValue YELLOWISLANDFEATURE;
+        public final ForgeConfigSpec.BooleanValue NETHERISLANDFEATURE;
+        public final ForgeConfigSpec.BooleanValue OVERWORLDISLANDFEATURE;
+        public final ForgeConfigSpec.BooleanValue ENDISLANDFEATURE;
+        public final ForgeConfigSpec.IntValue ISLANDFEATUREWEIGHT;
 
-        public final ForgeConfigSpec.IntValue BLUEISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue BLACKISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue BROWNISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue CYANISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue GREENISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue GREYISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue LIGHTBLUEISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue LIGHTGREYISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue LIMEGREENISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue MAGENTAISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue PINKISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue PURPLEISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue ORANGEISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue REDISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue WHITEISLANDFEATUREWEIGHT;
-        public final ForgeConfigSpec.IntValue YELLOWISLANDFEATUREWEIGHT;
 
         public Common(ForgeConfigSpec.Builder builder) {
             builder.push("BoneMeal Grass Spawn");
@@ -124,311 +94,127 @@ public class GrassConfigHandler {
             builder.pop();
 
 
-            builder.push("Feature General");
-            GRASSFEATURE = builder
-                    .comment("If True, This will activate the spawning grass feature that spawns grass in the world on all grass blocks. DOES NOT WORK")
-                    .define("GrassFeature", true);
-            ALLGRASSFEATURE = builder
-                    .comment("If True, Any Colour of Grass will Spawn on any GrassBlock in the world! This happens during Worldgen. DOES NOT WORK")
-                    .define("AllGrassFeature", false);
+            builder.push("Island Feature");
             RAINBOWISLANDS = builder
                     .comment("If True, All Grass Islands will spawn in Multiple Colours instead of the standard single colour. DOES NOT WORK")
-                    .define("RainbowIslands", true);
-            ISLANDFEATURE = builder
+                    .define("RainbowIslands", false);
+            OVERWORLDISLANDFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off! DOES NOT WORK")
-                    .define("IslandGrassFeature", true);
+                    .define("OverworldIslandFeature", true);
+            ENDISLANDFEATURE = builder
+                    .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off! DOES NOT WORK")
+                    .define("EndIslandFeature", false);
+            NETHERISLANDFEATURE = builder
+                    .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off! DOES NOT WORK")
+                    .define("NetherIslandFeature", false);
+            ISLANDFEATUREWEIGHT = builder
+                    .comment("Sets the amount of Island spawns")
+                    .defineInRange("IslandFeatureWeight", 2,1,10);
             builder.pop();
 
-            builder.push("Blue Grass Feature Spawn");
+            builder.push("Grass Feature Spawn");
+            GRASSFEATURE = builder
+                    .comment("If True, This will activate the spawning grass feature that spawns grass in the world on all grass blocks.")
+                    .define("GrassFeature", false);
             BLUEGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("BlueGrassFeature", true);
             BLUEGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("BlueGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Black Grass Feature Spawn");
+                    .defineInRange("BlueGrassFeatureWeight", 1,0,10);
             BLACKGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("BlackGrassFeature", true);
             BLACKGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("BlackGrassFeatureWeight", 10,1,10);
-            builder.pop();
-
-            builder.push("Brown Grass Feature Spawn");
+                    .defineInRange("BlackGrassFeatureWeight", 5,0,10);
             BROWNGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("BrownGrassFeature", true);
             BROWNGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("BrownGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Cyan Grass Feature Spawn");
+                    .defineInRange("BrownGrassFeatureWeight", 5,0,10);
             CYANGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("CyanGrassFeature", true);
             CYANGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("CyanGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Green Grass Feature Spawn");
+                    .defineInRange("CyanGrassFeatureWeight", 5,0,10);
             GREENGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("GreenGrassFeature", true);
             GREENGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("GreenGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Grey Grass Feature Spawn");
+                    .defineInRange("GreenGrassFeatureWeight", 5,0,10);
             GREYGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("GreyGrassFeature", true);
             GREYGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("GreyGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Light Grey Grass Feature Spawn");
+                    .defineInRange("GreyGrassFeatureWeight", 5,0,10);
             LIGHTGREYGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("LightGreyGrassFeature", true);
             LIGHTGREYGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("LightGreyGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Light Blue Grass Feature Spawn");
+                    .defineInRange("LightGreyGrassFeatureWeight", 1,0,10);
             LIGHTBLUEGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("LightBlueGrassFeature", true);
             LIGHTBLUEGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("LightBlueGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Lime Green Grass Feature Spawn");
+                    .defineInRange("LightBlueGrassFeatureWeight", 1,0,10);
             LIMEGREENGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("LimeGreenGrassFeature", true);
             LIMEGREENGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("LimeGreenGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Magenta Grass Feature Spawn");
+                    .defineInRange("LimeGreenGrassFeatureWeight", 2,0,10);
             MAGENTAGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("MagentaGrassFeature", true);
             MAGENTAGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("MagentaGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Pink Grass Feature Spawn");
+                    .defineInRange("MagentaGrassFeatureWeight", 1,0,10);
             PINKGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("PinkGrassFeature", true);
             PINKGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("PinkGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Purple Grass Feature Spawn");
+                    .defineInRange("PinkGrassFeatureWeight", 1,0,10);
             PURPLEGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("PurpleGrassFeature", true);
             PURPLEGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("PurpleGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Orange Grass Feature Spawn");
+                    .defineInRange("PurpleGrassFeatureWeight", 1,0,10);
             ORANGEGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("OrangeGrassFeature", true);
             ORANGEGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("OrangeGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Red  Grass Feature Spawn");
+                    .defineInRange("OrangeGrassFeatureWeight", 1,0,10);
             REDGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("RedGrassFeature", true);
             REDGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("RedGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("White  Grass Feature Spawn");
+                    .defineInRange("RedGrassFeatureWeight", 1,0,10);
             WHITEGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("WhiteGrassFeature", true);
             WHITEGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("WhiteGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Yellow Grass Feature Spawn");
+                    .defineInRange("WhiteGrassFeatureWeight", 1,0,10);
             YELLOWGRASSFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off!")
                     .define("YellowGrassFeature", true);
             YELLOWGRASSFEATUREWEIGHT = builder
                     .comment("Sets the amount of Grass of this colour spawns")
-                    .defineInRange("YellowGrassFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Black Island Feature Spawn");
-            BLACKISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("BlackIslandFeature", true);
-            BLACKISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("BlackIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Blue Island Feature Spawn");
-            BLUEISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("BlueIslandFeature", true);
-            BLUEISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("BlueIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Brown Island Feature Spawn");
-            BROWNISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("BrownIslandFeature", true);
-            BROWNISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("BrownIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Cyan Island Feature Spawn");
-            CYANISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("CyanIslandFeature", true);
-            CYANISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("CyanIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Green Island Feature Spawn");
-            GREENISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("IslandFeature", true);
-            GREENISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("IslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Grey Island Feature Spawn");
-            GREYISLANDFEATURE = builder
-                    .comment("If True, This will spawn this Island grass in the world. Set Island Feature to false to turn all grass off!")
-                    .define("GreyIslandFeature", true);
-            GREYISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("GreyIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Light Blue Island Feature Spawn");
-            LIGHTBLUEISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("LightBlueIslandFeature", true);
-            LIGHTBLUEISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("LightBlueIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Light Grey Island Feature Spawn");
-            LIGHTGREYISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("LightGreyIslandFeature", true);
-            LIGHTGREYISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("LightGreyIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Lime Green Island Feature Spawn");
-            LIMEGREENISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("LimeGreenIslandFeature", true);
-            LIMEGREENISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("LimeGreenIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Magenta Island Feature Spawn");
-            MAGENTAISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("MagentaIslandFeature", true);
-            MAGENTAISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("MagentaIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Pink Island Feature Spawn");
-            PINKISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("PinkIslandFeature", true);
-            PINKISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("PinkIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Purple Island Feature Spawn");
-            PURPLEISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Grass Feature to Island to turn all grass off!")
-                    .define("PurpleIslandFeature", true);
-            PURPLEISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("PurpleIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Orange Island Feature Spawn");
-            ORANGEISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Grass Feature to Island to turn all grass off!")
-                    .define("OrangeIslandFeature", true);
-            ORANGEISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("OrangeIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Red Island Feature Spawn");
-            REDISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("RedIslandFeature", true);
-            REDISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("RedIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("Yellow Island Feature Spawn");
-            YELLOWISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("YellowIslandFeature", true);
-            YELLOWISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("YellowIslandFeatureWeight", 2,1,10);
-            builder.pop();
-
-            builder.push("White Island Feature Spawn");
-            WHITEISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour Island in the world. Set Island Feature to false to turn all grass off!")
-                    .define("WhiteIslandFeature", true);
-            WHITEISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Islands of this colour spawns")
-                    .defineInRange("WhiteIslandFeatureWeight", 2,1,10);
+                    .defineInRange("YellowGrassFeatureWeight", 1,0,10);
             builder.pop();
 
         }
-
     }
 
 }
