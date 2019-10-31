@@ -14,6 +14,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static com.drizzs.grassworld.registries.GrassFeatures.onFeatureRegistryEvent;
+
 @Mod("grassworld")
 public class GrassWorld
 {
@@ -39,6 +41,7 @@ public class GrassWorld
 
     private void setup(final FMLCommonSetupEvent event)
     {
+
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

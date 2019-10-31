@@ -1,76 +1,93 @@
-package com.drizzs.grassworld.features;
+package com.drizzs.grassworld.features.unused;
 
 import com.drizzs.grassworld.util.GrassConfigHandler;
-import com.drizzs.grassworld.util.GrassHolders;
 import com.drizzs.grassworld.util.lib.GrassContentLib;
 import com.drizzs.grassworld.util.tags.GrassTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.Mirror;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.IWorld;
-import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.structure.IStructurePieceType;
-import net.minecraft.world.gen.feature.structure.ScatteredStructurePiece;
-import net.minecraft.world.gen.feature.structure.SwampHutPiece;
 import net.minecraft.world.gen.feature.structure.TemplateStructurePiece;
+import net.minecraft.world.gen.feature.template.BlockIgnoreStructureProcessor;
+import net.minecraft.world.gen.feature.template.PlacementSettings;
+import net.minecraft.world.gen.feature.template.Template;
 import net.minecraft.world.gen.feature.template.TemplateManager;
 
 import java.util.Random;
 
+import static com.drizzs.grassworld.util.lib.GrassFeatureLib.ISLANDPIECE;
 import static net.minecraft.world.gen.feature.structure.IStructurePieceType.register;
 
-public class GrassIslandPieceold {
-/*
-    public static IStructurePieceType GIP = register(GrassIslandPiece::new, "GIP");
+public class GrassIslandPiece2 extends TemplateStructurePiece {
 
-    protected GrassIslandPiece(Random random, int minx, int minz) {
-        super(GIP, random, minx, 100 + random.nextInt(70), minz, 0, 180, 0);
+    private final String templateName;
+
+
+
+    public GrassIslandPiece2(TemplateManager templateManager, String templateName, BlockPos templatePosition) {
+        super(ISLANDPIECE, 0);
+        this.templateName = templateName;
+        this.templatePosition = templatePosition;
+        this.loadTemplate(templateManager);
     }
 
-    public GrassIslandPiece(TemplateManager templateManager, CompoundNBT compoundNBT) {
-        super(GIP ,compoundNBT);
-
+    public GrassIslandPiece2(TemplateManager templateManager, CompoundNBT nbt) {
+        super(ISLANDPIECE, nbt);
+        this.templateName = nbt.getString("Template");
+        this.loadTemplate(templateManager);
     }
 
-
+    private void loadTemplate(TemplateManager templateManager) {
+        Template template = templateManager.getTemplateDefaulted(new ResourceLocation("grassworld:grassislands/" + this.templateName));
+        PlacementSettings placementsettings = (new PlacementSettings()).setIgnoreEntities(true).addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK);
+        this.setup(template, this.templatePosition, placementsettings);
+    }
 
     @Override
-    public boolean addComponentParts(IWorld world, Random random, MutableBoundingBox structureBoundingBoxIn, ChunkPos chunkPosIn) {
-        int rand = random.nextInt(15);
+    protected void readAdditional(CompoundNBT tagCompound) {
+        super.readAdditional(tagCompound);
+        tagCompound.putString("Template", this.templateName);
+    }
+
+    @Override
+    protected void handleDataMarker(String func , BlockPos pos, IWorld world, Random rand, MutableBoundingBox box) {
+        int zz = rand.nextInt(15);
         for(int i = 0; i > -5; --i) {
             for(int k = -5; k < 5; ++k) {
                 for(int j = -5; j < 5; ++j) {
                     if ((i * i) + (j * j) + (k * k) < (5 * 5) + 5 + 1) {
-                        BlockState state = this.getBlockStateFromPos(world,k,i,j,structureBoundingBoxIn);
-                        BlockState stateup = this.getBlockStateFromPos(world,k,i+1,j,structureBoundingBoxIn);
+                        BlockPos targetpos = pos.add(k,i,j);
+                        BlockState state = world.getBlockState(targetpos);
+                        BlockState stateup = world.getBlockState(targetpos.up());;
                         if(state.isAir()) {
                             if (stateup.isIn(GrassTags.Blocks.GRASSWORLDGRASS)) {
                                 BlockState underblock = underBlockSelector(stateup);
-                                this.setBlockState(world, underblock,k,i,j,structureBoundingBoxIn);
+                                world.setBlockState(targetpos, underblock,0);
                             } else {
                                 BlockState topBlock;
                                 if(GrassConfigHandler.COMMON.RAINBOWISLANDS.get()){
-                                    topBlock = randomBlockSelector(random);
+                                    topBlock = randomBlockSelector(rand);
                                 }
                                 else {
-                                    topBlock = topBlockSelector(rand, random);
+                                    topBlock = topBlockSelector(zz, rand);
                                 }
 
-                                this.setBlockState(world,topBlock,k,i,j,structureBoundingBoxIn);
+                                world.setBlockState(targetpos, topBlock, 0);;
 
                             }
                         }
                     }
                 }
             }
-
         }
-        return true;
     }
-*/
 
     public BlockState randomBlockSelector(Random random) {
         int next = random.nextInt(8);
