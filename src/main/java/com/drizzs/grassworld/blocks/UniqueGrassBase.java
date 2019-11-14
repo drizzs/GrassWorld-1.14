@@ -5,6 +5,9 @@ import com.drizzs.grassworld.util.tags.GrassTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SnowBlock;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.monster.*;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -75,6 +78,20 @@ public class UniqueGrassBase extends GrassBase {
             GrassHolders.blockGrowth = Blocks.END_STONE.getDefaultState();
         }
         return GrassHolders.blockGrowth;
+    }
+
+    public void spawnEntities(World world, Entity entity){
+        if(this.isIn(GrassTags.Blocks.ENDGRASS)) {
+            world.addEntity(new EndermanEntity(EntityType.ENDERMAN, world));
+            world.addEntity(new EndermiteEntity(EntityType.ENDERMITE, world));
+        }
+        else if(this.isIn(GrassTags.Blocks.NETHERGRASS)) {
+
+            world.addEntity(new GhastEntity(EntityType.GHAST, world));
+            world.addEntity(new ZombiePigmanEntity(EntityType.ZOMBIE_PIGMAN, world));
+            world.addEntity(new MagmaCubeEntity(EntityType.MAGMA_CUBE, world));
+            world.addEntity(new WitherSkeletonEntity(EntityType.WITHER_SKELETON, world));
+        }
     }
 
 }

@@ -39,6 +39,8 @@ public class GrassFeatures {
         applyFeatures();
     }
 
+
+    //Grass Feature Stuff
     public static void onFeatureRegistryEvent() {
         if (GrassConfigHandler.COMMON.GRASSFEATURE.get()) {
             if (GrassConfigHandler.COMMON.BLACKGRASSFEATURE.get()) {
@@ -101,7 +103,7 @@ public class GrassFeatures {
         }
 
     }
-
+    //Island Feature Stuff
     public static void applyFeatures() {
         ConfiguredFeature<?> ISLAND_FEATURE = Biome.createDecoratedFeature(ISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.NOPE, IPlacementConfig.NO_PLACEMENT_CONFIG);
         FlatGenerationSettings.FEATURE_STAGES.put(ISLAND_FEATURE, GenerationStage.Decoration.SURFACE_STRUCTURES);

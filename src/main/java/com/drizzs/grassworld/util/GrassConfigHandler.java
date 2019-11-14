@@ -100,7 +100,7 @@ public class GrassConfigHandler {
                     .define("RainbowIslands", false);
             OVERWORLDISLANDFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off! DOES NOT WORK")
-                    .define("OverworldIslandFeature", true);
+                    .define("OverworldIslandFeature", false);
             ENDISLANDFEATURE = builder
                     .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off! DOES NOT WORK")
                     .define("EndIslandFeature", false);

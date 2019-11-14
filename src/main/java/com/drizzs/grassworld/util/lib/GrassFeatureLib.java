@@ -12,7 +12,7 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder("grassworld")
 public class GrassFeatureLib
 {
-    @ObjectHolder("grassworld:grassisland")
+
     public static Structure<NoFeatureConfig> ISLANDFEATURE;
 
     public static IStructurePieceType ISLANDPIECE;

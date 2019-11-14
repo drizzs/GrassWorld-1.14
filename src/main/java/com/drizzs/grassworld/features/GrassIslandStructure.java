@@ -64,7 +64,7 @@ public class GrassIslandStructure extends ScatteredStructure<NoFeatureConfig> {
 
   @Override
   public String getStructureName() {
-    return "GrassIsland";
+    return "grassisland";
   }
 
   @Override
@@ -108,7 +108,7 @@ public class GrassIslandStructure extends ScatteredStructure<NoFeatureConfig> {
 
       int rnr = this.rand.nextInt(15);
       GrassIslandVariant variant = GrassIslandVariant.BLUE;
-      String[] sizes = new String[] { "dirtisland" };
+      String[] sizes = new String[] { "dirtisland" , "endisland" , "netherisland" };
 
       if (rnr == 1) {
         variant = GrassIslandVariant.BLACK;

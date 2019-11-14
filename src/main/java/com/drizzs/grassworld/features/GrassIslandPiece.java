@@ -3,7 +3,6 @@ package com.drizzs.grassworld.features;
 import com.drizzs.grassworld.blocks.ActualGrass;
 import com.drizzs.grassworld.util.GrassConfigHandler;
 import com.drizzs.grassworld.util.StaticGrassHandlers;
-import com.drizzs.grassworld.util.tags.GrassTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.nbt.CompoundNBT;
@@ -55,7 +54,7 @@ public class GrassIslandPiece extends TemplateStructurePiece {
   }
 
   private void loadTemplate(TemplateManager templateManager) {
-    Template template = templateManager.getTemplateDefaulted(new ResourceLocation("grassworld:grassislands/" + this.variant.getName() + "/" + this.templateName));
+    Template template = templateManager.getTemplateDefaulted(new ResourceLocation("grassworld:structures/"+ this.variant.getName() + "/" + this.templateName));
     PlacementSettings placementsettings = (new PlacementSettings()).setIgnoreEntities(true).setRotation(this.rotation).setMirror(this.mirror).addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK);
     this.setup(template, this.templatePosition, placementsettings);
   }
@@ -70,10 +69,9 @@ public class GrassIslandPiece extends TemplateStructurePiece {
   }
 
   @Override
-  protected void handleDataMarker(String function, BlockPos pos, IWorld worldIn, Random rand, MutableBoundingBox sbb) {
+  protected void handleDataMarker(String function, BlockPos pos, IWorld worldIn, Random rand, MutableBoundingBox mbb) {
     switch (function) {
       case "grassworld:grassfloor":
-         BlockState grass = worldIn.getBlockState(pos.up());
         if(GrassConfigHandler.COMMON.RAINBOWISLANDS.get()){
                 worldIn.setBlockState(pos, StaticGrassHandlers.randomBlockSelector(), 2);
         }
