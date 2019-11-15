@@ -29,7 +29,6 @@ public class GrassIslandPiece extends TemplateStructurePiece {
   private final Rotation rotation;
   private final Mirror mirror;
 
-
   public GrassIslandPiece(TemplateManager templateManager, GrassIslandVariant variant, String templateName, BlockPos templatePosition, Rotation rotation) {
     this(templateManager, variant, templateName, templatePosition, rotation, Mirror.NONE);
   }
@@ -107,6 +106,4 @@ public class GrassIslandPiece extends TemplateStructurePiece {
         break;
     }
   }
-
-
 }

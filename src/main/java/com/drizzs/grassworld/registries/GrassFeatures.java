@@ -16,10 +16,7 @@ import net.minecraft.world.gen.placement.*;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.IForgeRegistryEntry;
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.registries.*;
 
 import static com.drizzs.grassworld.GrassWorld.MOD_ID;
 import static com.drizzs.grassworld.util.lib.GrassFeatureLib.*;
@@ -29,12 +26,14 @@ import static net.minecraft.world.biome.Biome.createDecoratedFeature;
 @ObjectHolder(MOD_ID)
 public class GrassFeatures {
 
+
+
     @SubscribeEvent
     public static void registerFeature(RegistryEvent.Register<Feature<?>> event) {
         BaseRegistryAdapter<Feature<?>> registry = new BaseRegistryAdapter<>(event.getRegistry());
         event.getRegistry().register(new GrassFeature(GrassFeatureConfig::deserialize).setRegistryName("grassfeature"));
         ISLANDPIECE = Registry.register(Registry.STRUCTURE_PIECE, registry.getResource("grasspiece"), GrassIslandPiece::new);
-        registry.register(new GrassIslandStructure(NoFeatureConfig::deserialize), "grassisland");
+        event.getRegistry().register(new GrassIslandStructure(NoFeatureConfig::deserialize).setRegistryName("grassisland"));
         onFeatureRegistryEvent();
         applyFeatures();
     }

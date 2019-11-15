@@ -159,6 +159,7 @@ public class GrassIslandStructure extends ScatteredStructure<NoFeatureConfig> {
       GrassIslandPiece grassIslandPiece;
       grassIslandPiece = new GrassIslandPiece(templateManagerIn, variant, "dirtisland", new BlockPos(x, y, z), rotation);
       this.components.add(grassIslandPiece);
+      this.recalculateStructureSize();
     }
   }
 }
