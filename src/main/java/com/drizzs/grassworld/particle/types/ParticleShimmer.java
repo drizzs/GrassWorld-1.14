@@ -161,7 +161,7 @@ public class ParticleShimmer extends Particle {
 
         @Override
         public String toString() {
-            return "grassworld:idk";
+            return "grassworld:shimmer";
         }
     };
 }

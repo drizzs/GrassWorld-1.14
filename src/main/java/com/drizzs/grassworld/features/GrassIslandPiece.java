@@ -20,7 +20,8 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 
 import java.util.Random;
 
-import static com.drizzs.grassworld.util.lib.GrassFeatureLib.ISLANDPIECE;
+import static com.drizzs.grassworld.registries.StructurePieceRegistry.ISLANDPIECE;
+
 
 public class GrassIslandPiece extends TemplateStructurePiece {
 
@@ -53,7 +54,7 @@ public class GrassIslandPiece extends TemplateStructurePiece {
   }
 
   private void loadTemplate(TemplateManager templateManager) {
-    Template template = templateManager.getTemplateDefaulted(new ResourceLocation("grassworld:structures/"+ this.variant.getName() + "/" + this.templateName));
+    Template template = templateManager.getTemplateDefaulted(new ResourceLocation("grassworld:"+ this.variant.getName() + "/" + this.templateName));
     PlacementSettings placementsettings = (new PlacementSettings()).setIgnoreEntities(true).setRotation(this.rotation).setMirror(this.mirror).addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK);
     this.setup(template, this.templatePosition, placementsettings);
   }

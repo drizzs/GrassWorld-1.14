@@ -1,11 +1,9 @@
 package com.drizzs.grassworld.blocks;
 
-import com.drizzs.grassworld.particle.GrassParticleRegistry;
 import com.drizzs.grassworld.particle.types.ShimmerParticleData;
 import com.drizzs.grassworld.util.GrassConfigHandler;
 import com.drizzs.grassworld.util.GrassHolders;
 import com.drizzs.grassworld.util.lib.GrassContentLib;
-import com.drizzs.grassworld.util.lib.GrassFeatureLib;
 import com.drizzs.grassworld.util.tags.GrassTags;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;

@@ -8,9 +8,9 @@ import net.minecraft.block.BlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.FlatGenerationSettings;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.structure.IStructurePieceType;
 import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.gen.placement.*;
 import net.minecraftforge.event.RegistryEvent;
@@ -19,23 +19,20 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.*;
 
 import static com.drizzs.grassworld.GrassWorld.MOD_ID;
-import static com.drizzs.grassworld.util.lib.GrassFeatureLib.*;
 import static net.minecraft.world.biome.Biome.createDecoratedFeature;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(MOD_ID)
 public class GrassFeatures {
 
-
+    @ObjectHolder(MOD_ID + ":grassisland")
+    public static Structure<NoFeatureConfig> ISLANDFEATURE;
 
     @SubscribeEvent
     public static void registerFeature(RegistryEvent.Register<Feature<?>> event) {
         BaseRegistryAdapter<Feature<?>> registry = new BaseRegistryAdapter<>(event.getRegistry());
-        event.getRegistry().register(new GrassFeature(GrassFeatureConfig::deserialize).setRegistryName("grassfeature"));
-        ISLANDPIECE = Registry.register(Registry.STRUCTURE_PIECE, registry.getResource("grasspiece"), GrassIslandPiece::new);
-        event.getRegistry().register(new GrassIslandStructure(NoFeatureConfig::deserialize).setRegistryName("grassisland"));
+        event.getRegistry().register(new GrassIslandStructure(NoFeatureConfig::deserialize).setRegistryName("grassworld:grassisland"));
         onFeatureRegistryEvent();
-        applyFeatures();
     }
 
 
@@ -104,10 +101,6 @@ public class GrassFeatures {
     }
     //Island Feature Stuff
     public static void applyFeatures() {
-        ConfiguredFeature<?> ISLAND_FEATURE = Biome.createDecoratedFeature(ISLANDFEATURE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.NOPE, IPlacementConfig.NO_PLACEMENT_CONFIG);
-        FlatGenerationSettings.FEATURE_STAGES.put(ISLAND_FEATURE, GenerationStage.Decoration.SURFACE_STRUCTURES);
-        FlatGenerationSettings.STRUCTURES.put("grassworld:grassisland", new ConfiguredFeature[] { ISLAND_FEATURE });
-        FlatGenerationSettings.FEATURE_CONFIGS.put(ISLAND_FEATURE, IFeatureConfig.NO_FEATURE_CONFIG);
 
         if (GrassConfigHandler.COMMON.OVERWORLDISLANDFEATURE.get()) {
             for (Biome biome : ForgeRegistries.BIOMES.getValues()) {

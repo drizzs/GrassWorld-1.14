@@ -14,12 +14,11 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static com.drizzs.grassworld.GrassWorld.MOD_ID;
 import static com.drizzs.grassworld.registries.GrassFeatures.applyFeatures;
-import static com.drizzs.grassworld.registries.GrassFeatures.onFeatureRegistryEvent;
 
-@Mod("grassworld")
-public class GrassWorld
-{
+@Mod(MOD_ID)
+public class GrassWorld {
     public static final String MOD_ID = "grassworld";
     public static GrassWorld instance;
 
@@ -40,21 +39,18 @@ public class GrassWorld
 
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
-
+    private void setup(final FMLCommonSetupEvent event) {
+        applyFeatures();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
 
     }
 
-    private void enqueueIMC(final InterModEnqueueEvent event)
-    {
+    private void enqueueIMC(final InterModEnqueueEvent event) {
     }
 
-    private void processIMC(final InterModProcessEvent event)
-    {
+    private void processIMC(final InterModProcessEvent event) {
 
     }
 
