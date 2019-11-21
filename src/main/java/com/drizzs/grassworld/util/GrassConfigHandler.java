@@ -83,7 +83,7 @@ public class GrassConfigHandler {
         public final ForgeConfigSpec.BooleanValue NETHERISLANDFEATURE;
         public final ForgeConfigSpec.BooleanValue OVERWORLDISLANDFEATURE;
         public final ForgeConfigSpec.BooleanValue ENDISLANDFEATURE;
-        public final ForgeConfigSpec.IntValue ISLANDFEATUREWEIGHT;
+        public final ForgeConfigSpec.BooleanValue ENDOVERWORLDISLANDFEATURE;
 
 
         public Common(ForgeConfigSpec.Builder builder) {
@@ -96,20 +96,20 @@ public class GrassConfigHandler {
 
             builder.push("Island Feature");
             RAINBOWISLANDS = builder
-                    .comment("If True, All Grass Islands will spawn in Multiple Colours instead of the standard single colour. DOES NOT WORK")
+                    .comment("If True, All Grass Islands will spawn in Multiple Colours instead of the standard single colour.")
                     .define("RainbowIslands", false);
             OVERWORLDISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off! DOES NOT WORK")
+                    .comment("If True, This will spawn Dirt Islands Floating in the Sky of the Overworld, These Islands will have extra spawn rate for Overworld Mobs")
                     .define("OverworldIslandFeature", true);
             ENDISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off! DOES NOT WORK")
-                    .define("EndIslandFeature", false);
+                    .comment("If True, This will spawn End Islands Floating in the Sky of the Overworld, These Islands will have extra spawn rate for End Mobs")
+                    .define("EndIslandFeature", true);
+            ENDOVERWORLDISLANDFEATURE = builder
+                    .comment("If True, This will spawn End Islands Floating in the Sky of the End, These Islands will have extra spawn rate for End Mobs")
+                    .define("EndOverWorldIslandFeature", true);
             NETHERISLANDFEATURE = builder
-                    .comment("If True, This will spawn this colour grass in the world. Set Grass Feature to false to turn all grass off! DOES NOT WORK")
-                    .define("NetherIslandFeature", false);
-            ISLANDFEATUREWEIGHT = builder
-                    .comment("Sets the amount of Island spawns")
-                    .defineInRange("IslandFeatureWeight", 2,1,10);
+                    .comment("If True, This will spawn Nether Islands Floating in the Sky of the Overworld, These Islands will have extra spawn rate for Nether Mobs")
+                    .define("NetherIslandFeature", true);
             builder.pop();
 
             builder.push("Grass Feature Spawn");

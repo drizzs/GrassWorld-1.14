@@ -1,7 +1,9 @@
 package com.drizzs.grassworld.registries;
 
+import com.drizzs.grassworld.features.EndIslandStructure;
 import com.drizzs.grassworld.features.GrassIslandPiece;
 import com.drizzs.grassworld.features.GrassIslandStructure;
+import com.drizzs.grassworld.features.NetherIslandStructure;
 import com.drizzs.grassworld.util.GrassConfigHandler;
 import com.drizzs.grassworld.util.lib.GrassContentLib;
 import net.minecraft.block.BlockState;
@@ -28,10 +30,20 @@ public class GrassFeatures {
     @ObjectHolder(MOD_ID + ":grassisland")
     public static Structure<NoFeatureConfig> ISLANDFEATURE;
 
+    @ObjectHolder(MOD_ID + ":endgrassisland")
+    public static Structure<NoFeatureConfig> ENDISLANDFEATURE;
+
+    @ObjectHolder(MOD_ID + ":nethergrassisland")
+    public static Structure<NoFeatureConfig> NETHERISLANDFEATURE;
+
+
     @SubscribeEvent
     public static void registerFeature(RegistryEvent.Register<Feature<?>> event) {
         BaseRegistryAdapter<Feature<?>> registry = new BaseRegistryAdapter<>(event.getRegistry());
         event.getRegistry().register(new GrassIslandStructure(NoFeatureConfig::deserialize).setRegistryName("grassworld:grassisland"));
+        event.getRegistry().register(new EndIslandStructure(NoFeatureConfig::deserialize).setRegistryName("grassworld:endgrassisland"));
+        event.getRegistry().register(new NetherIslandStructure(NoFeatureConfig::deserialize).setRegistryName("grassworld:nethergrassisland"));
+
         onFeatureRegistryEvent();
     }
 
@@ -102,12 +114,35 @@ public class GrassFeatures {
     //Island Feature Stuff
     public static void applyFeatures() {
 
+        if (GrassConfigHandler.COMMON.NETHERISLANDFEATURE.get()) {
+            for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
+                if (biome.getCategory() != Biome.Category.NETHER && biome.getCategory() != Biome.Category.THEEND) {
+                    addStructure(biome, GenerationStage.Decoration.SURFACE_STRUCTURES, NETHERISLANDFEATURE);
+                }
+            }
+        }
+
+        if (GrassConfigHandler.COMMON.ENDOVERWORLDISLANDFEATURE.get()) {
+            for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
+                if (biome.getCategory() != Biome.Category.NETHER && biome.getCategory() != Biome.Category.THEEND) {
+                    addStructure(biome, GenerationStage.Decoration.SURFACE_STRUCTURES, ENDISLANDFEATURE);
+                }
+            }
+        }
+
+        if (GrassConfigHandler.COMMON.ENDISLANDFEATURE.get()) {
+            for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
+                if (biome.getCategory() == Biome.Category.THEEND) {
+                    addStructure(biome, GenerationStage.Decoration.SURFACE_STRUCTURES, ENDISLANDFEATURE);
+                }
+            }
+        }
+
         if (GrassConfigHandler.COMMON.OVERWORLDISLANDFEATURE.get()) {
             for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
                 if (biome.getCategory() != Biome.Category.NETHER && biome.getCategory() != Biome.Category.THEEND) {
                     addStructure(biome, GenerationStage.Decoration.SURFACE_STRUCTURES, ISLANDFEATURE);
                 }
-
             }
         }
     }

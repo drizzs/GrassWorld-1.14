@@ -54,7 +54,7 @@ public class GrassIslandPiece extends TemplateStructurePiece {
   }
 
   private void loadTemplate(TemplateManager templateManager) {
-    Template template = templateManager.getTemplateDefaulted(new ResourceLocation("grassworld:"+ this.variant.getName() + "/" + this.templateName));
+    Template template = templateManager.getTemplateDefaulted(new ResourceLocation("grassworld:" + this.templateName));
     PlacementSettings placementsettings = (new PlacementSettings()).setIgnoreEntities(true).setRotation(this.rotation).setMirror(this.mirror).addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK);
     this.setup(template, this.templatePosition, placementsettings);
   }
@@ -72,11 +72,12 @@ public class GrassIslandPiece extends TemplateStructurePiece {
   protected void handleDataMarker(String function, BlockPos pos, IWorld worldIn, Random rand, MutableBoundingBox mbb) {
     switch (function) {
       case "grassworld:grassfloor":
+        int grass = rand.nextInt(this.variant.getGrassBlock().length);
         if(GrassConfigHandler.COMMON.RAINBOWISLANDS.get()){
                 worldIn.setBlockState(pos, StaticGrassHandlers.randomBlockSelector(), 2);
         }
         else {
-            worldIn.setBlockState(pos, this.variant.getGrassBlock(), 2);
+            worldIn.setBlockState(pos, this.variant.getGrassBlock()[grass], 2);
         }
         break;
       case "grassworld:lakefluid":

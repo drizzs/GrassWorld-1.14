@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 public class ParticleShimmer extends Particle {
 
-    private static final ResourceLocation grassParticles = new ResourceLocation("textures/particle/particles.png");
+    private static final ResourceLocation grassParticles = new ResourceLocation("grassworld:textures/particle/shimmer.png");
     public static final ResourceLocation particles = new ResourceLocation("shimmer.png");
 
     protected float particleScale = (this.rand.nextFloat() * 0.5F + 0.5F) * 2.0F;

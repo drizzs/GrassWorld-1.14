@@ -18,9 +18,9 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 import java.util.Random;
 import java.util.function.Function;
 
-public class GrassIslandStructure extends ScatteredStructure<NoFeatureConfig> {
+public class EndIslandStructure extends ScatteredStructure<NoFeatureConfig> {
 
-  public GrassIslandStructure(Function<Dynamic<?>, ? extends NoFeatureConfig> p_i51476_1_) {
+  public EndIslandStructure(Function<Dynamic<?>, ? extends NoFeatureConfig> p_i51476_1_) {
     super(p_i51476_1_);
   }
 
@@ -58,13 +58,13 @@ public class GrassIslandStructure extends ScatteredStructure<NoFeatureConfig> {
   }
 
   @Override
-  public Structure.IStartFactory getStartFactory() {
-    return GrassIslandStructure.Start::new;
+  public IStartFactory getStartFactory() {
+    return EndIslandStructure.Start::new;
   }
 
   @Override
   public String getStructureName() {
-    return "grassisland";
+    return "endisland";
   }
 
   @Override
@@ -107,56 +107,56 @@ public class GrassIslandStructure extends ScatteredStructure<NoFeatureConfig> {
       int y = Math.min(Math.min(i1, j1), Math.min(k1, l1)) + 50 + this.rand.nextInt(50) + 11;
 
       int rnr = this.rand.nextInt(15);
-      GrassIslandVariant variant = GrassIslandVariant.BLUE;
+      GrassIslandVariant variant = GrassIslandVariant.BLUEEND;
 
       if (rnr == 1) {
-        variant = GrassIslandVariant.BLACK;
+        variant = GrassIslandVariant.BLACKEND;
       }
       else if (rnr == 2) {
-        variant = GrassIslandVariant.BROWN;
+        variant = GrassIslandVariant.BROWNEND;
       }
       else if (rnr == 3) {
-        variant = GrassIslandVariant.CYAN;
+        variant = GrassIslandVariant.CYANEND;
       }
       else if (rnr == 4) {
-        variant = GrassIslandVariant.GREEN;
+        variant = GrassIslandVariant.GREENEND;
       }
       else if (rnr == 5) {
-        variant = GrassIslandVariant.GREY;
+        variant = GrassIslandVariant.GREYEND;
       }
       else if (rnr == 6) {
-        variant = GrassIslandVariant.LIGHTBLUE;
+        variant = GrassIslandVariant.LIGHTBLUEEND;
       }
       else if (rnr == 7) {
-        variant = GrassIslandVariant.LIGHTGREY;
+        variant = GrassIslandVariant.LIGHTGREYEND;
       }
       else if (rnr == 8) {
-        variant = GrassIslandVariant.LIME;
+        variant = GrassIslandVariant.LIMEEND;
       }
       else if (rnr == 9) {
-        variant = GrassIslandVariant.MAGENTA;
+        variant = GrassIslandVariant.MAGENTAEND;
       }
       else if (rnr == 10) {
-        variant = GrassIslandVariant.PINK;
+        variant = GrassIslandVariant.PINKEND;
       }
       else if (rnr == 11) {
-        variant = GrassIslandVariant.PURPLE;
+        variant = GrassIslandVariant.PURPLEEND;
       }
       else if (rnr == 12) {
-        variant = GrassIslandVariant.ORANGE;
+        variant = GrassIslandVariant.ORANGEEND;
       }
       else if (rnr == 13) {
-        variant = GrassIslandVariant.RED;
+        variant = GrassIslandVariant.REDEND;
       }
       else if (rnr == 14) {
-        variant = GrassIslandVariant.WHITE;
+        variant = GrassIslandVariant.WHITEEND;
       }
       else if (rnr == 15) {
-        variant = GrassIslandVariant.YELLOW;
+        variant = GrassIslandVariant.YELLOWEND;
       }
 
       GrassIslandPiece grassIslandPiece;
-      grassIslandPiece = new GrassIslandPiece(templateManagerIn, variant, "dirtisland", new BlockPos(x, y, z), rotation);
+      grassIslandPiece = new GrassIslandPiece(templateManagerIn, variant, "endisland", new BlockPos(x, y, z), rotation);
       this.components.add(grassIslandPiece);
       this.recalculateStructureSize();
     }
