@@ -1,8 +1,10 @@
 package com.drizzs.grassworld;
 
 
+import com.drizzs.grassworld.registries.GrassRegistry;
 import com.drizzs.grassworld.util.GrassConfigHandler;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -30,13 +32,14 @@ public class GrassWorld {
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, GrassConfigHandler.CLIENT_SPEC);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GrassConfigHandler.COMMON_SPEC);
 
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         MinecraftForge.EVENT_BUS.register(this);
-
+        GrassRegistry.register(bus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

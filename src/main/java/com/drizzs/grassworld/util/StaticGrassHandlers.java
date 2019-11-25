@@ -1,10 +1,12 @@
 package com.drizzs.grassworld.util;
 
-import com.drizzs.grassworld.util.lib.GrassContentLib;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 
 import java.util.Random;
+
+import static com.drizzs.grassworld.util.lib.GrassContentLib.*;
 
 public class StaticGrassHandlers
 {
@@ -13,78 +15,78 @@ public class StaticGrassHandlers
     }
 
     public static BlockState[] getAllActualGrass() {
-        return createArray(GrassContentLib.actualgrassblack.getDefaultState(), GrassContentLib.actualgrassblue.getDefaultState(), GrassContentLib.actualgrassbrown.getDefaultState(), GrassContentLib.actualgrasscyan.getDefaultState(), GrassContentLib.actualgrassgreen.getDefaultState(), GrassContentLib.actualgrassgrey.getDefaultState(), GrassContentLib.actualgrasslightblue.getDefaultState(), GrassContentLib.actualgrasslightgrey.getDefaultState(), GrassContentLib.actualgrasslimegreen.getDefaultState(), GrassContentLib.actualgrassmagenta.getDefaultState(), GrassContentLib.actualgrassorange.getDefaultState(), GrassContentLib.actualgrasspink.getDefaultState(), GrassContentLib.actualgrasspurple.getDefaultState(), GrassContentLib.actualgrassred.getDefaultState(), GrassContentLib.actualgrasswhite.getDefaultState(), GrassContentLib.actualgrassyellow.getDefaultState());
+        return createArray(actualgrassblack.getDefaultState(), actualgrassblue.getDefaultState(), actualgrassbrown.getDefaultState(), actualgrasscyan.getDefaultState(), actualgrassgreen.getDefaultState(), actualgrassgrey.getDefaultState(), actualgrasslightblue.getDefaultState(), actualgrasslightgrey.getDefaultState(), actualgrasslimegreen.getDefaultState(), actualgrassmagenta.getDefaultState(), actualgrassorange.getDefaultState(), actualgrasspink.getDefaultState(), actualgrasspurple.getDefaultState(), actualgrassred.getDefaultState(), actualgrasswhite.getDefaultState(), actualgrassyellow.getDefaultState());
     }
 
     public static BlockState randomBlockSelector() {
         Random random = Minecraft.getInstance().world.rand;
         int next = random.nextInt(8);
         BlockState topBlock;
-        if(next == 0){topBlock = GrassContentLib.blackgrass.getDefaultState();}
-        else if(next == 1){topBlock = GrassContentLib.fancyblackgrass.getDefaultState();}
-        else if(next == 2){topBlock = GrassContentLib.enchantedblackgrass.getDefaultState();}
-        else if(next == 3){topBlock = GrassContentLib.glowingblackgrass.getDefaultState();}
-        else if(next == 4){topBlock = GrassContentLib.bluegrass.getDefaultState();}
-        else if(next == 5){topBlock = GrassContentLib.fancybluegrass.getDefaultState();}
-        else if(next == 6){topBlock = GrassContentLib.enchantedbluegrass.getDefaultState();}
-        else if(next == 7){topBlock = GrassContentLib.glowingbluegrass.getDefaultState();}
-        else if(next == 8){topBlock = GrassContentLib.browngrass.getDefaultState();}
-        else if(next == 9){topBlock = GrassContentLib.fancybrowngrass.getDefaultState();}
-        else if(next == 10){topBlock = GrassContentLib.enchantedbrowngrass.getDefaultState();}
-        else if(next == 11){topBlock = GrassContentLib.glowingbrowngrass.getDefaultState();}
-        else if(next == 12){topBlock = GrassContentLib.cyangrass.getDefaultState();}
-        else if(next == 13){topBlock = GrassContentLib.fancycyangrass.getDefaultState();}
-        else if(next == 14){topBlock = GrassContentLib.enchantedcyangrass.getDefaultState();}
-        else if(next == 15){topBlock = GrassContentLib.glowingcyangrass.getDefaultState();}
-        else if(next == 16){topBlock = GrassContentLib.greengrass.getDefaultState();}
-        else if(next == 17){topBlock = GrassContentLib.fancygreengrass.getDefaultState();}
-        else if(next == 18){topBlock = GrassContentLib.enchantedgreengrass.getDefaultState();}
-        else if(next == 19){topBlock = GrassContentLib.glowinggreengrass.getDefaultState();}
-        else if(next == 20){topBlock = GrassContentLib.greygrass.getDefaultState();}
-        else if(next == 21){topBlock = GrassContentLib.fancygreygrass.getDefaultState();}
-        else if(next == 22){topBlock = GrassContentLib.enchantedgreygrass.getDefaultState();}
-        else if(next == 23){topBlock = GrassContentLib.glowinggreygrass.getDefaultState();}
-        else if(next == 24){topBlock = GrassContentLib.lightbluegrass.getDefaultState();}
-        else if(next == 25){topBlock = GrassContentLib.fancylightbluegrass.getDefaultState();}
-        else if(next == 26){topBlock = GrassContentLib.enchantedlightbluegrass.getDefaultState();}
-        else if(next == 27){topBlock = GrassContentLib.glowinglightbluegrass.getDefaultState();}
-        else if(next == 28){topBlock = GrassContentLib.lightgreygrass.getDefaultState();}
-        else if(next == 29){topBlock = GrassContentLib.fancylightgreygrass.getDefaultState();}
-        else if(next == 30){topBlock = GrassContentLib.enchantedlightgreygrass.getDefaultState();}
-        else if(next == 31){topBlock = GrassContentLib.glowinglightgreygrass.getDefaultState();}
-        else if(next == 32){topBlock = GrassContentLib.limegreengrass.getDefaultState();}
-        else if(next == 33){topBlock = GrassContentLib.fancylimegreengrass.getDefaultState();}
-        else if(next == 34){topBlock = GrassContentLib.enchantedlimegreengrass.getDefaultState();}
-        else if(next == 35){topBlock = GrassContentLib.glowinglimegreengrass.getDefaultState();}
-        else if(next == 36){topBlock = GrassContentLib.magentagrass.getDefaultState();}
-        else if(next == 37){topBlock = GrassContentLib.fancymagentagrass.getDefaultState();}
-        else if(next == 38){topBlock = GrassContentLib.enchantedmagentagrass.getDefaultState();}
-        else if(next == 39){topBlock = GrassContentLib.glowingmagentagrass.getDefaultState();}
-        else if(next == 40){topBlock = GrassContentLib.orangegrass.getDefaultState();}
-        else if(next == 41){topBlock = GrassContentLib.fancyorangegrass.getDefaultState();}
-        else if(next == 42){topBlock = GrassContentLib.enchantedorangegrass.getDefaultState();}
-        else if(next == 43){topBlock = GrassContentLib.glowingorangegrass.getDefaultState();}
-        else if(next == 44){topBlock = GrassContentLib.pinkgrass.getDefaultState();}
-        else if(next == 45){topBlock = GrassContentLib.fancypinkgrass.getDefaultState();}
-        else if(next == 46){topBlock = GrassContentLib.enchantedpinkgrass.getDefaultState();}
-        else if(next == 47){topBlock = GrassContentLib.glowingpinkgrass.getDefaultState();}
-        else if(next == 48){topBlock = GrassContentLib.purplegrass.getDefaultState();}
-        else if(next == 49){topBlock = GrassContentLib.fancypurplegrass.getDefaultState();}
-        else if(next == 50){topBlock = GrassContentLib.enchantedpurplegrass.getDefaultState();}
-        else if(next == 51){topBlock = GrassContentLib.glowingpurplegrass.getDefaultState();}
-        else if(next == 52){topBlock = GrassContentLib.redgrass.getDefaultState();}
-        else if(next == 53){topBlock = GrassContentLib.fancyredgrass.getDefaultState();}
-        else if(next == 54){topBlock = GrassContentLib.enchantedredgrass.getDefaultState();}
-        else if(next == 55){topBlock = GrassContentLib.glowingredgrass.getDefaultState();}
-        else if(next == 56){topBlock = GrassContentLib.whitegrass.getDefaultState();}
-        else if(next == 57){topBlock = GrassContentLib.fancywhitegrass.getDefaultState();}
-        else if(next == 58){topBlock = GrassContentLib.enchantedwhitegrass.getDefaultState();}
-        else if(next == 59){topBlock = GrassContentLib.glowingwhitegrass.getDefaultState();}
-        else if(next == 60){topBlock = GrassContentLib.yellowgrass.getDefaultState();}
-        else if(next == 61){topBlock = GrassContentLib.fancyyellowgrass.getDefaultState();}
-        else if(next == 62){topBlock = GrassContentLib.enchantedyellowgrass.getDefaultState();}
-        else if(next == 63){topBlock = GrassContentLib.glowingyellowgrass.getDefaultState();}
-        else{topBlock = GrassContentLib.fancywhitegrass.getDefaultState();}
+        if(next == 0){topBlock = blackgrass.getDefaultState();}
+        else if(next == 1){topBlock = fancyblackgrass.getDefaultState();}
+        else if(next == 2){topBlock = enchantedblackgrass.getDefaultState();}
+        else if(next == 3){topBlock = glowingblackgrass.getDefaultState();}
+        else if(next == 4){topBlock = bluegrass.getDefaultState();}
+        else if(next == 5){topBlock = fancybluegrass.getDefaultState();}
+        else if(next == 6){topBlock = enchantedbluegrass.getDefaultState();}
+        else if(next == 7){topBlock = glowingbluegrass.getDefaultState();}
+        else if(next == 8){topBlock = browngrass.getDefaultState();}
+        else if(next == 9){topBlock = fancybrowngrass.getDefaultState();}
+        else if(next == 10){topBlock = enchantedbrowngrass.getDefaultState();}
+        else if(next == 11){topBlock = glowingbrowngrass.getDefaultState();}
+        else if(next == 12){topBlock = cyangrass.getDefaultState();}
+        else if(next == 13){topBlock = fancycyangrass.getDefaultState();}
+        else if(next == 14){topBlock = enchantedcyangrass.getDefaultState();}
+        else if(next == 15){topBlock = glowingcyangrass.getDefaultState();}
+        else if(next == 16){topBlock = greengrass.getDefaultState();}
+        else if(next == 17){topBlock = fancygreengrass.getDefaultState();}
+        else if(next == 18){topBlock = enchantedgreengrass.getDefaultState();}
+        else if(next == 19){topBlock = glowinggreengrass.getDefaultState();}
+        else if(next == 20){topBlock = greygrass.getDefaultState();}
+        else if(next == 21){topBlock = fancygreygrass.getDefaultState();}
+        else if(next == 22){topBlock = enchantedgreygrass.getDefaultState();}
+        else if(next == 23){topBlock = glowinggreygrass.getDefaultState();}
+        else if(next == 24){topBlock = lightbluegrass.getDefaultState();}
+        else if(next == 25){topBlock = fancylightbluegrass.getDefaultState();}
+        else if(next == 26){topBlock = enchantedlightbluegrass.getDefaultState();}
+        else if(next == 27){topBlock = glowinglightbluegrass.getDefaultState();}
+        else if(next == 28){topBlock = lightgreygrass.getDefaultState();}
+        else if(next == 29){topBlock = fancylightgreygrass.getDefaultState();}
+        else if(next == 30){topBlock = enchantedlightgreygrass.getDefaultState();}
+        else if(next == 31){topBlock = glowinglightgreygrass.getDefaultState();}
+        else if(next == 32){topBlock = limegreengrass.getDefaultState();}
+        else if(next == 33){topBlock = fancylimegreengrass.getDefaultState();}
+        else if(next == 34){topBlock = enchantedlimegreengrass.getDefaultState();}
+        else if(next == 35){topBlock = glowinglimegreengrass.getDefaultState();}
+        else if(next == 36){topBlock = magentagrass.getDefaultState();}
+        else if(next == 37){topBlock = fancymagentagrass.getDefaultState();}
+        else if(next == 38){topBlock = enchantedmagentagrass.getDefaultState();}
+        else if(next == 39){topBlock = glowingmagentagrass.getDefaultState();}
+        else if(next == 40){topBlock = orangegrass.getDefaultState();}
+        else if(next == 41){topBlock = fancyorangegrass.getDefaultState();}
+        else if(next == 42){topBlock = enchantedorangegrass.getDefaultState();}
+        else if(next == 43){topBlock = glowingorangegrass.getDefaultState();}
+        else if(next == 44){topBlock = pinkgrass.getDefaultState();}
+        else if(next == 45){topBlock = fancypinkgrass.getDefaultState();}
+        else if(next == 46){topBlock = enchantedpinkgrass.getDefaultState();}
+        else if(next == 47){topBlock = glowingpinkgrass.getDefaultState();}
+        else if(next == 48){topBlock = purplegrass.getDefaultState();}
+        else if(next == 49){topBlock = fancypurplegrass.getDefaultState();}
+        else if(next == 50){topBlock = enchantedpurplegrass.getDefaultState();}
+        else if(next == 51){topBlock = glowingpurplegrass.getDefaultState();}
+        else if(next == 52){topBlock = redgrass.getDefaultState();}
+        else if(next == 53){topBlock = fancyredgrass.getDefaultState();}
+        else if(next == 54){topBlock = enchantedredgrass.getDefaultState();}
+        else if(next == 55){topBlock = glowingredgrass.getDefaultState();}
+        else if(next == 56){topBlock = whitegrass.getDefaultState();}
+        else if(next == 57){topBlock = fancywhitegrass.getDefaultState();}
+        else if(next == 58){topBlock = enchantedwhitegrass.getDefaultState();}
+        else if(next == 59){topBlock = glowingwhitegrass.getDefaultState();}
+        else if(next == 60){topBlock = yellowgrass.getDefaultState();}
+        else if(next == 61){topBlock = fancyyellowgrass.getDefaultState();}
+        else if(next == 62){topBlock = enchantedyellowgrass.getDefaultState();}
+        else if(next == 63){topBlock = glowingyellowgrass.getDefaultState();}
+        else{topBlock = fancywhitegrass.getDefaultState();}
         return topBlock;
     }
 

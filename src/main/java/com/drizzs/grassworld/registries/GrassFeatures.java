@@ -109,7 +109,6 @@ public class GrassFeatures {
                 biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, createDecoratedFeature(Feature.GRASS, new GrassFeatureConfig(state), Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(frequency)));
             }
         }
-
     }
     //Island Feature Stuff
     public static void applyFeatures() {

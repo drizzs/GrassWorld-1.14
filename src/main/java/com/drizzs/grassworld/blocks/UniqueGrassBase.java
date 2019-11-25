@@ -8,6 +8,7 @@ import net.minecraft.block.SnowBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.monster.*;
+import net.minecraft.item.DyeColor;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -19,8 +20,8 @@ import java.util.Random;
 
 public class UniqueGrassBase extends GrassBase {
 
-    public UniqueGrassBase(Properties properties, String id) {
-        super(properties, id);
+    public UniqueGrassBase(Properties properties, DyeColor dyeColor) {
+        super(properties, dyeColor);
         GrassHolders.blockGrowth = blockGrowth();
     }
 
@@ -86,7 +87,6 @@ public class UniqueGrassBase extends GrassBase {
             world.addEntity(new EndermiteEntity(EntityType.ENDERMITE, world));
         }
         else if(this.isIn(GrassTags.Blocks.NETHERGRASS)) {
-
             world.addEntity(new GhastEntity(EntityType.GHAST, world));
             world.addEntity(new ZombiePigmanEntity(EntityType.ZOMBIE_PIGMAN, world));
             world.addEntity(new MagmaCubeEntity(EntityType.MAGMA_CUBE, world));
