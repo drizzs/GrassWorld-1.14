@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
@@ -20,7 +21,7 @@ public class ParticleShimmer extends Particle {
     private static final ResourceLocation grassParticles = new ResourceLocation("grassworld:textures/particle/shimmer.png");
     public static final ResourceLocation particles = new ResourceLocation("shimmer.png");
 
-    protected float particleScale = (this.rand.nextFloat() * 0.5F + 0.5F) * 2.0F;
+    protected float particleScale;
     private final boolean depthTest;
     private final float moteParticleScale;
     private final int moteHalfLife;
@@ -38,9 +39,9 @@ public class ParticleShimmer extends Particle {
         particleGreen = green;
         particleBlue = blue;
         particleGravity = 0;
-        particleScale *= size;
+        particleScale = size;
         moteParticleScale = particleScale;
-        maxAge = (int)(28D / (Math.random() * 0.3D + 0.7D) * maxAgeMul);
+        maxAge = (int) Math.max(Math.max(world.rand.nextInt(10) * 10F,world.rand.nextInt(10) * 10F), world.rand.nextInt(30) * 10F);
         this.depthTest = depthTest;
 
         moteHalfLife = maxAge / 2;
@@ -53,11 +54,6 @@ public class ParticleShimmer extends Particle {
 
     @Override
     public void renderParticle(BufferBuilder buffer, ActiveRenderInfo entityIn, float partialTicks, float rotationX, float rotationZ, float rotationYZ, float rotationXY, float rotationXZ) {
-        float agescale = (float)age / (float) moteHalfLife;
-        if (agescale > 1F)
-            agescale = 2 - agescale;
-
-        particleScale = moteParticleScale * agescale;
 
         float f10 = 0.5F * particleScale;
         float f11 = (float)(prevPosX + (posX - prevPosX) * partialTicks - interpPosX);
@@ -86,25 +82,15 @@ public class ParticleShimmer extends Particle {
 
         this.motionY -= 0.04D * (double) this.particleGravity;
         this.move(this.motionX, this.motionY, this.motionZ);
-        this.motionX *= 0.9800000190734863D;
-        this.motionY *= 0.9800000190734863D;
-        this.motionZ *= 0.9800000190734863D;
+        this.motionX *= 0;
+        this.motionY = 0.003D;
+        this.motionZ *= 0;
     }
 
     @Nonnull
     @Override
     public IParticleRenderType getRenderType() {
         return depthTest ? NORMAL_RENDER : DIW_RENDER;
-    }
-
-    public void setGravity(float value) {
-        particleGravity = value;
-    }
-
-    public void setSpeed(float mx, float my, float mz) {
-        motionX = mx;
-        motionY = my;
-        motionZ = mz;
     }
 
     private static void beginRenderCommon(BufferBuilder bufferBuilder, TextureManager textureManager) {

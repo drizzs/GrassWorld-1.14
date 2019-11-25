@@ -224,12 +224,12 @@ public class GrassBase extends GrassBlock {
     @Override
     public void animateTick(BlockState stateIn, World world, BlockPos pos, Random rand)
     {
-        if(this.isIn(GrassTags.Blocks.ENCHANTEDGRASS)){
-            ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.2F + 1F, 1F, 0F, 1F, 5);
-            world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
+        if(this.isIn(GrassTags.Blocks.ENCHANTEDGRASS)) {
+            if (rand.nextInt(8) == 0) {
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 1F, 0F, 1F, 1);
+                world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
+            }
         }
-
-
     }
 
 }
