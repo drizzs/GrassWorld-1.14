@@ -25,10 +25,8 @@ public class GrassBase extends GrassBlock {
 
     private DyeColor dyeColour;
 
-    public GrassBase(Properties properties, DyeColor dyeColor) {
+    public GrassBase(Properties properties) {
         super(properties);
-        this.dyeColour = dyeColour;
-
     }
 
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {

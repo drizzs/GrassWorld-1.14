@@ -20,9 +20,8 @@ import java.util.Random;
 
 public class UniqueGrassBase extends GrassBase {
 
-    public UniqueGrassBase(Properties properties, DyeColor dyeColor) {
-        super(properties, dyeColor);
-        GrassHolders.blockGrowth = blockGrowth();
+    public UniqueGrassBase(Properties properties) {
+        super(properties);
     }
 
     private static boolean getLightLevel(BlockState state, IWorldReader iworld, BlockPos pos) {
@@ -45,40 +44,34 @@ public class UniqueGrassBase extends GrassBase {
     @Override
     public void tick(BlockState state, World worldIn, BlockPos pos, Random random) {
         if (!worldIn.isRemote) {
-
             if (!worldIn.isAreaLoaded(pos, 3))
                 return; // Forge: prevent loading unloaded chunks when checking neighbor's light and spreading
             if (!getLightLevel(state, worldIn, pos)) {
-                worldIn.setBlockState(pos, GrassHolders.blockGrowth);
-
-
+                worldIn.setBlockState(pos, blockGrowth());
             } else {
                 if (worldIn.getLight(pos.up()) >= 0) {
                     BlockState blockstate = this.getDefaultState();
 
                     for (int i = 0; i < 4; ++i) {
                         BlockPos blockpos = pos.add(random.nextInt(3) - 1, random.nextInt(5) - 3, random.nextInt(3) - 1);
-                        if (worldIn.getBlockState(blockpos) == GrassHolders.blockGrowth && getFluidState(blockstate, worldIn, blockpos)) {
+                        if (worldIn.getBlockState(blockpos) == blockGrowth() && getFluidState(blockstate, worldIn, blockpos)) {
                             worldIn.setBlockState(blockpos, blockstate.with(SNOWY, Boolean.valueOf(worldIn.getBlockState(blockpos.up()).getBlock() == Blocks.SNOW)));
-
                         }
                     }
                 }
-
             }
         }
-
     }
 
     public BlockState blockGrowth(){
-
+        BlockState state = null;
         if (this.isIn(GrassTags.Blocks.NETHERGRASS)) {
-            GrassHolders.blockGrowth = Blocks.NETHERRACK.getDefaultState();
+            state = Blocks.NETHERRACK.getDefaultState();
         }
         if (this.isIn(GrassTags.Blocks.ENDGRASS)) {
-            GrassHolders.blockGrowth = Blocks.END_STONE.getDefaultState();
+            state = Blocks.END_STONE.getDefaultState();
         }
-        return GrassHolders.blockGrowth;
+        return state;
     }
 
     public void spawnEntities(World world, Entity entity){
