@@ -296,7 +296,7 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:actualgrassmagenta")
     public static Block actualgrassmagenta;
 
-    @ObjectHolder("grassworld:actualgrassblack")
+    @ObjectHolder("grassworld:blackactualgrass")
     public static Block actualgrassblack;
 
     @ObjectHolder("grassworld:actualgrassblue")
