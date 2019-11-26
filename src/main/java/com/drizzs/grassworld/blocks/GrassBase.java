@@ -23,8 +23,6 @@ import static com.drizzs.grassworld.util.lib.GrassContentLib.*;
 
 public class GrassBase extends GrassBlock {
 
-    private DyeColor dyeColour;
-
     public GrassBase(Properties properties) {
         super(properties);
     }
@@ -181,12 +179,7 @@ public class GrassBase extends GrassBlock {
     @OnlyIn(Dist.CLIENT)
     @Override
     public void animateTick(BlockState stateIn, World world, BlockPos pos, Random rand) {
-            if (this.equals(enchantedredgrass)) {
-                if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 1F, 0F, 1F, 1);
-                    world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
-                }
-            } else if (this.equals(enchantedblackgrass)) {
+                if (this.equals(enchantedblackgrass)) {
                 if (rand.nextInt(8) == 0) {
                     ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 0F, 0F, 0F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);

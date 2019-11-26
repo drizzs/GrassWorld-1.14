@@ -83,7 +83,7 @@ public class GrassRegistry {
             grassItemBlocks.put(dyeColor, ITEMS.register(dyeColor.toString() + "endgrass", () -> new BlockItem(endGrass.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
             grassItemBlocks.put(dyeColor, ITEMS.register("fancy" + dyeColor.toString() + "endgrass", () -> new BlockItem(fancyEndGrass.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
             grassItemBlocks.put(dyeColor, ITEMS.register("fancy" + dyeColor.toString() + "nethergrass", () -> new BlockItem(fancyNetherGrass.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
-            grassItemBlocks.put(dyeColor, ITEMS.register(dyeColor.toString() + "actualgrass", () -> new BlockItem(fancyNetherGrass.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
+            grassItemBlocks.put(dyeColor, ITEMS.register(dyeColor.toString() + "actualgrass", () -> new BlockItem(actualgrass.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
         }
 
         for (DyeColor dyeColor : DyeColor.values()) {
