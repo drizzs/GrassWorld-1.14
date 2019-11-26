@@ -8,9 +8,8 @@ import net.minecraft.world.IBlockReader;
 public class ActualGrass extends TallGrassBlock {
 
 
-    public ActualGrass(Block.Properties properties, String id) {
+    public ActualGrass(Block.Properties properties) {
         super(properties);
-        setRegistryName(id);
     }
 
     @Override

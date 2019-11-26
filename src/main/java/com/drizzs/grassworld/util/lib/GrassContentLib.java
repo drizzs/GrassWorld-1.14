@@ -26,16 +26,16 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:redgrass")
     public static Block redgrass;
 
-    @ObjectHolder("grassworld:greygrass")
+    @ObjectHolder("grassworld:graygrass")
     public static Block greygrass;
 
-    @ObjectHolder("grassworld:lightgreygrass")
+    @ObjectHolder("grassworld:light_graygrass")
     public static Block lightgreygrass;
 
-    @ObjectHolder("grassworld:lightbluegrass")
+    @ObjectHolder("grassworld:light_bluegrass")
     public static Block lightbluegrass;
 
-    @ObjectHolder("grassworld:limegreengrass")
+    @ObjectHolder("grassworld:limegrass")
     public static Block limegreengrass;
 
     @ObjectHolder("grassworld:magentagrass")
@@ -75,16 +75,16 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:redlog")
     public static Block redlog;
 
-    @ObjectHolder("grassworld:greylog")
+    @ObjectHolder("grassworld:graylog")
     public static Block greylog;
 
-    @ObjectHolder("grassworld:lightgreylog")
+    @ObjectHolder("grassworld:light_graylog")
     public static Block lightgreylog;
 
-    @ObjectHolder("grassworld:lightbluelog")
+    @ObjectHolder("grassworld:light_bluelog")
     public static Block lightbluelog;
 
-    @ObjectHolder("grassworld:limegreenlog")
+    @ObjectHolder("grassworld:limelog")
     public static Block limegreenlog;
 
     @ObjectHolder("grassworld:magentalog")
@@ -125,16 +125,16 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:redleaves")
     public static Block redleaves;
 
-    @ObjectHolder("grassworld:greyleaves")
+    @ObjectHolder("grassworld:grayleaves")
     public static Block greyleaves;
 
-    @ObjectHolder("grassworld:lightgreyleaves")
+    @ObjectHolder("grassworld:light_grayleaves")
     public static Block lightgreyleaves;
 
-    @ObjectHolder("grassworld:lightblueleaves")
+    @ObjectHolder("grassworld:light_blueleaves")
     public static Block lightblueleaves;
 
-    @ObjectHolder("grassworld:limegreenleaves")
+    @ObjectHolder("grassworld:limeleaves")
     public static Block limegreenleaves;
 
     @ObjectHolder("grassworld:magentaleaves")
@@ -171,16 +171,16 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:fancyredgrass")
     public static Block fancyredgrass;
 
-    @ObjectHolder("grassworld:fancygreygrass")
+    @ObjectHolder("grassworld:fancygraygrass")
     public static Block fancygreygrass;
 
-    @ObjectHolder("grassworld:fancylightgreygrass")
+    @ObjectHolder("grassworld:fancylight_graygrass")
     public static Block fancylightgreygrass;
 
-    @ObjectHolder("grassworld:fancylightbluegrass")
+    @ObjectHolder("grassworld:fancylight_bluegrass")
     public static Block fancylightbluegrass;
 
-    @ObjectHolder("grassworld:fancylimegreengrass")
+    @ObjectHolder("grassworld:fancylimegrass")
     public static Block fancylimegreengrass;
 
     @ObjectHolder("grassworld:fancymagentagrass")
@@ -223,16 +223,16 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:enchantedredgrass")
     public static Block enchantedredgrass;
 
-    @ObjectHolder("grassworld:enchantedgreygrass")
+    @ObjectHolder("grassworld:enchantedgraygrass")
     public static Block enchantedgreygrass;
 
-    @ObjectHolder("grassworld:enchantedlightgreygrass")
+    @ObjectHolder("grassworld:enchantedlight_graygrass")
     public static Block enchantedlightgreygrass;
 
-    @ObjectHolder("grassworld:enchantedlightbluegrass")
+    @ObjectHolder("grassworld:enchantedlight_bluegrass")
     public static Block enchantedlightbluegrass;
 
-    @ObjectHolder("grassworld:enchantedlimegreengrass")
+    @ObjectHolder("grassworld:enchantedlimegrass")
     public static Block enchantedlimegreengrass;
 
     @ObjectHolder("grassworld:enchantedmagentagrass")
@@ -254,102 +254,102 @@ public class GrassContentLib {
     public static Block enchantedgreengrass;
 
     //ActualGrass
-    @ObjectHolder("grassworld:actualgrassorange")
+    @ObjectHolder("grassworld:orangeactualgrass")
     public static Block actualgrassorange;
 
-    @ObjectHolder("grassworld:actualgrasscyan")
+    @ObjectHolder("grassworld:cyanactualgrass")
     public static Block actualgrasscyan;
 
-    @ObjectHolder("grassworld:actualgrassred")
+    @ObjectHolder("grassworld:redactualgrass")
     public static Block actualgrassred;
 
-    @ObjectHolder("grassworld:actualgrassbrown")
+    @ObjectHolder("grassworld:brownactualgrass")
     public static Block actualgrassbrown;
 
-    @ObjectHolder("grassworld:actualgrasspink")
+    @ObjectHolder("grassworld:pinkactualgrass")
     public static Block actualgrasspink;
 
-    @ObjectHolder("grassworld:actualgrasspurple")
+    @ObjectHolder("grassworld:purpleactualgrass")
     public static Block actualgrasspurple;
 
-    @ObjectHolder("grassworld:actualgrassgreen")
+    @ObjectHolder("grassworld:greenactualgrass")
     public static Block actualgrassgreen;
 
-    @ObjectHolder("grassworld:actualgrasslimegreen")
+    @ObjectHolder("grassworld:limeactualgrass")
     public static Block actualgrasslimegreen;
 
-    @ObjectHolder("grassworld:actualgrasslightgrey")
+    @ObjectHolder("grassworld:light_grayactualgrass")
     public static Block actualgrasslightgrey;
 
-    @ObjectHolder("grassworld:actualgrassgrey")
+    @ObjectHolder("grassworld:grayactualgrass")
     public static Block actualgrassgrey;
 
-    @ObjectHolder("grassworld:actualgrasslightblue")
+    @ObjectHolder("grassworld:light_blueactualgrass")
     public static Block actualgrasslightblue;
 
-    @ObjectHolder("grassworld:actualgrassyellow")
+    @ObjectHolder("grassworld:yellowactualgrass")
     public static Block actualgrassyellow;
 
-    @ObjectHolder("grassworld:actualgrasswhite")
+    @ObjectHolder("grassworld:whiteactualgrass")
     public static Block actualgrasswhite;
 
-    @ObjectHolder("grassworld:actualgrassmagenta")
+    @ObjectHolder("grassworld:magentaactualgrass")
     public static Block actualgrassmagenta;
 
     @ObjectHolder("grassworld:blackactualgrass")
     public static Block actualgrassblack;
 
-    @ObjectHolder("grassworld:actualgrassblue")
+    @ObjectHolder("grassworld:blueactualgrass")
     public static Block actualgrassblue;
 
     //Planks
-    @ObjectHolder("grassworld:plankred")
-    public static Block plankred;
+    @ObjectHolder("grassworld:redplank")
+    public static Block redplank;
 
-    @ObjectHolder("grassworld:plankblue")
-    public static Block plankblue;
+    @ObjectHolder("grassworld:blueplank")
+    public static Block blueplank;
 
-    @ObjectHolder("grassworld:plankgreen")
-    public static Block plankgreen;
+    @ObjectHolder("grassworld:greenplank")
+    public static Block greenplank;
 
-    @ObjectHolder("grassworld:planklimegreen")
-    public static Block planklimegreen;
+    @ObjectHolder("grassworld:limeplank")
+    public static Block limegreenplank;
 
-    @ObjectHolder("grassworld:plankorange")
-    public static Block plankorange;
+    @ObjectHolder("grassworld:orangeplank")
+    public static Block orangeplank;
 
-    @ObjectHolder("grassworld:planklightblue")
-    public static Block planklightblue;
+    @ObjectHolder("grassworld:light_blueplank")
+    public static Block lightblueplank;
 
-    @ObjectHolder("grassworld:plankgrey")
-    public static Block plankgrey;
+    @ObjectHolder("grassworld:grayplank")
+    public static Block greyplank;
 
-    @ObjectHolder("grassworld:planklightgrey")
-    public static Block planklightgrey;
+    @ObjectHolder("grassworld:light_grayplank")
+    public static Block lightgreyplank;
 
-    @ObjectHolder("grassworld:plankmagenta")
-    public static Block plankmagenta;
+    @ObjectHolder("grassworld:magentaplank")
+    public static Block magentaplank;
 
-    @ObjectHolder("grassworld:plankbrown")
-    public static Block plankbrown;
+    @ObjectHolder("grassworld:brownplank")
+    public static Block brownplank;
 
-    @ObjectHolder("grassworld:plankwhite")
-    public static Block plankwhite;
+    @ObjectHolder("grassworld:whiteplank")
+    public static Block whiteplank;
 
-    @ObjectHolder("grassworld:plankblack")
-    public static Block plankblack;
+    @ObjectHolder("grassworld:blackplank")
+    public static Block blackplank;
 
-    @ObjectHolder("grassworld:plankpurple")
-    public static Block plankpurple;
+    @ObjectHolder("grassworld:purpleplank")
+    public static Block purpleplank;
 
-    @ObjectHolder("grassworld:plankpink")
-    public static Block plankpink;
+    @ObjectHolder("grassworld:pinkplank")
+    public static Block pinkplank;
 
-    @ObjectHolder("grassworld:plankcyan")
-    public static Block plankcyan;
+    @ObjectHolder("grassworld:cyanplank")
+    public static Block cyanplank;
 
-    @ObjectHolder("grassworld:plankyellow")
-    public static Block plankyellow;
+    @ObjectHolder("grassworld:yellowplank")
+    public static Block yellowplank;
 
     //End Grass
     @ObjectHolder("grassworld:orangeendgrass")
@@ -370,16 +370,16 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:redendgrass")
     public static Block redendgrass;
 
-    @ObjectHolder("grassworld:greyendgrass")
+    @ObjectHolder("grassworld:grayendgrass")
     public static Block greyendgrass;
 
-    @ObjectHolder("grassworld:lightgreyendgrass")
+    @ObjectHolder("grassworld:light_grayendgrass")
     public static Block lightgreyendgrass;
 
-    @ObjectHolder("grassworld:lightblueendgrass")
+    @ObjectHolder("grassworld:light_blueendgrass")
     public static Block lightblueendgrass;
 
-    @ObjectHolder("grassworld:limegreenendgrass")
+    @ObjectHolder("grassworld:limeendgrass")
     public static Block limegreenendgrass;
 
     @ObjectHolder("grassworld:magentaendgrass")
@@ -420,16 +420,16 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:fancyredendgrass")
     public static Block fancyredendgrass;
 
-    @ObjectHolder("grassworld:fancygreyendgrass")
+    @ObjectHolder("grassworld:fancygrayendgrass")
     public static Block fancygreyendgrass;
 
-    @ObjectHolder("grassworld:fancylightgreyendgrass")
+    @ObjectHolder("grassworld:fancylight_grayendgrass")
     public static Block fancylightgreyendgrass;
 
-    @ObjectHolder("grassworld:fancylightblueendgrass")
+    @ObjectHolder("grassworld:fancylight_blueendgrass")
     public static Block fancylightblueendgrass;
 
-    @ObjectHolder("grassworld:fancylimegreenendgrass")
+    @ObjectHolder("grassworld:fancylimeendgrass")
     public static Block fancylimegreenendgrass;
 
     @ObjectHolder("grassworld:fancymagentaendgrass")
@@ -470,16 +470,16 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:rednethergrass")
     public static Block rednethergrass;
 
-    @ObjectHolder("grassworld:greynethergrass")
+    @ObjectHolder("grassworld:graynethergrass")
     public static Block greynethergrass;
 
-    @ObjectHolder("grassworld:lightgreynethergrass")
+    @ObjectHolder("grassworld:light_graynethergrass")
     public static Block lightgreynethergrass;
 
-    @ObjectHolder("grassworld:lightbluenethergrass")
+    @ObjectHolder("grassworld:light_bluenethergrass")
     public static Block lightbluenethergrass;
 
-    @ObjectHolder("grassworld:limegreennethergrass")
+    @ObjectHolder("grassworld:limenethergrass")
     public static Block limegreennethergrass;
 
     @ObjectHolder("grassworld:magentanethergrass")
@@ -519,16 +519,16 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:fancyrednethergrass")
     public static Block fancyrednethergrass;
 
-    @ObjectHolder("grassworld:fancygreynethergrass")
+    @ObjectHolder("grassworld:fancygraynethergrass")
     public static Block fancygreynethergrass;
 
-    @ObjectHolder("grassworld:fancylightgreynethergrass")
+    @ObjectHolder("grassworld:fancylight_graynethergrass")
     public static Block fancylightgreynethergrass;
 
-    @ObjectHolder("grassworld:fancylightbluenethergrass")
+    @ObjectHolder("grassworld:fancylight_bluenethergrass")
     public static Block fancylightbluenethergrass;
 
-    @ObjectHolder("grassworld:fancylimegreennethergrass")
+    @ObjectHolder("grassworld:fancylimenethergrass")
     public static Block fancylimegreennethergrass;
 
     @ObjectHolder("grassworld:fancymagentanethergrass")
@@ -566,16 +566,16 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:glowingredgrass")
     public static Block glowingredgrass;
 
-    @ObjectHolder("grassworld:glowinggreygrass")
+    @ObjectHolder("grassworld:glowinggraygrass")
     public static Block glowinggreygrass;
 
-    @ObjectHolder("grassworld:glowinglightgreygrass")
+    @ObjectHolder("grassworld:glowinglight_graygrass")
     public static Block glowinglightgreygrass;
 
-    @ObjectHolder("grassworld:glowinglightbluegrass")
+    @ObjectHolder("grassworld:glowinglight_bluegrass")
     public static Block glowinglightbluegrass;
 
-    @ObjectHolder("grassworld:glowinglimegreengrass")
+    @ObjectHolder("grassworld:glowinglimegrass")
     public static Block glowinglimegreengrass;
 
     @ObjectHolder("grassworld:glowingmagentagrass")
@@ -608,7 +608,7 @@ public class GrassContentLib {
     //Normal Seeds
 
 
-    @ObjectHolder("grassworld:glowingorangegrass")
+    @ObjectHolder("grassworld:orangeseed")
     public static Item orangeseed;
 
     @ObjectHolder("grassworld:blueseed")
@@ -617,13 +617,13 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:redseed")
     public static Item redseed;
 
-    @ObjectHolder("grassworld:lightblueseed")
+    @ObjectHolder("grassworld:light_blueseed")
     public static Item lightblueseed;
 
-    @ObjectHolder("grassworld:greyseed")
+    @ObjectHolder("grassworld:grayseed")
     public static Item greyseed;
 
-    @ObjectHolder("grassworld:lightgreyseed")
+    @ObjectHolder("grassworld:light_grayseed")
     public static Item lightgreyseed;
 
     @ObjectHolder("grassworld:pinkseed")
@@ -653,7 +653,7 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:greenseed")
     public static Item greenseed;
 
-    @ObjectHolder("grassworld:limegreenseed")
+    @ObjectHolder("grassworld:limeseed")
     public static Item limegreenseed;
 
 
@@ -667,13 +667,13 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:glowingredseed")
     public static Item glowingredseed;
 
-    @ObjectHolder("grassworld:glowinglightblueseed")
+    @ObjectHolder("grassworld:glowinglight_blueseed")
     public static Item glowinglightblueseed;
 
-    @ObjectHolder("grassworld:glowinggreyseed")
+    @ObjectHolder("grassworld:glowinggrayseed")
     public static Item glowinggreyseed;
 
-    @ObjectHolder("grassworld:glowinglightgreyseed")
+    @ObjectHolder("grassworld:glowinglight_grayseed")
     public static Item glowinglightgreyseed;
 
     @ObjectHolder("grassworld:glowingpinkseed")
@@ -703,12 +703,12 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:glowinggreenseed")
     public static Item glowinggreenseed;
 
-    @ObjectHolder("grassworld:glowinglimegreenseed")
+    @ObjectHolder("grassworld:glowinglimeseed")
     public static Item glowinglimegreenseed;
 
 
     //Fancy Seed
-    @ObjectHolder("grassworld:fancyblueseed")
+    @ObjectHolder("grassworld:fancyorangeseed")
     public static Item fancyorangeseed;
 
     @ObjectHolder("grassworld:fancyblueseed")
@@ -717,13 +717,13 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:fancyredseed")
     public static Item fancyredseed;
 
-    @ObjectHolder("grassworld:fancylightblueseed")
+    @ObjectHolder("grassworld:fancylight_blueseed")
     public static Item fancylightblueseed;
 
-    @ObjectHolder("grassworld:fancygreyseed")
+    @ObjectHolder("grassworld:fancygrayseed")
     public static Item fancygreyseed;
 
-    @ObjectHolder("grassworld:fancylightgreyseed")
+    @ObjectHolder("grassworld:fancylight_grayseed")
     public static Item fancylightgreyseed;
 
     @ObjectHolder("grassworld:fancypinkseed")
@@ -753,7 +753,7 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:fancygreenseed")
     public static Item fancygreenseed;
 
-    @ObjectHolder("grassworld:fancylimegreenseed")
+    @ObjectHolder("grassworld:fancylimeseed")
     public static Item fancylimegreenseed;
 
 
@@ -767,13 +767,13 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:enchantedredseed")
     public static Item enchantedredseed;
 
-    @ObjectHolder("grassworld:enchantedlightblueseed")
+    @ObjectHolder("grassworld:enchantedlight_blueseed")
     public static Item enchantedlightblueseed;
 
-    @ObjectHolder("grassworld:enchantedgreyseed")
+    @ObjectHolder("grassworld:enchantedgrayseed")
     public static Item enchantedgreyseed;
 
-    @ObjectHolder("grassworld:enchantedlightgreyseed")
+    @ObjectHolder("grassworld:enchantedlight_grayseed")
     public static Item enchantedlightgreyseed;
 
     @ObjectHolder("grassworld:enchantedpinkseed")
@@ -803,7 +803,7 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:enchantedgreenseed")
     public static Item enchantedgreenseed;
 
-    @ObjectHolder("grassworld:enchantedlimegreenseed")
+    @ObjectHolder("grassworld:enchantedlimeseed")
     public static Item enchantedlimegreenseed;
 
 
@@ -817,13 +817,13 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:redendseed")
     public static Item redendseed;
 
-    @ObjectHolder("grassworld:lightblueendseed")
+    @ObjectHolder("grassworld:light_blueendseed")
     public static Item lightblueendseed;
 
-    @ObjectHolder("grassworld:greyendseed")
+    @ObjectHolder("grassworld:grayendseed")
     public static Item greyendseed;
 
-    @ObjectHolder("grassworld:lightgreyendseed")
+    @ObjectHolder("grassworld:light_grayendseed")
     public static Item lightgreyendseed;
 
     @ObjectHolder("grassworld:pinkendseed")
@@ -853,7 +853,7 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:greenendseed")
     public static Item greenendseed;
 
-    @ObjectHolder("grassworld:limegreenendseed")
+    @ObjectHolder("grassworld:limeendseed")
     public static Item limegreenendseed;
 
 
@@ -867,13 +867,13 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:rednetherseed")
     public static Item rednetherseed;
 
-    @ObjectHolder("grassworld:lightbluenetherseed")
+    @ObjectHolder("grassworld:light_bluenetherseed")
     public static Item lightbluenetherseed;
 
-    @ObjectHolder("grassworld:greynetherseed")
+    @ObjectHolder("grassworld:graynetherseed")
     public static Item greynetherseed;
 
-    @ObjectHolder("grassworld:lightgreynetherseed")
+    @ObjectHolder("grassworld:light_graynetherseed")
     public static Item lightgreynetherseed;
 
     @ObjectHolder("grassworld:pinknetherseed")
@@ -903,7 +903,7 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:greennetherseed")
     public static Item greennetherseed;
 
-    @ObjectHolder("grassworld:limegreennetherseed")
+    @ObjectHolder("grassworld:limenetherseed")
     public static Item limegreennetherseed;
 
 
@@ -917,13 +917,13 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:fancyredendseed")
     public static Item fancyredendseed;
 
-    @ObjectHolder("grassworld:fancylightblueendseed")
+    @ObjectHolder("grassworld:fancylight_blueendseed")
     public static Item fancylightblueendseed;
 
-    @ObjectHolder("grassworld:fancygreyendseed")
+    @ObjectHolder("grassworld:fancygrayendseed")
     public static Item fancygreyendseed;
 
-    @ObjectHolder("grassworld:fancylightgreyendseed")
+    @ObjectHolder("grassworld:fancylight_grayendseed")
     public static Item fancylightgreyendseed;
 
     @ObjectHolder("grassworld:fancypinkendseed")
@@ -953,7 +953,7 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:fancygreenendseed")
     public static Item fancygreenendseed;
 
-    @ObjectHolder("grassworld:fancylimegreenendseed")
+    @ObjectHolder("grassworld:fancylimeendseed")
     public static Item fancylimegreenendseed;
 
 
@@ -967,13 +967,13 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:fancyrednetherseed")
     public static Item fancyrednetherseed;
 
-    @ObjectHolder("grassworld:fancylightbluenetherseed")
+    @ObjectHolder("grassworld:fancylight_bluenetherseed")
     public static Item fancylightbluenetherseed;
 
-    @ObjectHolder("grassworld:fancygreynetherseed")
+    @ObjectHolder("grassworld:fancygraynetherseed")
     public static Item fancygreynetherseed;
 
-    @ObjectHolder("grassworld:fancylightgreynetherseed")
+    @ObjectHolder("grassworld:fancylight_graynetherseed")
     public static Item fancylightgreynetherseed;
 
     @ObjectHolder("grassworld:fancypinknetherseed")
@@ -1003,7 +1003,7 @@ public class GrassContentLib {
     @ObjectHolder("grassworld:fancygreennetherseed")
     public static Item fancygreennetherseed;
 
-    @ObjectHolder("grassworld:fancylimegreennetherseed")
+    @ObjectHolder("grassworld:fancylimenetherseed")
     public static Item fancylimegreennetherseed;
 
 
