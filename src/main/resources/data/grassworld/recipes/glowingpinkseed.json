@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "grassworld:enchantedpinkseed"
+      "item": "grassworld:fancypinkseed"
     },
     {
       "item": "minecraft:glowstone"

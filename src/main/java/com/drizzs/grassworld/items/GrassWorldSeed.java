@@ -31,8 +31,24 @@ public class GrassWorldSeed extends Item {
         World world = context.getWorld();
         BlockPos blockpos = context.getPos();
         ItemStack item = context.getItem();
-        world.setBlockState(blockpos, this.grassSupplier.get().getDefaultState());
-        item.shrink(1);
+        if (this.isIn(GrassTags.Items.DIRTSEED)) {
+            if (world.getBlockState(blockpos).getBlock().isIn(GrassTags.Blocks.OVERWORLDSEEDDIRT)) {
+                world.setBlockState(blockpos, this.grassSupplier.get().getDefaultState());
+                item.shrink(1);
+            }
+        }
+        else if (this.isIn(GrassTags.Items.ENDSEED)) {
+            if (world.getBlockState(blockpos).getBlock().isIn(GrassTags.Blocks.ENDSEEDDIRT)) {
+                world.setBlockState(blockpos, this.grassSupplier.get().getDefaultState());
+                item.shrink(1);
+            }
+        }
+        else if (this.isIn(GrassTags.Items.NETHERSEED)) {
+            if (world.getBlockState(blockpos).getBlock().isIn(GrassTags.Blocks.NETHERSEEDDIRT)) {
+                world.setBlockState(blockpos, this.grassSupplier.get().getDefaultState());
+                item.shrink(1);
+            }
+        }
         return ActionResultType.SUCCESS;
     }
 

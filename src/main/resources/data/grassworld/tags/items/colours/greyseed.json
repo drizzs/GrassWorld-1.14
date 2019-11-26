@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "grassworld:greyseed",
-    "grassworld:fancygreyseed",
-    "grassworld:enchantedgreyseed",
-    "grassworld:glowinggreyseed",
-    "grassworld:greynetherseed",
-    "grassworld:greyendseed",
-    "grassworld:fancygreyendseed",
-    "grassworld:fancygreynetherseed"
+    "grassworld:grayseed",
+    "grassworld:fancygrayseed",
+    "grassworld:enchantedgrayseed",
+    "grassworld:glowinggrayseed",
+    "grassworld:graynetherseed",
+    "grassworld:grayendseed",
+    "grassworld:fancygrayendseed",
+    "grassworld:fancygraynetherseed"
   ]
 }

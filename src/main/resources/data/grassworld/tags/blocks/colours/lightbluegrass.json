@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "grassworld:glowinglightbluegrass",
-    "grassworld:enchantedlightbluegrass",
-    "grassworld:fancylightblueendgrass",
-    "grassworld:fancylightbluegrass",
-    "grassworld:lightbluenethergrass",
-    "grassworld:lightblueendgrass",
-    "grassworld:lightbluegrass",
-    "grassworld:fancylightbluenethergrass"
+    "grassworld:glowinglight_bluegrass",
+    "grassworld:enchantedlight_bluegrass",
+    "grassworld:fancylight_blueendgrass",
+    "grassworld:fancylight_bluegrass",
+    "grassworld:light_bluenethergrass",
+    "grassworld:light_blueendgrass",
+    "grassworld:light_bluegrass",
+    "grassworld:fancylight_bluenethergrass"
   ]
 }

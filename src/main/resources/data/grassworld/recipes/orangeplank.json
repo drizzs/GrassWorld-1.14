@@ -1,0 +1,13 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "grassworld:orangelog"
+    }
+  ],
+  "result": {
+    "item": "grassworld:orangeplank",
+    "count": 4
+  }
+}

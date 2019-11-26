@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "grassworld:limegreenseed",
-    "grassworld:fancylimegreenseed",
-    "grassworld:enchantedlimegreenseed",
-    "grassworld:glowinglimegreenseed",
-    "grassworld:limegreennetherseed",
-    "grassworld:limegreenendseed",
-    "grassworld:fancylimegreenendseed",
-    "grassworld:fancylimegreennetherseed"
+    "grassworld:limeseed",
+    "grassworld:fancylimeseed",
+    "grassworld:enchantedlimeseed",
+    "grassworld:glowinglimeseed",
+    "grassworld:limenetherseed",
+    "grassworld:limeendseed",
+    "grassworld:fancylimeendseed",
+    "grassworld:fancylimenetherseed"
   ]
 }

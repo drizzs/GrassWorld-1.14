@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SDP"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "D": {
+      "item": "minecraft:gray_dye"
+    },
+    "P": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "grassworld:enchantedgrayseed"
+  }
+}
