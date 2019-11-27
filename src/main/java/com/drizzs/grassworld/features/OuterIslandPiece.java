@@ -18,7 +18,7 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 
 import java.util.Random;
 
-import static com.drizzs.grassworld.registries.StructurePieceRegistry.ISLANDPIECE;
+import static com.drizzs.grassworld.registries.StructurePieceRegistry.OUTERISLANDPIECE;
 
 
 public class OuterIslandPiece extends TemplateStructurePiece {
@@ -33,7 +33,7 @@ public class OuterIslandPiece extends TemplateStructurePiece {
     }
 
     public OuterIslandPiece(TemplateManager templateManager, GrassIslandVariant variant, String templateName, BlockPos templatePosition, Rotation rotation, Mirror mirror) {
-        super(ISLANDPIECE, 0);
+        super(OUTERISLANDPIECE, 0);
         this.templateName = templateName;
         this.variant = variant;
         this.templatePosition = templatePosition;
@@ -43,7 +43,7 @@ public class OuterIslandPiece extends TemplateStructurePiece {
     }
 
     public OuterIslandPiece(TemplateManager templateManager, CompoundNBT nbt) {
-        super(ISLANDPIECE, nbt);
+        super(OUTERISLANDPIECE, nbt);
         this.templateName = nbt.getString("Template");
         this.variant = GrassIslandVariant.getVariantFromIndex(nbt.getInt("Variant"));
         this.rotation = Rotation.valueOf(nbt.getString("Rotation"));
