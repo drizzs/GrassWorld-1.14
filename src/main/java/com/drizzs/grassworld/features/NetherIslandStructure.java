@@ -155,9 +155,9 @@ public class NetherIslandStructure extends ScatteredStructure<NoFeatureConfig> {
         variant = GrassIslandVariant.YELLOWNETHER;
       }
 
-      GrassIslandPiece grassIslandPiece;
-      grassIslandPiece = new GrassIslandPiece(templateManagerIn, variant, "netherisland", new BlockPos(x, y, z), rotation);
-      this.components.add(grassIslandPiece);
+      OuterIslandPiece outerIslandPiece;
+      outerIslandPiece = new OuterIslandPiece(templateManagerIn, variant, "netherisland", new BlockPos(x, y, z), rotation);
+      this.components.add(outerIslandPiece);
       this.recalculateStructureSize();
     }
   }

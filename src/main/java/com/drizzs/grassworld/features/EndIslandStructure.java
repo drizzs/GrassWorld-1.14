@@ -155,9 +155,9 @@ public class EndIslandStructure extends ScatteredStructure<NoFeatureConfig> {
         variant = GrassIslandVariant.YELLOWEND;
       }
 
-      GrassIslandPiece grassIslandPiece;
-      grassIslandPiece = new GrassIslandPiece(templateManagerIn, variant, "endisland", new BlockPos(x, y, z), rotation);
-      this.components.add(grassIslandPiece);
+      OuterIslandPiece outerIslandPiece;
+      outerIslandPiece = new OuterIslandPiece(templateManagerIn, variant, "endisland", new BlockPos(x, y, z), rotation);
+      this.components.add(outerIslandPiece);
       this.recalculateStructureSize();
     }
   }
