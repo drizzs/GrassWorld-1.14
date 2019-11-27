@@ -2,11 +2,9 @@ package com.drizzs.grassworld.particle;
 
 
 import com.drizzs.grassworld.GrassWorld;
-import com.drizzs.grassworld.particle.types.ParticleShimmer;
 import com.drizzs.grassworld.particle.types.ShimmerParticleData;
 import com.drizzs.grassworld.particle.types.ShimmerParticleType;
 import net.minecraft.client.Minecraft;
-import net.minecraft.particles.ItemParticleData;
 import net.minecraft.particles.ParticleType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;

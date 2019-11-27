@@ -1,18 +1,15 @@
 package com.drizzs.grassworld.registries;
 
 import com.drizzs.grassworld.features.EndIslandStructure;
-import com.drizzs.grassworld.features.GrassIslandPiece;
 import com.drizzs.grassworld.features.GrassIslandStructure;
 import com.drizzs.grassworld.features.NetherIslandStructure;
 import com.drizzs.grassworld.util.GrassConfigHandler;
 import com.drizzs.grassworld.util.lib.GrassContentLib;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.structure.IStructurePieceType;
 import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.gen.placement.*;
 import net.minecraftforge.event.RegistryEvent;

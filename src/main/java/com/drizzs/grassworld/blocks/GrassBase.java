@@ -2,7 +2,6 @@ package com.drizzs.grassworld.blocks;
 
 import com.drizzs.grassworld.particle.types.ShimmerParticleData;
 import com.drizzs.grassworld.util.GrassConfigHandler;
-import com.drizzs.grassworld.util.tags.GrassTags;
 import net.minecraft.block.*;
 import net.minecraft.item.DyeColor;
 import net.minecraft.util.Direction;

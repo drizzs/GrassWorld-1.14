@@ -1,11 +1,9 @@
 package com.drizzs.grassworld.blocks;
 
-import com.drizzs.grassworld.util.GrassHolders;
 import com.drizzs.grassworld.util.tags.GrassTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SnowBlock;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.monster.*;
 import net.minecraft.item.DyeColor;

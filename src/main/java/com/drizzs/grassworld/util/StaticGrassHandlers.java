@@ -2,7 +2,6 @@ package com.drizzs.grassworld.util;
 
 
 import net.minecraft.block.BlockState;
-import net.minecraft.client.Minecraft;
 
 import java.util.Random;
 

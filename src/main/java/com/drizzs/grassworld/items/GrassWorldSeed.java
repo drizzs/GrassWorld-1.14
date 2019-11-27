@@ -1,12 +1,8 @@
 package com.drizzs.grassworld.items;
 
-import com.drizzs.grassworld.blocks.GrassBase;
-import com.drizzs.grassworld.util.GrassHolders;
 import com.drizzs.grassworld.util.group.GrassGroup;
-import com.drizzs.grassworld.util.lib.GrassContentLib;
 import com.drizzs.grassworld.util.tags.GrassTags;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;

@@ -33,7 +33,7 @@ public class GrassConfigHandler {
         public Client(ForgeConfigSpec.Builder builder) {
             builder.push("TestOreGen");
             particleOn = builder
-                    .comment("Set this to true if you're not running a server in your mom's basement for 200 people!")
+                    .comment("Set this to true if you're not running a server in your mom's basement for 200 people while you play!")
                     .define("particleOn", true);
             builder.pop();
         }
@@ -85,14 +85,12 @@ public class GrassConfigHandler {
         public final ForgeConfigSpec.BooleanValue ENDISLANDFEATURE;
         public final ForgeConfigSpec.BooleanValue ENDOVERWORLDISLANDFEATURE;
 
-
         public Common(ForgeConfigSpec.Builder builder) {
             builder.push("BoneMeal Grass Spawn");
             ALLGRASSGROWTH = builder
                     .comment("If True, Any Colour of Grass will Spawn on any Coloured Grass Block when BoneMeal is Applied")
                     .define("AllGrassGrowth", false);
             builder.pop();
-
 
             builder.push("Island Feature");
             RAINBOWISLANDS = builder
