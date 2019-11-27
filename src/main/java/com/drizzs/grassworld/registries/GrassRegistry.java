@@ -50,14 +50,14 @@ public class GrassRegistry {
     public static void register(IEventBus bus) {
 
         for (DyeColor dyeColor : DyeColor.values()) {
-            overworldGrass.put(dyeColor, BLOCKS.register(dyeColor.toString() + "grass", () -> new GrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))));
-            fancyoverworldGrass.put(dyeColor, BLOCKS.register("fancy" + dyeColor.toString() + "grass", () -> new GrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))));
-            glowingoverworldGrass.put(dyeColor, BLOCKS.register("glowing" + dyeColor.toString() + "grass", () -> new GrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))));
-            enchantedoverworldGrass.put(dyeColor, BLOCKS.register("enchanted" + dyeColor.toString() + "grass", () -> new GrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))));
-            netherGrass.put(dyeColor, BLOCKS.register(dyeColor.toString() + "nethergrass", () -> new UniqueGrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))));
-            endGrass.put(dyeColor, BLOCKS.register(dyeColor.toString() + "endgrass", () -> new UniqueGrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))));
-            fancyEndGrass.put(dyeColor, BLOCKS.register("fancy" + dyeColor.toString() + "endgrass", () -> new UniqueGrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))));
-            fancyNetherGrass.put(dyeColor, BLOCKS.register("fancy" + dyeColor.toString() + "nethergrass", () -> new UniqueGrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT))));
+            overworldGrass.put(dyeColor, BLOCKS.register(dyeColor.toString() + "grass", () -> new GrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
+            fancyoverworldGrass.put(dyeColor, BLOCKS.register("fancy" + dyeColor.toString() + "grass", () -> new GrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
+            glowingoverworldGrass.put(dyeColor, BLOCKS.register("glowing" + dyeColor.toString() + "grass", () -> new GrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
+            enchantedoverworldGrass.put(dyeColor, BLOCKS.register("enchanted" + dyeColor.toString() + "grass", () -> new GrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
+            netherGrass.put(dyeColor, BLOCKS.register(dyeColor.toString() + "nethergrass", () -> new UniqueGrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
+            endGrass.put(dyeColor, BLOCKS.register(dyeColor.toString() + "endgrass", () -> new UniqueGrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
+            fancyEndGrass.put(dyeColor, BLOCKS.register("fancy" + dyeColor.toString() + "endgrass", () -> new UniqueGrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
+            fancyNetherGrass.put(dyeColor, BLOCKS.register("fancy" + dyeColor.toString() + "nethergrass", () -> new UniqueGrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
             actualgrass.put(dyeColor, BLOCKS.register(dyeColor.toString() + "actualgrass", () -> new ActualGrass(Block.Properties.create(Material.ORGANIC).hardnessAndResistance(0.0F).sound(SoundType.PLANT))));
         }
 

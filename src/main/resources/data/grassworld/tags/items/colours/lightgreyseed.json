@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "grassworld:light_greyseed",
-    "grassworld:fancylight_greyseed",
-    "grassworld:enchantedlight_greyseed",
-    "grassworld:glowinglight_greyseed",
-    "grassworld:light_greynetherseed",
-    "grassworld:light_greyendseed",
-    "grassworld:fancylight_greyendseed",
-    "grassworld:fancylight_greynetherseed"
+    "grassworld:light_grayseed",
+    "grassworld:fancylight_grayseed",
+    "grassworld:enchantedlight_grayseed",
+    "grassworld:glowinglight_grayseed",
+    "grassworld:light_graynetherseed",
+    "grassworld:light_grayendseed",
+    "grassworld:fancylight_grayendseed",
+    "grassworld:fancylight_graynetherseed"
   ]
 }

@@ -100,16 +100,16 @@ public class GrassConfigHandler {
                     .define("RainbowIslands", false);
             OVERWORLDISLANDFEATURE = builder
                     .comment("If True, This will spawn Dirt Islands Floating in the Sky of the Overworld, These Islands will have extra spawn rate for Overworld Mobs")
-                    .define("OverworldIslandFeature", true);
+                    .define("OverworldIslandFeature", false);
             ENDISLANDFEATURE = builder
                     .comment("If True, This will spawn End Islands Floating in the Sky of the Overworld, These Islands will have extra spawn rate for End Mobs")
-                    .define("EndIslandFeature", true);
+                    .define("EndIslandFeature", false);
             ENDOVERWORLDISLANDFEATURE = builder
                     .comment("If True, This will spawn End Islands Floating in the Sky of the End, These Islands will have extra spawn rate for End Mobs")
-                    .define("EndOverWorldIslandFeature", true);
+                    .define("EndOverWorldIslandFeature", false);
             NETHERISLANDFEATURE = builder
                     .comment("If True, This will spawn Nether Islands Floating in the Sky of the Overworld, These Islands will have extra spawn rate for Nether Mobs")
-                    .define("NetherIslandFeature", true);
+                    .define("NetherIslandFeature", false);
             builder.pop();
 
             builder.push("Grass Feature Spawn");

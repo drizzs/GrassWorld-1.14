@@ -74,7 +74,7 @@ public class GrassIslandPiece extends TemplateStructurePiece {
       case "grassworld:grassfloor":
         int grass = rand.nextInt(this.variant.getGrassBlock().length);
         if(GrassConfigHandler.COMMON.RAINBOWISLANDS.get()){
-                worldIn.setBlockState(pos, StaticGrassHandlers.randomBlockSelector(), 2);
+                worldIn.setBlockState(pos, StaticGrassHandlers.randomBlockSelector(rand), 2);
         }
         else {
             worldIn.setBlockState(pos, this.variant.getGrassBlock()[grass], 2);

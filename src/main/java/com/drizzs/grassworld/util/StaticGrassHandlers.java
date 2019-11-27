@@ -15,12 +15,12 @@ public class StaticGrassHandlers
     }
 
     public static BlockState[] getAllActualGrass() {
-        return createArray(actualgrassblack.getDefaultState(), actualgrassblue.getDefaultState(), actualgrassbrown.getDefaultState(), actualgrasscyan.getDefaultState(), actualgrassgreen.getDefaultState(), actualgrassgrey.getDefaultState(), actualgrasslightblue.getDefaultState(), actualgrasslightgrey.getDefaultState(), actualgrasslimegreen.getDefaultState(), actualgrassmagenta.getDefaultState(), actualgrassorange.getDefaultState(), actualgrasspink.getDefaultState(), actualgrasspurple.getDefaultState(), actualgrassred.getDefaultState(), actualgrasswhite.getDefaultState(), actualgrassyellow.getDefaultState());
+        return createArray(actualgrassblack.getDefaultState(), actualgrassblue.getDefaultState(), actualgrassbrown.getDefaultState(), actualgrasscyan.getDefaultState(), actualgrassgreen.getDefaultState(), actualgrassgrey.getDefaultState(), actualgrasslightblue.getDefaultState(), actualgrasslightgrey.getDefaultState(), actualgrasslimegreen.getDefaultState(),
+                actualgrassmagenta.getDefaultState(), actualgrassorange.getDefaultState(), actualgrasspink.getDefaultState(), actualgrasspurple.getDefaultState(), actualgrassred.getDefaultState(), actualgrasswhite.getDefaultState(), actualgrassyellow.getDefaultState());
     }
 
-    public static BlockState randomBlockSelector() {
-        Random random = Minecraft.getInstance().world.rand;
-        int next = random.nextInt(8);
+    public static BlockState randomBlockSelector(Random random) {
+        int next = random.nextInt(63);
         BlockState topBlock;
         if(next == 0){topBlock = blackgrass.getDefaultState();}
         else if(next == 1){topBlock = fancyblackgrass.getDefaultState();}

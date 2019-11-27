@@ -26,8 +26,6 @@ public class ParticleShimmer extends Particle {
     private final float moteParticleScale;
     private final int moteHalfLife;
 
-
-
     public ParticleShimmer(World world, double d, double d1, double d2, double xSpeed, double ySpeed, double zSpeed,
                            float size, float red, float green, float blue, boolean depthTest, float maxAgeMul) {
         super(world, d, d1, d2, 0, 0, 0);
@@ -68,7 +66,6 @@ public class ParticleShimmer extends Particle {
         buffer.pos(f11 + rotationX * f10 - rotationXY * f10, f12 - rotationZ * f10, f13 + rotationYZ * f10 - rotationXZ * f10).tex(0, 0).lightmap(k3, l3).color(particleRed, particleGreen, particleBlue, 0.5F).endVertex();
 
     }
-
 
     @Override
     public void tick() {

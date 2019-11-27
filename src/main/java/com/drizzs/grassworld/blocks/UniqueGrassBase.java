@@ -20,8 +20,8 @@ import java.util.Random;
 
 public class UniqueGrassBase extends GrassBase {
 
-    public UniqueGrassBase(Properties properties) {
-        super(properties);
+    public UniqueGrassBase(Properties properties, DyeColor dyeColor) {
+        super(properties, dyeColor);
     }
 
     private static boolean getLightLevel(BlockState state, IWorldReader iworld, BlockPos pos) {
@@ -74,7 +74,7 @@ public class UniqueGrassBase extends GrassBase {
         return state;
     }
 
-    public void spawnEntities(World world, Entity entity){
+    public void spawnEntities(World world){
         if(this.isIn(GrassTags.Blocks.ENDGRASS)) {
             world.addEntity(new EndermanEntity(EntityType.ENDERMAN, world));
             world.addEntity(new EndermiteEntity(EntityType.ENDERMITE, world));

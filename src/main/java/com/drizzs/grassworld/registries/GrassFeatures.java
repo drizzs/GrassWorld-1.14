@@ -100,7 +100,6 @@ public class GrassFeatures {
                 featureOverWorldGrassSpawn(GrassContentLib.actualgrasslightblue.getDefaultState(), GrassConfigHandler.COMMON.LIGHTBLUEGRASSFEATUREWEIGHT.get());
             }
         }
-
     }
 
     public static void featureOverWorldGrassSpawn(BlockState state, int frequency) {
