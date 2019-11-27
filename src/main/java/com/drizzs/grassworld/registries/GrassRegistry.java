@@ -6,10 +6,9 @@ import com.drizzs.grassworld.blocks.UniqueGrassBase;
 import com.drizzs.grassworld.items.GrassWorldSeed;
 import com.drizzs.grassworld.util.group.GrassGroup;
 import com.google.common.collect.Maps;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.DyeColor;
 import net.minecraft.item.Item;
@@ -37,6 +36,9 @@ public class GrassRegistry {
     public static final EnumMap<DyeColor, RegistryObject<Block>> fancyEndGrass = Maps.newEnumMap(DyeColor.class);
     public static final EnumMap<DyeColor, RegistryObject<Block>> fancyNetherGrass = Maps.newEnumMap(DyeColor.class);
     public static final EnumMap<DyeColor, RegistryObject<Block>> actualgrass = Maps.newEnumMap(DyeColor.class);
+    public static final EnumMap<DyeColor, RegistryObject<Block>> logs = Maps.newEnumMap(DyeColor.class);
+    public static final EnumMap<DyeColor, RegistryObject<Block>> leaves = Maps.newEnumMap(DyeColor.class);
+    public static final EnumMap<DyeColor, RegistryObject<Block>> planks = Maps.newEnumMap(DyeColor.class);
     public static final EnumMap<DyeColor, RegistryObject<Item>> grassItemBlocks = Maps.newEnumMap(DyeColor.class);
     public static final EnumMap<DyeColor, RegistryObject<Item>> overworldSeeds = Maps.newEnumMap(DyeColor.class);
 
@@ -55,6 +57,9 @@ public class GrassRegistry {
             fancyEndGrass.put(dyeColor, BLOCKS.register("fancy" + dyeColor.toString() + "endgrass", () -> new UniqueGrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
             fancyNetherGrass.put(dyeColor, BLOCKS.register("fancy" + dyeColor.toString() + "nethergrass", () -> new UniqueGrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
             actualgrass.put(dyeColor, BLOCKS.register(dyeColor.toString() + "actualgrass", () -> new ActualGrass(Block.Properties.create(Material.ORGANIC).hardnessAndResistance(0.0F).sound(SoundType.PLANT))));
+            logs.put(dyeColor, BLOCKS.register(dyeColor.toString() + "log", () -> new LogBlock(MaterialColor.BROWN ,Block.Properties.create(Material.ORGANIC).hardnessAndResistance(0.0F).sound(SoundType.PLANT))));
+            planks.put(dyeColor, BLOCKS.register(dyeColor.toString() + "plank", () -> new Block(Block.Properties.create(Material.ORGANIC).hardnessAndResistance(0.0F).sound(SoundType.PLANT))));
+            leaves.put(dyeColor, BLOCKS.register(dyeColor.toString() + "leaves", () -> new LeavesBlock(Block.Properties.create(Material.ORGANIC).hardnessAndResistance(0.0F).sound(SoundType.PLANT))));
         }
 
         for (DyeColor dyeColor : DyeColor.values()) {
@@ -67,6 +72,9 @@ public class GrassRegistry {
             fancyEndGrass.get(dyeColor);
             fancyNetherGrass.get(dyeColor);
             actualgrass.get(dyeColor);
+            logs.get(dyeColor);
+            planks.get(dyeColor);
+            leaves.get(dyeColor);
         }
 
         for (DyeColor dyeColor : DyeColor.values()) {
@@ -80,6 +88,9 @@ public class GrassRegistry {
             grassItemBlocks.put(dyeColor, ITEMS.register("fancy" + dyeColor.toString() + "endgrass", () -> new BlockItem(fancyEndGrass.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
             grassItemBlocks.put(dyeColor, ITEMS.register("fancy" + dyeColor.toString() + "nethergrass", () -> new BlockItem(fancyNetherGrass.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
             grassItemBlocks.put(dyeColor, ITEMS.register(dyeColor.toString() + "actualgrass", () -> new BlockItem(actualgrass.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
+            grassItemBlocks.put(dyeColor, ITEMS.register(dyeColor.toString() + "log", () -> new BlockItem(logs.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
+            grassItemBlocks.put(dyeColor, ITEMS.register(dyeColor.toString() + "leaves", () -> new BlockItem(leaves.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
+            grassItemBlocks.put(dyeColor, ITEMS.register(dyeColor.toString() + "plank", () -> new BlockItem(planks.get(dyeColor).orElse(Blocks.AIR), new Item.Properties().group(GrassGroup.instance))));
         }
 
         for (DyeColor dyeColor : DyeColor.values()) {

@@ -34,7 +34,7 @@ public class GrassConfigHandler {
             builder.push("TestOreGen");
             particleOn = builder
                     .comment("Set this to true if you're not running a server in your mom's basement for 200 people while you play!")
-                    .define("particleOn", true);
+                    .define("particleOn", false);
             builder.pop();
         }
 
