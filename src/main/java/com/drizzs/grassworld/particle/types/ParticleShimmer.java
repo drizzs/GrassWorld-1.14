@@ -32,9 +32,9 @@ public class ParticleShimmer extends Particle {
         motionX = xSpeed;
         motionY = ySpeed;
         motionZ = zSpeed;
-        particleRed = red;
+        particleRed = blue;
         particleGreen = green;
-        particleBlue = blue;
+        particleBlue = red;
         particleGravity = 0;
         particleScale = size;
         moteParticleScale = particleScale;

@@ -19,8 +19,7 @@ import net.minecraft.world.lighting.LightEngine;
 
 import java.util.Random;
 
-import static com.drizzs.grassworld.registries.GrassRegistry.fancyEndGrass;
-import static com.drizzs.grassworld.registries.GrassRegistry.fancyNetherGrass;
+import static com.drizzs.grassworld.registries.GrassRegistry.*;
 
 public class UniqueGrassBase extends GrassBase {
 
@@ -72,12 +71,11 @@ public class UniqueGrassBase extends GrassBase {
         if (!worldIn.getFluidState(pos.up()).isEmpty()) return;
         if(!worldIn.isDaytime()) {
             if (random.nextInt(20) == 0) {
-                Entity entity = chosenOne(worldIn, random, pos.up());
+                Entity entity = chosenOne(worldIn, random);
                 if (entity != null) {
                     entity.setPosition(pos.getX(), pos.getY() + 1, pos.getZ());
                     if (!worldIn.areCollisionShapesEmpty(entity) || !worldIn.checkNoEntityCollision(entity)) return;
                     worldIn.addEntity(entity);
-                    LOGGER.info("spawning" + entity.toString());
                 }
             }
         }
@@ -85,25 +83,25 @@ public class UniqueGrassBase extends GrassBase {
 
     public BlockState blockGrowth(){
         BlockState state = null;
-        if (this.isIn(GrassTags.Blocks.NETHERGRASS)) {
+        if (this == fancyNetherGrass.get(dyeColor).get() || this == netherGrass.get(dyeColor).get()) {
             state = Blocks.NETHERRACK.getDefaultState();
         }
-        if (this.isIn(GrassTags.Blocks.ENDGRASS)) {
+        if (this == fancyEndGrass.get(dyeColor).get() || this == endGrass.get(dyeColor).get()) {
             state = Blocks.END_STONE.getDefaultState();
         }
         return state;
     }
 
-    private Entity chosenOne(World world, Random random, BlockPos pos){
-        Entity entity = null;
-        if(this.getRegistryName() == fancyEndGrass.get(dyeColor).getId()) {
-            int rand = random.nextInt(1);
-            if(rand == 0) {
-                entity = new EndermanEntity(EntityType.ENDERMAN, world).getType().create(world);
-            } else if(rand == 1) {
-                entity = new EndermiteEntity(EntityType.ENDERMITE, world).getType().create(world);
-            }
-        }else if(this.getRegistryName() == fancyNetherGrass.get(dyeColor).getId()) {
+        private Entity chosenOne(World world, Random random){
+            Entity entity = null;
+            if(this == fancyEndGrass.get(dyeColor).get()) {
+                int rand = random.nextInt(1);
+                if(rand == 0) {
+                    entity = new EndermanEntity(EntityType.ENDERMAN, world).getType().create(world);
+                } else if(rand == 1) {
+                    entity = new EndermiteEntity(EntityType.ENDERMITE, world).getType().create(world);
+                }
+        }else if(this == fancyNetherGrass.get(dyeColor).get()) {
             int rand = random.nextInt(200);
             if(rand < 198){
                 int check = random.nextInt(20);
