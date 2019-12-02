@@ -21,6 +21,7 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 import java.util.Random;
 
 import static com.drizzs.grassworld.registries.StructurePieceRegistry.ISLANDPIECE;
+import static com.drizzs.grassworld.util.StaticGrassHandlers.randomGrassSelector;
 
 
 public class GrassIslandPiece extends TemplateStructurePiece {
@@ -74,10 +75,10 @@ public class GrassIslandPiece extends TemplateStructurePiece {
       case "grassworld:grassfloor":
         int grass = rand.nextInt(this.variant.getGrassBlock().length);
         if(GrassConfigHandler.COMMON.RAINBOWISLANDS.get()){
-                worldIn.setBlockState(pos, StaticGrassHandlers.randomBlockSelector(rand), 2);
+                worldIn.setBlockState(pos, StaticGrassHandlers.randomBlockSelector(rand).getDefaultState(), 2);
         }
         else {
-            worldIn.setBlockState(pos, this.variant.getGrassBlock()[grass], 2);
+            worldIn.setBlockState(pos, this.variant.getGrassBlock()[grass].getDefaultState(), 2);
         }
         break;
       case "grassworld:lakefluid":
@@ -88,10 +89,9 @@ public class GrassIslandPiece extends TemplateStructurePiece {
 
         if (rand.nextBoolean()) {
             int grass_random = rand.nextInt(this.variant.getTallGrass().length);
-            int grassrandom = rand.nextInt(StaticGrassHandlers.getAllActualGrass().length);
 
-            BlockState chosenGrass = this.variant.getTallGrass()[grass_random];
-            BlockState allGrass = StaticGrassHandlers.getAllActualGrass()[grassrandom];
+            BlockState chosenGrass = this.variant.getTallGrass()[grass_random].getDefaultState();
+            BlockState allGrass = randomGrassSelector(rand).getDefaultState();
 
           if (chosenGrass.getBlock() instanceof ActualGrass) {
             if (((ActualGrass) chosenGrass.getBlock()).isValidPosition(chosenGrass, worldIn, pos)) {

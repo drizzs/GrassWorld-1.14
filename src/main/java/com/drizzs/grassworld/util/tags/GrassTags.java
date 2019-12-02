@@ -33,10 +33,6 @@ public class GrassTags {
         public static final Tag<Block> ENDSEEDDIRT = tag("endseeddirt");
         public static final Tag<Block> NETHERSEEDDIRT = tag("netherseeddirt");
 
-        //DirtTypes
-        public static final Tag<Block> ENDGRASS = tag("endgrass");
-        public static final Tag<Block> NETHERGRASS = tag("nethergrass");
-
 
         private static Tag<Block> tag(String name) {
             return new BlockTags.Wrapper(new ResourceLocation(MOD_ID, name));

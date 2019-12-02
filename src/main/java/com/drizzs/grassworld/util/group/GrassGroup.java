@@ -1,8 +1,9 @@
 package com.drizzs.grassworld.util.group;
 
-import com.drizzs.grassworld.util.lib.GrassContentLib;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+
+import static com.drizzs.grassworld.registries.GrassRegistry.GWICON;
 
 public class GrassGroup extends ItemGroup {
 
@@ -16,7 +17,7 @@ public class GrassGroup extends ItemGroup {
     @Override
     public ItemStack createIcon()
     {
-        return new ItemStack(GrassContentLib.gwicon);
+        return new ItemStack(GWICON.get());
     }
 
 

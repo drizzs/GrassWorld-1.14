@@ -4,8 +4,8 @@ import com.drizzs.grassworld.features.EndIslandStructure;
 import com.drizzs.grassworld.features.GrassIslandStructure;
 import com.drizzs.grassworld.features.NetherIslandStructure;
 import com.drizzs.grassworld.util.GrassConfigHandler;
-import com.drizzs.grassworld.util.lib.GrassContentLib;
 import net.minecraft.block.BlockState;
+import net.minecraft.item.DyeColor;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.*;
 
 import static com.drizzs.grassworld.GrassWorld.MOD_ID;
+import static com.drizzs.grassworld.registries.GrassRegistry.actualgrass;
 import static net.minecraft.world.biome.Biome.createDecoratedFeature;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -49,52 +50,52 @@ public class GrassFeatures {
     public static void onFeatureRegistryEvent() {
         if (GrassConfigHandler.COMMON.GRASSFEATURE.get()) {
             if (GrassConfigHandler.COMMON.BLACKGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrassblack.getDefaultState(), GrassConfigHandler.COMMON.BLACKGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.BLACK).get().getDefaultState(), GrassConfigHandler.COMMON.BLACKGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.BLUEGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrassblue.getDefaultState(), GrassConfigHandler.COMMON.BLUEGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.BLUE).get().getDefaultState(), GrassConfigHandler.COMMON.BLUEGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.GREYGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrassgrey.getDefaultState(), GrassConfigHandler.COMMON.GREYGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.GRAY).get().getDefaultState(), GrassConfigHandler.COMMON.GREYGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.MAGENTAGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrassmagenta.getDefaultState(), GrassConfigHandler.COMMON.MAGENTAGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.MAGENTA).get().getDefaultState(), GrassConfigHandler.COMMON.MAGENTAGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.CYANGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrasscyan.getDefaultState(), GrassConfigHandler.COMMON.CYANGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.CYAN).get().getDefaultState(), GrassConfigHandler.COMMON.CYANGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.ORANGEGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrassorange.getDefaultState(), GrassConfigHandler.COMMON.ORANGEGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.ORANGE).get().getDefaultState(), GrassConfigHandler.COMMON.ORANGEGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.BROWNGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrassbrown.getDefaultState(), GrassConfigHandler.COMMON.BROWNGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.BROWN).get().getDefaultState(), GrassConfigHandler.COMMON.BROWNGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.GREENGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrassgreen.getDefaultState(), GrassConfigHandler.COMMON.GREENGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.GREEN).get().getDefaultState(), GrassConfigHandler.COMMON.GREENGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.REDGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrassred.getDefaultState(), GrassConfigHandler.COMMON.REDGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.RED).get().getDefaultState(), GrassConfigHandler.COMMON.REDGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.PURPLEGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrasspurple.getDefaultState(), GrassConfigHandler.COMMON.PURPLEGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.PURPLE).get().getDefaultState(), GrassConfigHandler.COMMON.PURPLEGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.PINKGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrasspink.getDefaultState(), GrassConfigHandler.COMMON.PINKGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.PINK).get().getDefaultState(), GrassConfigHandler.COMMON.PINKGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.WHITEGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrasswhite.getDefaultState(), GrassConfigHandler.COMMON.WHITEGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.WHITE).get().getDefaultState(), GrassConfigHandler.COMMON.WHITEGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.YELLOWGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrassyellow.getDefaultState(), GrassConfigHandler.COMMON.YELLOWGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.YELLOW).get().getDefaultState(), GrassConfigHandler.COMMON.YELLOWGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.LIMEGREENGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrasslimegreen.getDefaultState(), GrassConfigHandler.COMMON.LIMEGREENGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.LIME).get().getDefaultState(), GrassConfigHandler.COMMON.LIMEGREENGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.LIGHTGREYGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrasslightgrey.getDefaultState(), GrassConfigHandler.COMMON.LIGHTGREYGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.LIGHT_GRAY).get().getDefaultState(), GrassConfigHandler.COMMON.LIGHTGREYGRASSFEATUREWEIGHT.get());
             }
             if (GrassConfigHandler.COMMON.LIGHTBLUEGRASSFEATURE.get()) {
-                featureOverWorldGrassSpawn(GrassContentLib.actualgrasslightblue.getDefaultState(), GrassConfigHandler.COMMON.LIGHTBLUEGRASSFEATUREWEIGHT.get());
+                featureOverWorldGrassSpawn(actualgrass.get(DyeColor.LIGHT_BLUE).get().getDefaultState(), GrassConfigHandler.COMMON.LIGHTBLUEGRASSFEATUREWEIGHT.get());
             }
         }
     }

@@ -71,7 +71,7 @@ public class OuterIslandPiece extends TemplateStructurePiece {
         switch (function) {
             case "grassworld:grassfloor":
                 int grass = rand.nextInt(this.variant.getGrassBlock().length);
-                worldIn.setBlockState(pos, this.variant.getGrassBlock()[grass], 2);
+                worldIn.setBlockState(pos, this.variant.getGrassBlock()[grass].getDefaultState(), 2);
                 break;
             case "grassworld:lakefluid":
                 worldIn.setBlockState(pos, this.variant.getLakeFluid(), 2);
@@ -81,7 +81,7 @@ public class OuterIslandPiece extends TemplateStructurePiece {
 
                 if (rand.nextBoolean()) {
                     int grass_random = rand.nextInt(this.variant.getTallGrass().length);
-                    BlockState chosenGrass = this.variant.getTallGrass()[grass_random];
+                    BlockState chosenGrass = this.variant.getTallGrass()[grass_random].getDefaultState();
 
                     if (chosenGrass.getBlock() instanceof ActualGrass) {
                         if (((ActualGrass) chosenGrass.getBlock()).isValidPosition(chosenGrass, worldIn, pos)) {

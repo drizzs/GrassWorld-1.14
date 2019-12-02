@@ -20,7 +20,6 @@ import java.util.Random;
 
 import static com.drizzs.grassworld.registries.GrassRegistry.actualgrass;
 import static com.drizzs.grassworld.registries.GrassRegistry.enchantedoverworldGrass;
-import static com.drizzs.grassworld.util.lib.GrassContentLib.*;
 
 public class GrassBase extends GrassBlock {
 
@@ -137,7 +136,7 @@ public class GrassBase extends GrassBlock {
     public void animateTick(BlockState stateIn, World world, BlockPos pos, Random rand) {
         if (this.equals(enchantedoverworldGrass.get(DyeColor.BLACK).get())) {
             if (rand.nextInt(8) == 0) {
-                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 1F, 1F, 1F, 1);
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 240F, 240F, 240F, 1);
                 world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.BLUE).get())) {
@@ -152,17 +151,17 @@ public class GrassBase extends GrassBlock {
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.CYAN).get())) {
             if (rand.nextInt(8) == 0) {
-                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 1F, 150F, 150F, 1);
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 150F, 50F, 255F, 1);
                 world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.GRAY).get())) {
             if (rand.nextInt(8) == 0) {
-                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 1F, 0F, 1F, 1);
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 210F, 210F, 210F, 1);
                 world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.GREEN).get())) {
             if (rand.nextInt(8) == 0) {
-                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 255F, 77F, 0F, 1);
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 215F, 77F, 215F, 1);
                 world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.LIGHT_BLUE).get())) {
@@ -172,22 +171,22 @@ public class GrassBase extends GrassBlock {
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.LIGHT_GRAY).get())) {
             if (rand.nextInt(8) == 0) {
-                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 1F, 0F, 1F, 1);
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 172F, 172F, 172F, 1);
                 world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.LIME).get())) {
             if (rand.nextInt(8) == 0) {
-                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 53F, 238F, 1F, 1);
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 200F, 20F, 250F, 1);
                 world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.MAGENTA).get())) {
             if (rand.nextInt(8) == 0) {
-                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 255F, 0F, 255F, 1);
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 100F, 200F, 10F, 1);
                 world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.ORANGE).get())) {
             if (rand.nextInt(8) == 0) {
-                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 255F, 77F, 0F, 1);
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 250F, 178F, 10F, 1);
                 world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.PINK).get())) {
@@ -197,7 +196,7 @@ public class GrassBase extends GrassBlock {
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.PURPLE).get())) {
             if (rand.nextInt(8) == 0) {
-                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 150F, 50F, 255F, 1);
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 220F, 250F, 145F, 1);
                 world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.YELLOW).get())) {
@@ -207,7 +206,7 @@ public class GrassBase extends GrassBlock {
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.WHITE).get())) {
             if (rand.nextInt(8) == 0) {
-                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 0F, 0F, 0F, 1);
+                ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 11F, 11F, 11F, 1);
                 world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
             }
         } else if (this.equals(enchantedoverworldGrass.get(DyeColor.RED).get())) {
