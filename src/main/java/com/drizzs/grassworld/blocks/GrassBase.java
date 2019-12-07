@@ -6,8 +6,12 @@ import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.monster.*;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.DyeColor;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -29,6 +33,7 @@ import static com.drizzs.grassworld.registries.GrassRegistry.*;
 public class GrassBase extends GrassBlock {
 
     private DyeColor dyeColor;
+
 
     public GrassBase(Properties properties, DyeColor dyeColor) {
         super(properties);
@@ -86,6 +91,31 @@ public class GrassBase extends GrassBlock {
                 }
             }
         }
+    }
+
+    @Override
+    public void onEntityWalk(World world, BlockPos pos, Entity entity) {
+        if (this.equals(enchantedoverworldGrass.get(dyeColor).get())) {
+            if (this.equals(enchantedoverworldGrass.get(DyeColor.BLACK).get())) {
+                if (entity instanceof MonsterEntity) {
+                    entity.attackEntityFrom(DamageSource.CACTUS, 1);
+                }
+            }
+            if (entity instanceof PlayerEntity) {
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 60));
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, 60));
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, 60));
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.GLOWING, 60));
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.JUMP_BOOST, 60));
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.HASTE, 60));
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.HEALTH_BOOST, 60));
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.LUCK, 60));
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, 60));
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, 60));
+                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.STRENGTH, 60));
+            }
+        }
+
     }
 
     public void grow(World worldIn, Random rand, BlockPos pos, BlockState state) {
@@ -195,82 +225,82 @@ public class GrassBase extends GrassBlock {
         if (GrassConfigHandler.CLIENT.particleOn.get()) {
             if (this.equals(enchantedoverworldGrass.get(DyeColor.BLACK).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 240F, 240F, 240F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 240F, 240F, 240F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.BLUE).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 150F, 0F, 255F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 150F, 0F, 255F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.BROWN).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 102F, 51F, 1F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 102F, 51F, 1F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.CYAN).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 150F, 50F, 255F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 150F, 50F, 255F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.GRAY).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 210F, 210F, 210F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 210F, 210F, 210F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.GREEN).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 215F, 77F, 215F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 215F, 77F, 215F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.LIGHT_BLUE).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 29F, 41F, 216F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 29F, 41F, 216F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.LIGHT_GRAY).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 172F, 172F, 172F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 172F, 172F, 172F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.LIME).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 200F, 20F, 250F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 200F, 20F, 250F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.MAGENTA).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 100F, 200F, 10F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 100F, 200F, 10F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.ORANGE).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 250F, 178F, 10F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 250F, 178F, 10F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.PINK).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 1F, 95F, 1F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 1F, 95F, 1F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.PURPLE).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 220F, 250F, 145F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 220F, 250F, 145F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.YELLOW).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 255F, 100F, 100F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 255F, 100F, 100F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.WHITE).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 11F, 11F, 11F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 11F, 11F, 11F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             } else if (this.equals(enchantedoverworldGrass.get(DyeColor.RED).get())) {
                 if (rand.nextInt(8) == 0) {
-                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.5F, 255F, 0F, 1F, 1);
+                    ShimmerParticleData data = ShimmerParticleData.shimmer(rand.nextFloat() * 0.35F, 255F, 0F, 1F, 1);
                     world.addParticle(data, pos.getX() + rand.nextFloat(), pos.getY() + 1.05, pos.getZ() + rand.nextFloat(), 0, 0, 0);
                 }
             }
@@ -318,5 +348,6 @@ public class GrassBase extends GrassBlock {
         }
         return entity;
     }
+
 
 }
