@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '2.0.0'
+version = '2.0.1'
 group = 'com.drizzs.grassworld'
 archivesBaseName = 'grassworld'
 
@@ -20,7 +20,7 @@ sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = co
 
 minecraft {
 
-    mappings channel: 'snapshot', version: '20191206-1.14.3'
+    mappings channel: 'snapshot', version: '20191211-1.14.3'
 
     runs {
         client {
@@ -60,7 +60,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.14.4-28.1.104'
+    minecraft 'net.minecraftforge:forge:1.14.4-28.1.106'
 }
 jar {
     manifest {

@@ -20,8 +20,8 @@ import java.util.function.Function;
 
 public class GrassIslandStructure extends ScatteredStructure<NoFeatureConfig> {
 
-  public GrassIslandStructure(Function<Dynamic<?>, ? extends NoFeatureConfig> p_i51476_1_) {
-    super(p_i51476_1_);
+  public GrassIslandStructure(Function<Dynamic<?>, ? extends NoFeatureConfig> feature) {
+    super(feature);
   }
 
   @Override
@@ -64,7 +64,7 @@ public class GrassIslandStructure extends ScatteredStructure<NoFeatureConfig> {
 
   @Override
   public String getStructureName() {
-    return "grassisland";
+    return "grassworld:grassisland";
   }
 
   @Override

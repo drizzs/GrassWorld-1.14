@@ -72,7 +72,7 @@ public class GrassIslandPiece extends TemplateStructurePiece {
   @Override
   protected void handleDataMarker(String function, BlockPos pos, IWorld worldIn, Random rand, MutableBoundingBox mbb) {
     switch (function) {
-      case "grassworld:grassfloor":
+        case "grassworld:grassfloor":
         int grass = rand.nextInt(this.variant.getGrassBlock().length);
         if(GrassConfigHandler.COMMON.RAINBOWISLANDS.get()){
                 worldIn.setBlockState(pos, StaticGrassHandlers.randomBlockSelector(rand).getDefaultState(), 2);
