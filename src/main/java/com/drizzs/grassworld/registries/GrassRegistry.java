@@ -56,9 +56,9 @@ public class GrassRegistry {
             fancyEndGrass.put(dyeColor, BLOCKS.register("fancy" + dyeColor.toString() + "endgrass", () -> new GrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
             fancyNetherGrass.put(dyeColor, BLOCKS.register("fancy" + dyeColor.toString() + "nethergrass", () -> new GrassBase(Block.Properties.create(Material.ORGANIC).tickRandomly().hardnessAndResistance(0.6F).sound(SoundType.PLANT), dyeColor)));
             actualgrass.put(dyeColor, BLOCKS.register(dyeColor.toString() + "actualgrass", () -> new ActualGrass(Block.Properties.create(Material.ORGANIC).hardnessAndResistance(0.0F).sound(SoundType.PLANT))));
-            logs.put(dyeColor, BLOCKS.register(dyeColor.toString() + "log", () -> new LogBlock(MaterialColor.BROWN ,Block.Properties.create(Material.ORGANIC).hardnessAndResistance(0.0F).sound(SoundType.PLANT))));
-            planks.put(dyeColor, BLOCKS.register(dyeColor.toString() + "plank", () -> new Block(Block.Properties.create(Material.ORGANIC).hardnessAndResistance(0.0F).sound(SoundType.PLANT))));
-            leaves.put(dyeColor, BLOCKS.register(dyeColor.toString() + "leaves", () -> new LeavesBlock(Block.Properties.create(Material.ORGANIC).hardnessAndResistance(0.0F).sound(SoundType.PLANT))));
+            logs.put(dyeColor, BLOCKS.register(dyeColor.toString() + "log", () -> new LogBlock(MaterialColor.BROWN ,Block.Properties.create(Material.WOOD).hardnessAndResistance(0.0F).sound(SoundType.WOOD))));
+            planks.put(dyeColor, BLOCKS.register(dyeColor.toString() + "plank", () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.0F).sound(SoundType.WOOD))));
+            leaves.put(dyeColor, BLOCKS.register(dyeColor.toString() + "leaves", () -> new LeavesBlock(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.0F).sound(SoundType.PLANT))));
         }
 
         for (DyeColor dyeColor : DyeColor.values()) {

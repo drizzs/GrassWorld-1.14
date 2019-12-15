@@ -32,7 +32,7 @@ public class GrassParticleRegistry
     public static class Factory {
         @SubscribeEvent
         public static void registerFactories(ParticleFactoryRegisterEvent evt) {
-            Minecraft.getInstance().particles.registerFactory(GrassParticleRegistry.SHIMMER, ShimmerParticleType.FACTORY);
+            Minecraft.getInstance().particles.registerFactory(GrassParticleRegistry.SHIMMER, new ShimmerParticleType.Factory());
         }
     }
 
