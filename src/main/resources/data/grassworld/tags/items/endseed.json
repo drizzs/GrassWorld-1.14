@@ -1,0 +1,39 @@
+{
+  "replace": false,
+  "values": [
+
+    "grassworld:blueendseed",
+    "grassworld:blackendseed",
+    "grassworld:brownendseed",
+    "grassworld:cyanendseed",
+    "grassworld:greenendseed",
+    "grassworld:grayendseed",
+    "grassworld:light_grayendseed",
+    "grassworld:light_blueendseed",
+    "grassworld:limeendseed",
+    "grassworld:magentaendseed",
+    "grassworld:pinkendseed",
+    "grassworld:purpleendseed",
+    "grassworld:orangeendseed",
+    "grassworld:redendseed",
+    "grassworld:whiteendseed",
+    "grassworld:yellowendseed",
+
+    "grassworld:fancyblueendseed",
+    "grassworld:fancyblackendseed",
+    "grassworld:fancybrownendseed",
+    "grassworld:fancycyanendseed",
+    "grassworld:fancygreenendseed",
+    "grassworld:fancygrayendseed",
+    "grassworld:fancylight_grayendseed",
+    "grassworld:fancylight_blueendseed",
+    "grassworld:fancylimeendseed",
+    "grassworld:fancymagentaendseed",
+    "grassworld:fancypinkendseed",
+    "grassworld:fancypurpleendseed",
+    "grassworld:fancyorangeendseed",
+    "grassworld:fancyredendseed",
+    "grassworld:fancywhiteendseed",
+    "grassworld:fancyyellowendseed"
+  ]
+}

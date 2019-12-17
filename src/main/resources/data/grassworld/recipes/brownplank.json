@@ -1,0 +1,13 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "grassworld:brownlog"
+    }
+  ],
+  "result": {
+    "item": "grassworld:brownplank",
+    "count": 4
+  }
+}

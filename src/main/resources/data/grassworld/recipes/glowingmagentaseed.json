@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "grassworld:enchanted_magentaseed"
+      "item": "grassworld:fancymagentaseed"
     },
     {
       "item": "minecraft:glowstone"
